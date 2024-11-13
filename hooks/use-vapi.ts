@@ -8,6 +8,7 @@ const useVapi = () => {
   const [volumeLevel, setVolumeLevel] = useState(0);
   const [isSessionActive, setIsSessionActive] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [conversation, setConversation] = useState<
     { role: string; text: string; timestamp: string; isFinal: boolean }[]
   >([]);
@@ -20,10 +21,12 @@ const useVapi = () => {
 
       vapiInstance.on("call-start", () => {
         setIsSessionActive(true);
+        setIsLoading(false);
       });
 
       vapiInstance.on("call-end", () => {
         setIsSessionActive(false);
+        setIsLoading(false);
         setConversation([]); // Reset conversation on call end
       });
 
@@ -96,6 +99,7 @@ const useVapi = () => {
 
       vapiInstance.on("error", (e: Error) => {
         console.error("Vapi error:", e);
+        setIsLoading(false);
       });
     }
   }, []);
@@ -114,6 +118,7 @@ const useVapi = () => {
 
   const toggleCall = async () => {
     try {
+      setIsLoading(true);
       if (isSessionActive) {
         await vapiRef.current.stop();
       } else {
@@ -121,6 +126,7 @@ const useVapi = () => {
       }
     } catch (err) {
       console.error("Error toggling Vapi session:", err);
+      setIsLoading(false);
     }
   };
 
@@ -147,15 +153,29 @@ const useVapi = () => {
     }
   };
 
+  const endCall = async () => {
+    try {
+      if (isSessionActive) {
+        await vapiRef.current.stop();
+        setIsSessionActive(false);
+        setConversation([]);
+      }
+    } catch (err) {
+      console.error("Error ending Vapi session:", err);
+    }
+  };
+
   return {
     volumeLevel,
     isSessionActive,
+    isLoading,
     conversation,
     toggleCall,
     sendMessage,
     say,
     toggleMute,
     isMuted,
+    endCall,
   };
 };
 
