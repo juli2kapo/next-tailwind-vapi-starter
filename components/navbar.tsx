@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -56,18 +56,18 @@ export default function Navbar() {
                 >
                   <div className="nav-text">Inicio</div>
                 </a>
-                <div className="flex flex-col">
-                  <div className="nav-link">
-                    <div className="nav-text">Servicios</div>
-                    {/* Dropdown menu */}
+                <div className="flex flex-col dropdown-container" onMouseEnter={()=>setIsDropdownOpen(true)} onMouseLeave={()=>setIsDropdownOpen(false)}>
+                  <div className="nav-link dropdown-trigger">
+                    <div className="nav-text" >Servicios</div>
                   </div>
-                  <div className="dropdown-menu">
+                  <div className={("dropdown-menu absolute " + (isDropdownOpen ? "flex" : "hidden")) }>
                     <div className="inner-dropdown">
                       <a href="/conversationai">IA Conversacional</a>
                       <a href="/chatbotgeneration">Desarrollo de chatbot</a>
                     </div>
                   </div>
                 </div>
+
               </nav>
               <a href="/contact" className="nav-link contact-button">
                 Contactanos
@@ -198,6 +198,39 @@ body {
     left: 75vw;
     cursor: pointer;
   }
+
+
+
+    .dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position right below the trigger */
+  left: 0;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Ensure it appears above other elements */
+  border-radius: 4px;
+  padding: 10px 0;
+  width: 200px;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: block; /* Show on hover */
+}
+
+.inner-dropdown a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.inner-dropdown a:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+.dropdown-container {
+  position: relative;
+}
 
   .close-icon svg {
     fill: #fff;
