@@ -1,107 +1,213 @@
-'use client';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
+"use client"
+import React, { useState } from "react";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
-    // <header className="navbar">
-    //   <div className="hero-container">
-    //     <div className="nav-box">
-    //       <Link href="/">
-    //         <Image src="https://i.imgur.com/ycaBSDa.jpeg" alt="Elykia Logo" width={60} height={60} />
-    //       </Link>
-    //       <div className="nav-core-component">
-    //         <nav className={`nav-menu-mobile ${menuOpen ? 'open' : ''}`}>
-    //           <Link href="/">Inicio</Link>
-    //           <div className="nav-link">
-    //             <span>Servicios</span>
-    //             <div className="dropdown-menu">
-    //               <Link href="/conversationai">IA Conversacional</Link>
-    //               <Link href="/chatbotgeneration">Desarrollo de chatbot</Link>
-    //             </div>
-    //           </div>
-    //           <Link href="/contact" className="contact-button">Contactanos</Link>
-    //         </nav>
-    //         <button
-    //           className="menu-button"
-    //           onClick={() => setMenuOpen(!menuOpen)}
-    //           aria-label="Toggle Menu"
-    //         >
-    //           ☰
-    //         </button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </header>
     <>
-    <div data-animation="over-left" className="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium"
-      data-w-id="07f4b03e-b653-bf76-2345-ebb47fb39754" role="banner" id="particles-js">
-  <div className="hero-container w-container">
-    <div data-w-id="07f4b03e-b653-bf76-2345-ebb47fb39756" className="nav-box opacity-100">
-      <Link href="/" aria-current="page" className="w-nav-brand w--current" aria-label="home">
-        <img src="https://i.imgur.com/ycaBSDa.jpeg" loading="lazy" alt="Elykia Logo" className="nav-image" width="60" />
-      </Link>
-
-      <div className="nav-core-component flex items-center">
-        {/* Desktop Navigation */}
-        <nav role="navigation" className="hidden md:flex gap-4">
-          <Link href="/" aria-current="page" className="nav-link w-inline-block w--current">
-            <div className="nav-text">Inicio</div>
-          </Link>
-
-          <div className="nav-link relative group">
-            <div className="nav-text cursor-pointer">Servicios</div>
-            <div className="dropdown-menu absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-lg mt-2">
-              <div className="inner-dropdown p-4">
-                <a href="/conversationai" className="block px-4 py-2 hover:bg-gray-100">IA Conversacional</a>
-                <a href="/chatbotgeneration" className="block px-4 py-2 hover:bg-gray-100">Desarrollo de chatbot</a>
-              </div>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        media="all"
+      />
+      <div
+        data-animation="over-left"
+        className="navbar w-nav"
+        data-easing2="ease"
+        data-easing="ease"
+        data-collapse="medium"
+        data-w-id="07f4b03e-b653-bf76-2345-ebb47fb39754"
+        role="banner"
+        data-duration={400}
+        id="particles-js"
+      >
+        <div className="hero-container w-container">
+          <div
+            data-w-id="07f4b03e-b653-bf76-2345-ebb47fb39756"
+            className="nav-box"
+            style={{ opacity: 1 }}
+          >
+            <a
+              href="/"
+              aria-current="page"
+              className="w-nav-brand w--current"
+              aria-label="home"
+            >
+              <img
+                src="https://i.imgur.com/ycaBSDa.jpeg"
+                loading="lazy"
+                alt="Elykia Logo"
+                className="nav-image"
+                width={60}
+              />
+            </a>
+            <p></p>
+            <div className="nav-core-component">
+              <nav role="navigation" className="nav-menu-mobile w-nav-menu">
+                <a
+                  href="/"
+                  aria-current="page"
+                  className="nav-link w-inline-block w--current"
+                >
+                  <div className="nav-text">Inicio</div>
+                </a>
+                <div className="flex flex-col">
+                  <div className="nav-link">
+                    <div className="nav-text">Servicios</div>
+                    {/* Dropdown menu */}
+                  </div>
+                  <div className="dropdown-menu">
+                    <div className="inner-dropdown">
+                      <a href="/conversationai">IA Conversacional</a>
+                      <a href="/chatbotgeneration">Desarrollo de chatbot</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+              <a href="/contact" className="nav-link contact-button">
+                Contactanos
+              </a>
+            </div>
+            {/* Mobile Menu Button */}
+            <div
+              className="menu-button w-nav-button"
+              style={{ WebkitUserSelect: "text" }}
+              aria-label="menu"
+              role="button"
+              tabIndex={0}
+              aria-controls="w-nav-overlay-0"
+              aria-haspopup="menu"
+              aria-expanded={isMobileMenuOpen}
+              onClick={toggleMobileMenu}
+            >
+              <div className="menu-icon w-icon-nav-menu" />
             </div>
           </div>
-        </nav>
-
-        <a href="/contact" className="nav-link contact-button nav-text">Contactanos</a>
-      </div>
-
-      {/* Mobile Menu Button */}
-      <div className="menu-button w-nav-button md:hidden" aria-label="menu" role="button" tabIndex={0} aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
-        <div className="menu-icon w-icon-nav-menu">
-          <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
         </div>
 
-        {/* Mobile Navigation */}
-        <nav role="navigation" className="nav-menu-mobile w-nav-menu flex flex-col gap-4 bg-white p-4 absolute top-full left-0 right-0 shadow-lg md:hidden">
-          <a href="#" className="close-nav-menu-link-block w-inline-block">
-            <div className="close-icon w-embed">
-              <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 9.6L18.9 1.7C19.3 1.3 19.3 0.7 18.9 0.3C18.5 -0.1 17.9 -0.1 17.5 0.3L9.6 8.2L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L8.2 9.6L0.3 17.5C-0.1 17.9 -0.1 18.5 0.3 18.9C0.5 19.1 0.8 19.2 1 19.2C1.2 19.2 1.5 19.1 1.7 18.9L9.6 11L17.5 18.9C17.7 19.1 18 19.2 18.2 19.2C18.4 19.2 18.7 19.1 18.9 18.9C19.3 18.5 19.3 17.9 18.9 17.5L11 9.6Z" fill="black"></path>
+        {/* Mobile Menu */}
+        <nav
+          role="navigation"
+          className={`nav-menu-mobile w-nav-menu ${
+            isMobileMenuOpen ? "open" : "closed"
+          }`}
+          style={{
+            display: isMobileMenuOpen ? "block" : "none",
+          }}
+        >
+          <a
+            data-w-id="3aad70a9-d556-c5fc-d440-1ccc6b36ed78"
+            href="#"
+            className="close-nav-menu-link-block w-inline-block nav-link"
+            onClick={toggleMobileMenu}
+          >
+            <div className="close-icon w-embed mt-16 z-50">
+              <svg
+                width={30}
+                height={30}
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 9.6L18.9 1.7C19.3 1.3 19.3 0.7 18.9 0.3C18.5 -0.1 17.9 -0.1 17.5 0.3L9.6 8.2L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L8.2 9.6L0.3 17.5C-0.1 17.9 -0.1 18.5 0.3 18.9C0.5 19.1 0.8 19.2 1 19.2C1.2 19.2 1.5 19.1 1.7 18.9L9.6 11L17.5 18.9C17.7 19.1 18 19.2 18.2 19.2C18.4 19.2 18.7 19.1 18.9 18.9C19.3 18.5 19.3 17.9 18.9 17.5L11 9.6Z"
+                  fill="white"
+                />
               </svg>
             </div>
           </a>
-
-          <Link href="/" className="nav-link w-inline-block">
+          <a href="/" className="nav-link w-inline-block">
             <div className="nav-text">Inicio</div>
-          </Link>
+          </a>
           <a href="/conversationai" className="nav-link w-inline-block">
             <div className="nav-text">IA Conversacional</div>
           </a>
           <a href="/chatbotgeneration" className="nav-link w-inline-block">
             <div className="nav-text">Desarrollo de chatbot</div>
           </a>
-          <div className="button mobile w-button nav-text bg-white text-black p-2 rounded-md">
-            <a href="/contact" className="nav-text text-black no-underline">Contactanos</a>
-          </div>
+          <a href="/contact" className="nav-link w-inline-block">
+            <div className="nav-text">Contactanos</div>
+          </a>
         </nav>
       </div>
-    </div>
-  </div>
-  <div className="w-nav-overlay hidden" data-wf-ignore="" id="w-nav-overlay-0"></div>
-</div>
+
+      <style
+  dangerouslySetInnerHTML={{
+    __html: `
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  min-height: 100%;
+  color: rgb(0, 0, 0);
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Mobile Navigation Styles */
+@media screen and (max-width: 960px) {
+  .nav-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .nav-menu-mobile.closed {
+    display: none;
+  }
+
+  .nav-menu-mobile.open {
+    display: flex; /* Flex for centering menu items */
+  }
+
+  .nav-link {
+    margin: 20px 0; /* Space between items */
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .close-nav-menu-link-block {
+    position: relative;
+    bottom: 18vh;
+    left: 75vw;
+    cursor: pointer;
+  }
+
+  .close-icon svg {
+    fill: #fff;
+  }
+}
+`,
+  }}
+/>
+
+
 
     </>
   );

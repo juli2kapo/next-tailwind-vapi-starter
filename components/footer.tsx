@@ -4,17 +4,44 @@ export default function Footer() {
   return (
     <section className="footer">
     <div className="w-layout-blockcontainer hero-container footer w-container">
-        <div className="footer-left-div flex flex-row align-middle">
-            <img
-                src="Images/icon.jpg"
-                loading="lazy"
-                className='w-[60px] h-[60px]'
-                // width="auto"
-                alt=""
-                srcSet="Images/icon.jpg"
-            />
-            <div className="elykia-text text-white relative left-2 top-5 text-2xl font-bold">Elykia</div>
+    <div
+        className="footer-left-div"
+        style={{
+          boxSizing: "border-box",
+          flex: "1 1 0%",
+          flexDirection: "row",
+          display: "flex",
+        }}
+      >
+        <img
+
+          src="Images/icon.jpg"
+          srcSet="Images/icon.jpg"
+          style={{
+            boxSizing: "border-box",
+            height: "60px",
+            width: "auto",
+            border: "0px",
+            verticalAlign: "middle",
+            maxWidth: "100%",
+            display: "inline-block",
+          }}
+        />
+        <div
+          className="elykia-text"
+          style={{
+            boxSizing: "border-box",
+            color: "white",
+            position: "relative",
+            left: "10px",
+            top: "20px",
+            fontSize: "26px",
+            fontWeight: "bold",
+          }}
+        >
+          Elykia
         </div>
+      </div>
         <div className="footer-right-div">
             <div className="footer-right-div-top-div horizontal-div columnifmedia">
                 <div>
