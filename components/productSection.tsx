@@ -17,92 +17,218 @@ export default function ProductSection(){
                 <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
                 <div className="elykia-text text-white ml-2">ELYKIA</div>
                 </div>
-                <div className="horizontal-div flex pr-2 align-middle hover:cursor-pointer">
-                    <div className="border-white rounded-full border-2 pb-2 pr-2 pt-4 pl-4 flex flex-row">
+                <div className="horizontal-div flex pr-2 align-middle hover:cursor-pointer"
+                onClick={
+                  ()=>{
+                    if(isSessionActive){
+                      endCall();
+                    }
+                    else{
+                      toggleCall();
+                    }
+                  }
+                }>
+                    <div className="border-white rounded-full border pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
+                      <div className="mb-[2vh]">
                         {
                             isLoading ? (
-                                <Loader2Icon size={24} color="white" className="mr-3 animate-spin" />
+                                <Loader2Icon size={20} color="white" className="mr-3 animate-spin" />
                             ):
                             isSessionActive ? 
                             (
 
-                                <Phone size={24} color="white" className="mr-3" onClick={endCall} />
+                                <Phone size={20} color="white" className="mr-3" />
                             )
                             :
                             (
-                                <Mic  size={24} color="white" className="mr-3" onClick={toggleCall} />
+                                <Mic  size={20} color="white" className="mr-3" />
                             )
                         }
-                        {/* <Mic  size={24} color="white" className="mr-3" onClick={toggleCall} /> */}
-                        {/* <Orb /> */}
-                        <p className="text-white text-lg mr-2">
+                      </div>
+                      <div className="flex flex-col">
+
+                        <p className="text-white text-[14px] mr-2 mb-0">
                             Probar demo
                         </p>
+                        <p className="text-white text-[9px] mr-2 opacity-65">
+                            Reserva de restaurante
+                        </p>
+                      </div>
                     </div>
                 </div>
             </div>
 
             </div>
         
-        <div className="product-section bg-black">
-            <h1 className="product-heading text-center text-[48px] font-black text-white uppercase">IA Conversacional</h1>
-            <h2 className="product-subheading px-[12vw] text-[24px] text-center font-light text-[#aaa]">
-                Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.
-            </h2>
-            <div className="card-list grid grid-cols-1 gap-8 md:grid-cols-3 mt-8">
-                <div className="details-card p-6 bg-white rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold ">Rotación de personal</h3>
-                    <ul className="features-list mt-4 space-y-2">
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Evita entrenamientos repetitivos y contrataciones temporales.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Aumenta la producción y maneja múltiples llamadas a la vez.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Dedica el capital humano a tareas no automatizables.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div className="details-card p-6 bg-white rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold ">Mejor experiencia del consumidor</h3>
-                    <ul className="features-list mt-4 space-y-2">
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Libera recursos para dedicar a otras áreas.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Se líder en atención al cliente.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Valores tangibles de satisfacción del cliente</span>
-                        </li>
-                    </ul>
-                </div>
-                <div className="details-card p-6 bg-white rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold">IA para servir, no para controlar</h3>
-                    <ul className="features-list mt-4 space-y-2">
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Automatización que resuelve como humano y escala como software.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Experiencia personalizada y segura.</span>
-                        </li>
-                        <li className="feature-item flex items-start">
-                            <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[3vh] h-auto" />
-                            <span className="product-text ml-2 text-[#aaa]">Humanos involucrados en el proceso para escalabilidad y autorizaciones.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <div
+        className="product-section"
+        style={{
+          boxSizing: "border-box",
+          padding: "1px 1px 10vh",
+          backgroundColor: "rgb(0, 0, 0)",
+          textAlign: "center",
+        }}
+      >
+        <h1
+          className="product-heading text-[4vh]"
+          style={{
+            boxSizing: "border-box",
+            margin: "0.67em 0px",
+            marginTop: "20px",
+            lineHeight: "44px",
+            // fontSize: "48px",
+            fontWeight: 900,
+            marginBottom: "30px",
+            color: "rgb(255, 255, 255)",
+            textTransform: "uppercase",
+          }}
+        >
+          IA Conversacional
+        </h1>
+        <h2
+          className="product-subheading text-[3vh]"
+          style={{
+            boxSizing: "border-box",
+            marginTop: "20px",
+            lineHeight: "36px",
+            // fontSize: "24px",
+            fontWeight: 300,
+            marginBottom: "50px",
+            color: "rgb(170, 170, 170)",
+            paddingLeft: "12vw",
+            paddingRight: "12vw",
+          }}
+        >
+          {
+            "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias."
+          }
+        </h2>
+        <div
+  className="card-list flex flex-col lg:flex-row justify-around gap-6 lg:gap-4 mt-[15vh] mx-[5vw]"
+>
+  <div
+    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    style={{
+      backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
+    }}
+  >
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">Rotación de personal</h3>
+    <ul className="features-list text-left text-gray-200">
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Evita entrenamientos repetitivos y contrataciones temporales.
+        </span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Aumenta la producción y maneja múltiples llamadas a la vez.
+        </span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Dedica el capital humano a tareas no automatizables.
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    style={{
+      backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
+    }}
+  >
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">Mejor experiencia del consumidor</h3>
+    <ul className="features-list text-left text-gray-200">
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Libera recursos para dedicar a otras áreas.
+        </span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">Se líder en atención al cliente.</span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Valores tangibles de satisfacción del cliente.
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    style={{
+      backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
+    }}
+  >
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">IA para servir, no para controlar</h3>
+    <ul className="features-list text-left text-gray-200">
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Automatización que resuelve como humano y escala como software.
+        </span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Experiencia personalizada y segura.
+        </span>
+      </li>
+      <li className="flex items-center mb-4">
+        <img
+          className="w-[3vh] mx-4"
+          alt="Feature Icon"
+          src="https://i.imgur.com/yHSIico.png"
+        />
+        <span className="text-[2.5vh]">
+          Humanos involucrados para escalabilidad y autorizaciones.
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      </div>
 </div>
         </>
     )

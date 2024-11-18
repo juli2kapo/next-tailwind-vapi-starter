@@ -11,9 +11,9 @@ export default function Testimonials() {
   return (
     <div className="testimonials">
       <h2 className="section-heading text-white">Preguntas frecuentes</h2>
-      <div className="flex flex-row justify-around pl-12 pr-20">
-        <div className="parent-container">
-          <ul className="faq space-y-6 text-center m-auto items-center">
+      <div className="flex flex-row justify-around pl-3 pr-3">
+        <div className="parent-container pr-0">
+          <ul className="faq space-y-6 text-center m-auto items-center pl-0 pr-0">
             {faqData.map((item, index) => (
               <div key={index} className="text-center">
               <li
@@ -24,12 +24,13 @@ export default function Testimonials() {
                   className="question flex items-center cursor-pointer justify-center text-center"
                   onClick={() => handleToggle(index)}
                 >
-                  {item.question}
                   <div
-                    className={`plus-minus-toggle ml-2 ${
+                    className={`plus-minus-toggle pr-12 ${
                       activeIndex === index ? "" : "collapsed"
                     }`}
                   ></div>
+                  {item.question}
+
                 </h3>
                 <div className="answer">{item.answer}</div>
               </li>
