@@ -28,7 +28,7 @@ export default function ProductSection(){
                     }
                   }
                 }>
-                    <div className="border-white rounded-full border pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
+                    <div className="border-white rounded-full pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
                       <div className="mb-[2vh]">
                         {
                             isLoading ? (
