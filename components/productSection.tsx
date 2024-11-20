@@ -70,7 +70,7 @@ export default function ProductSection(){
         }}
       >
         <h1
-          className="product-heading text-[4vh]"
+          className="product-heading text-[6vh]"
           style={{
             boxSizing: "border-box",
             margin: "0.67em 0px",
@@ -104,7 +104,7 @@ export default function ProductSection(){
           }
         </h2>
         <div
-  className="card-list flex flex-col lg:flex-row justify-around gap-6 lg:gap-4 mt-[15vh] mx-[5vw]"
+  className="card-list flex flex-col lg:flex-row justify-around gap-6 lg:gap-24 mt-[15vh] lg:mx-[15vw] mx-[5vw]"
 >
   <div
     className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
