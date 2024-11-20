@@ -15,7 +15,7 @@ export default function ServicesSection() {
           </h1>
         </div>
         <div>
-          <p className=" uppercase font-semibold text-black text-[17px] leading-4">
+          <p className=" uppercase font-bold text-black text-[17px] leading-4 lg:leading-8">
             En Elykia entendemos que cada empresa tiene objetivos, retos y
             panoramas únicos. Por eso, aprovechamos nuestro profundo
             conocimiento del sector e ideas de vanguardia para diseñar una

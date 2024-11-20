@@ -21,7 +21,7 @@ export default function Testimonials() {
                 className={`faq-item text-center  ${activeIndex === index ? "active" : ""}`}
               >
                 <h3
-                  className="question flex items-center cursor-pointer justify-center text-center"
+                  className="question flex items-center cursor-pointer justify-center text-center mx-12"
                   onClick={() => handleToggle(index)}
                 >
                   <div
