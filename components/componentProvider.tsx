@@ -2,6 +2,7 @@
 
 import React from "react";
 import { createContext, useState } from "react";
+import Cookies from "js-cookie";
 
 interface LanguageContextProps {
     currentLanguage: string;
@@ -10,7 +11,11 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined)
 export default function LanguageProvider(props:{children:React.ReactNode}){
-    const [currentLanguage, setCurrentLanguage] = useState("ES");
+
+    const savedLanguage = Cookies.get("preferredLanguage");
+    const initialLanguage = savedLanguage ? savedLanguage : "ES";
+    console.log("initialLanguage", initialLanguage);
+    const [currentLanguage, setCurrentLanguage] = useState(initialLanguage);
 
     return(
         <LanguageContext.Provider value={{currentLanguage,setCurrentLanguage}}>

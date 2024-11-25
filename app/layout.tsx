@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import LanguageProvider from "@/components/componentProvider";
+import NoSsr from "@/components/noSsr";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,11 @@ export default function RootLayout({
       <link rel="icon" href="/icon.jpg" />
       <body className={inter.className}>
         <LanguageProvider>
+          <NoSsr >
           <Navbar />
             {children}
           <Footer />
+          </NoSsr>
         </LanguageProvider>
       </body>
     </html>
