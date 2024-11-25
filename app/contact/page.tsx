@@ -1,6 +1,7 @@
 "use client"
 import { useLanguage } from "@/components/componentProvider";
 import React from "react";
+ 
 
 export default function Home() {
   const {currentLanguage} = useLanguage();
