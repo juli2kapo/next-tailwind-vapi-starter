@@ -14,7 +14,6 @@ export default function LanguageProvider(props:{children:React.ReactNode}){
 
     const savedLanguage = Cookies.get("preferredLanguage");
     const initialLanguage = savedLanguage ? savedLanguage : "ES";
-    console.log("initialLanguage", initialLanguage);
     const [currentLanguage, setCurrentLanguage] = useState(initialLanguage);
 
     return(
