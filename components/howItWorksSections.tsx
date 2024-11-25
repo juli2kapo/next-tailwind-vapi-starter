@@ -1,6 +1,45 @@
+"use client"
 import React from "react";
+import { useLanguage } from "./componentProvider";
 
 export default function Component() {
+  const { currentLanguage } = useLanguage();
+  let firstRow;
+  let firstItem;
+  let secondItem;
+  let thirdItem;
+  let fourthItem;
+  let fifthItem;
+  let sixthItem;
+  switch(currentLanguage){
+    case "ES":
+      firstRow = "¿Por qué trabajar con nosotros?";
+      firstItem = "Nuestra prioridad es hacer crecer tu negocio, no hacer software.";
+      secondItem = "Soporte 24/7 y asistencia para todas tus necesidades.";
+      thirdItem = "Servicio hecho para vos. Nos decís que necesitas y nosotros lo hacemos.";
+      fourthItem = "Vas a ahorrar horas en entrada de datos y reducir errores.";
+      fifthItem = "Habilidad de manejar más de 100.000 llamadas al día.";
+      sixthItem = "Enfoque multicanal (Voz, Email, SMS, Whatsapp, etc.)";
+      break;
+    case "EN":
+      firstRow = "Why work with us?";
+      firstItem = "Our priority is to grow your business, not to make software.";
+      secondItem = "24/7 support and assistance for all your needs.";
+      thirdItem = "Service made for you. You tell us what you need and we do it.";
+      fourthItem = "You will save hours on data entry and reduce errors.";
+      fifthItem = "Ability to handle more than 100,000 calls per day.";
+      sixthItem = "Multichannel approach (Voice, Email, SMS, Whatsapp, etc.)";
+      break;
+    default:
+      firstRow = "¿Por qué trabajar con nosotros?";
+      firstItem = "Nuestra prioridad es hacer crecer tu negocio, no hacer software.";
+      secondItem = "Soporte 24/7 y asistencia para todas tus necesidades.";
+      thirdItem = "Servicio hecho para vos. Nos decís que necesitas y nosotros lo hacemos.";
+      fourthItem = "Vas a ahorrar horas en entrada de datos y reducir errores.";
+      fifthItem = "Habilidad de manejar más de 100.000 llamadas al día.";
+      sixthItem = "Enfoque multicanal (Voz, Email, SMS, Whatsapp, etc.)";
+  }
+
   return (
     <>
       <div
@@ -28,7 +67,7 @@ export default function Component() {
             paddingBottom: "10vh",
           }}
         >
-          ¿Por qué trabajar con nosotros?
+          {firstRow}
         </h2>
         <ul
           style={{
@@ -81,7 +120,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Nuestra prioridad es hacer crecer tu negocio, no hacer software.
+              {firstItem}
             </span>
           </li>
           <li
@@ -121,7 +160,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Soporte 24/7 y asistencia para todas tus necesidades.
+              {secondItem}
             </span>
           </li>
           <li
@@ -161,8 +200,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Servicio hecho para vos. Nos decís que necesitas y nosotros lo
-              hacemos.
+              {thirdItem}
             </span>
           </li>
           <li
@@ -202,7 +240,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Vas a ahorrar horas en entrada de datos y reducir errores.
+              {fourthItem}
             </span>
           </li>
           <li
@@ -242,7 +280,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Habilidad de manejar más de 100.000 llamadas al día.
+              {fifthItem}
             </span>
           </li>
           <li
@@ -282,7 +320,7 @@ export default function Component() {
                 fontWeight: 500,
               }}
             >
-              Enfoque multicanal (Voz, Email, SMS, Whatsapp, etc.)
+              {sixthItem}
             </span>
           </li>
         </ul>

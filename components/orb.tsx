@@ -45,7 +45,7 @@ const Orb: React.FC = () => {
       45,
       window.innerWidth / window.innerHeight,
       0.5,
-      100,
+      100
     );
     camera.position.set(0, 0, 100);
     camera.lookAt(scene.position);
@@ -123,7 +123,7 @@ const Orb: React.FC = () => {
       cameraRef.current.updateProjectionMatrix();
       rendererRef.current.setSize(
         outElement.clientWidth,
-        outElement.clientHeight,
+        outElement.clientHeight
       );
     }
   };
@@ -137,7 +137,7 @@ const Orb: React.FC = () => {
       const vertex = new THREE.Vector3(
         positionAttribute.getX(i),
         positionAttribute.getY(i),
-        positionAttribute.getZ(i),
+        positionAttribute.getZ(i)
       );
 
       const offset = 10; // Radius of the icosahedron
@@ -151,7 +151,7 @@ const Orb: React.FC = () => {
         noise(
           vertex.x + time * rf * 7,
           vertex.y + time * rf * 8,
-          vertex.z + time * rf * 9,
+          vertex.z + time * rf * 9
         ) *
           amp *
           volume;
@@ -166,7 +166,7 @@ const Orb: React.FC = () => {
 
   const resetBallMorph = (
     mesh: THREE.Mesh,
-    originalPositions: Float32Array,
+    originalPositions: Float32Array
   ) => {
     console.log("Resetting the ball to its original shape");
     const geometry = mesh.geometry as THREE.BufferGeometry;
@@ -177,7 +177,7 @@ const Orb: React.FC = () => {
         i,
         originalPositions[i * 3],
         originalPositions[i * 3 + 1],
-        originalPositions[i * 3 + 2],
+        originalPositions[i * 3 + 2]
       );
     }
 

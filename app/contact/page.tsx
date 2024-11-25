@@ -1,6 +1,89 @@
+"use client"
+import { useLanguage } from "@/components/componentProvider";
 import React from "react";
 
 export default function Home() {
+  const {currentLanguage} = useLanguage();
+  let firstTitle;
+  let secondTitle;
+  let firstParrafo;
+  let secondParrafo;
+  let firstField;
+  let secondField;
+  let thirdField;
+  let fourthField;
+  let firstBudgetOption;
+  let fifthField;
+  let firstServiceOption;
+  let secondServiceOption;
+  let thirdServiceOption;
+  let fourthServiceOption;
+  let sixthField;
+  let seventhField;
+  let button;
+  let sixthFieldPlaceholder;
+  switch(currentLanguage){
+    case "ES":
+      firstTitle = "EL FUTURO ";
+      secondTitle = "ESPERA";
+      firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
+      secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
+      firstField = "Asunto";
+      secondField = "Nombre";
+      thirdField = "Email";
+      fourthField = "¿Cuál es tu presupuesto para este proyecto?";
+      firstBudgetOption = "Menos de $1,000";
+      fifthField = "¿Qué servicio te interesa?";
+      firstServiceOption = "IA Conversacional";
+      secondServiceOption = "Desarrollo de chatbots";
+      thirdServiceOption = "Consultoría empresarial";
+      fourthServiceOption = "Consulta general";
+      sixthField = "¿A qué se dedica tu empresa?";
+      sixthFieldPlaceholder = "Rubro";
+      seventhField = "¿Cómo podemos ayudarte?";
+      button = "Enviar";
+      break;
+    case "EN":
+      firstTitle = "THE FUTURE ";
+      secondTitle = "AWAITS";
+      firstParrafo = "Artificial intelligence is a powerful tool to take your company to the next level. By integrating AI, you will optimize operations, reduce costs and increase productivity. It is not just an investment in technology, but in the future of your business. Seize this opportunity to lead your industry and maximize results.";
+      secondParrafo = "If you have questions or just want to find out about what we do, don't hesitate to contact us. At Elykia we are at your disposal to guide and help you";
+      firstField = "Subject";
+      secondField = "Name";
+      thirdField = "Email";
+      fourthField = "What is your budget for this project?";
+      firstBudgetOption = "Less than $1,000";
+      fifthField = "What service are you interested in?";
+      firstServiceOption = "Conversational AI";
+      secondServiceOption = "Chatbot Development";
+      thirdServiceOption = "Business consulting";
+      fourthServiceOption = "General inquiry";
+      sixthField = "What does your company do?";
+      sixthFieldPlaceholder = "Industry";
+      seventhField = "How can we help you?";
+      button = "Send";
+      break;
+    default:
+      firstTitle = "EL FUTURO ";
+      secondTitle = "ESPERA";
+      firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
+      secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
+      firstField = "Asunto";
+      secondField = "Nombre";
+      thirdField = "Email";
+      fourthField = "¿Cuál es tu presupuesto para este proyecto?";
+      firstBudgetOption = "Menos de $1,000";
+      fifthField = "¿Qué servicio te interesa?";
+      firstServiceOption = "IA Conversacional";
+      secondServiceOption = "Desarrollo de chatbots";
+      thirdServiceOption = "Consultoría empresarial";
+      fourthServiceOption = "Consulta general";
+      sixthField = "¿A qué se dedica tu empresa?";
+      sixthFieldPlaceholder = "Rubro";
+      seventhField = "¿Cómo podemos ayudarte?";
+      button = "Enviar";
+  }
+
   return (
     <>
       <div className="bg-black">
@@ -67,14 +150,14 @@ export default function Home() {
                   color: "white",
                 }}
               >
-                {"EL FUTURO "}
+                {firstTitle}
                 <span
                   style={{
                     boxSizing: "border-box",
                     color: "rgb(124, 108, 119)",
                   }}
                 >
-                  ESPERA
+                  {secondTitle}
                 </span>
               </h2>
               <div
@@ -88,17 +171,10 @@ export default function Home() {
                   color: "white",
                 }}
               >
-                {`La inteligencia artificial es una herramienta poderosa para llevar
-tu empresa al siguiente nivel. Al integrar IA, optimizarás
-operaciones, reducirás costos y aumentarás la productividad. No es
-solo una inversión en tecnología, sino en el futuro de tu negocio.
-Aprovecha esta oportunidad para liderar tu industria y maximizar
-resultados.`}
+                {firstParrafo}
                 <br style={{ boxSizing: "border-box" }} />
                 <br style={{ boxSizing: "border-box" }} />
-                {`Si tenés preguntas o simplemente querés informarte sobre lo que
-hacemos, no dudes en ponerte en contacto con nosotros. En Elykia
-estamos a su disposición para guiarlo y ayudarlo`}
+                {secondParrafo}
               </div>
             </div>
             <div
@@ -136,7 +212,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     type="text"
                     maxLength={256}
                     required
-                    placeholder="Asunto"
+                    placeholder={firstField}
                     style={{
                       boxSizing: "border-box",
                       font: "inherit",
@@ -186,7 +262,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                       type="text"
                       maxLength={256}
                       required
-                      placeholder="Nombre"
+                      placeholder={secondField}
                       style={{
                         boxSizing: "border-box",
                         font: "inherit",
@@ -223,7 +299,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                       type="email"
                       maxLength={256}
                       required
-                      placeholder="Email"
+                      placeholder={thirdField}
                       style={{
                         boxSizing: "border-box",
                         font: "inherit",
@@ -265,7 +341,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     <strong
                       style={{ boxSizing: "border-box", fontWeight: "bold" }}
                     >
-                      ¿Cuál es tu presupuesto para este proyecto?
+                      {fourthField}
                     </strong>
                   </div>
                   <select
@@ -312,7 +388,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                         backgroundColor: "black",
                       }}
                     >
-                      {"Menos de $1,000"}
+                      {firstBudgetOption}
                     </option>
                     <option
                       value="$1,000 - $5,000"
@@ -362,7 +438,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     <strong
                       style={{ boxSizing: "border-box", fontWeight: "bold" }}
                     >
-                      ¿Qué servicio te interesa?
+                      {fifthField}
                     </strong>
                   </div>
                   <select
@@ -409,7 +485,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                         backgroundColor: "black",
                       }}
                     >
-                      {"IA Conversacional"}
+                      {firstServiceOption}
                     </option>
                     <option
                       value="chatbot"
@@ -418,7 +494,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                         backgroundColor: "black",
                       }}
                     >
-                      {"Desarrollo de chatbots"}
+                      {secondServiceOption}
                     </option>
                     <option
                       value="consult"
@@ -427,7 +503,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                         backgroundColor: "black",
                       }}
                     >
-                      {"Consultoría empresarial"}
+                      {thirdServiceOption}
                     </option>
                     <option
                       value="chat"
@@ -436,7 +512,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                         backgroundColor: "black",
                       }}
                     >
-                      {"Consulta general"}
+                      {fourthServiceOption}
                     </option>
                   </select>
                   <div
@@ -450,7 +526,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     <strong
                       style={{ boxSizing: "border-box", fontWeight: "bold" }}
                     >
-                      ¿A qué se dedica tu empresa?
+                      {sixthField}
                     </strong>
                   </div>
                   <input
@@ -460,7 +536,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     type="text"
                     maxLength={256}
                     required
-                    placeholder="Rubro"
+                    placeholder={sixthFieldPlaceholder}
                     style={{
                       boxSizing: "border-box",
                       font: "inherit",
@@ -496,7 +572,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                     name="How-can-we-help"
                     maxLength={5000}
                     required
-                    placeholder="¿Cómo podemos ayudarte?"
+                    placeholder={seventhField}
                     style={{
                       boxSizing: "border-box",
                       font: "inherit",
@@ -559,7 +635,7 @@ estamos a su disposición para guiarlo y ayudarlo`}
                       marginLeft: "0px",
                     }}
                   >
-                    {"Enviar"}
+                    {button}
                   </button>
                 </form>
                 <div

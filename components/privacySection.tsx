@@ -1,4 +1,51 @@
+"use client"
+import { useLanguage } from "./componentProvider";
+
 export default function PrivacySection(){
+  const {currentLanguage} = useLanguage();
+  let firstRow;
+  let firstTitle;
+  let firstDescription;
+  let secondTitle;
+  let secondDescription;
+  let thirdTitle;
+  let thirdDescription;
+  let fourthTitle;
+  let fourthDescription;
+  switch(currentLanguage){
+    case "ES":
+      firstRow = "Tu privacidad es importante para nosotros";
+      firstTitle = "Seguridad como pilar fundamental";
+      firstDescription = "En Elykia, la protección de datos y las interacciones de los usuarios es una prioridad central.";
+      secondTitle = "Cumplimiento de requisitos";
+      secondDescription = "Nos alineamos con tus necesidades de seguridad y cumplimiento, garantizando que nuestros chatbots estén a la altura de tus necesidades.";
+      thirdTitle = "Defensa contra vulnerabilidades";
+      thirdDescription = "Desarrollamos chatbots robustos que resisten amenazas y vulnerabilidades sin comprometer la funcionalidad ni la experiencia del usuario.";
+      fourthTitle = "Protección de datos";
+      fourthDescription = "Implementamos medidas avanzadas de cifrado de datos para mantener segura toda la información manejada por los chatbots.";
+      break;
+    case "EN":
+      firstRow = "Your privacy is important to us";
+      firstTitle = "Security as a fundamental pillar";
+      firstDescription = "At Elykia, data protection and user interactions are a central priority.";
+      secondTitle = "Compliance with requirements";
+      secondDescription = "We align with your security and compliance needs, ensuring that our chatbots meet your needs.";
+      thirdTitle = "Defense against vulnerabilities";
+      thirdDescription = "We develop robust chatbots that withstand threats and vulnerabilities without compromising functionality or user experience.";
+      fourthTitle = "Data protection";
+      fourthDescription = "We implement advanced data encryption measures to keep all information handled by chatbots secure.";
+      break;
+    default:
+      firstRow = "Tu privacidad es importante para nosotros";
+      firstTitle = "Seguridad como pilar fundamental";
+      firstDescription = "En Elykia, la protección de datos y las interacciones de los usuarios es una prioridad central.";
+      secondTitle = "Cumplimiento de requisitos";
+      secondDescription = "Nos alineamos con tus necesidades de seguridad y cumplimiento, garantizando que nuestros chatbots estén a la altura de tus necesidades.";
+      thirdTitle = "Defensa contra vulnerabilidades";
+      thirdDescription = "Desarrollamos chatbots robustos que resisten amenazas y vulnerabilidades sin comprometer la funcionalidad ni la experiencia del usuario.";
+      fourthTitle = "Protección de datos";
+      fourthDescription = "Implementamos medidas avanzadas de cifrado de datos para mantener segura toda la información manejada por los chatbots.";
+  }
     return (
         <section className="section services">
   <section id="services" data-w-id="b90accb7-49e1-4682-7912-de74aec760d2"
@@ -7,7 +54,7 @@ export default function PrivacySection(){
          className="w-layout-cell flex justify-center items-center mx-auto text-center">
       <h1 className="h1 mainh1 text-2xl text-black text-center">
         <div className="mx-[10vw] text-center">
-          <span className="green text-white text-[25px]">Tu privacidad es importante para nosotros</span><br />
+          <span className="green text-white text-[25px]">{firstRow}</span><br />
         </div>  
         
         <div className="grid grid-cols-2 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
@@ -16,8 +63,8 @@ export default function PrivacySection(){
             <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
                  className="mb-[2vh]" width="30" />
             <span className="color-white text-[17px] leading-[2.4vh]">
-              Seguridad como pilar fundamental
-              <h5>En Elykia, la protección de datos y las interacciones de los usuarios es una prioridad central.</h5>
+              {firstTitle}
+              <h5>{firstDescription}</h5>
             </span>
           </div>
         
@@ -25,8 +72,8 @@ export default function PrivacySection(){
             <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
                  className="mb-[2vh]" width="30" />
             <span className="color-white text-[17px] leading-[2.4vh]">
-              Cumplimiento de requisitos
-              <h5>Nos alineamos con tus necesidades de seguridad y cumplimiento, garantizando que nuestros chatbots estén a la altura de tus necesidades.</h5>
+              {secondTitle}
+              <h5>{secondDescription}</h5>
             </span>
           </div>
         
@@ -34,8 +81,8 @@ export default function PrivacySection(){
             <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
                  className="mb-[2vh]" width="30" />
             <span className="color-white text-[17px] leading-[2.4vh]">
-              Defensa contra vulnerabilidades
-              <h5>Desarrollamos chatbots robustos que resisten amenazas y vulnerabilidades sin comprometer la funcionalidad ni la experiencia del usuario.</h5>
+              {thirdTitle}
+              <h5>{thirdDescription}</h5>
             </span>
           </div>
         
@@ -43,8 +90,8 @@ export default function PrivacySection(){
             <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
                  className="mb-[2vh]" width="30" />
             <span className="color-white text-[17px] leading-[2.4vh]">
-              Protección de datos
-              <h5>Implementamos medidas avanzadas de cifrado de datos para mantener segura toda la información manejada por los chatbots.</h5>
+              {fourthTitle}
+              <h5>{fourthDescription}</h5>
             </span>
           </div>
           
