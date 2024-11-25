@@ -1,10 +1,38 @@
-import Link from 'next/link';
-
-
-
+"use client";
+import Link from "next/link";
 import React from "react";
+import { useLanguage } from "./componentProvider";
 
 export default function HeroSection() {
+  const { currentLanguage } = useLanguage();
+  let firstRow;
+  let secondRow;
+  let thirdRow;
+  let button1;
+  let button2;
+  switch (currentLanguage) {
+    case "ES":
+      firstRow = "Lo que antes era imposible de automatizar";
+      secondRow =
+        "hoy es posible gracias a nuestros modelos de voz y texto impulsados";
+      thirdRow = "con inteligencia artificial.";
+      button1 = "IA Conversacional";
+      button2 = "Desarrollo de chatbot";
+      break;
+    case "EN":
+      firstRow = "What was once impossible to automate";
+      secondRow = "is now possible thanks to our voice and text models powered";
+      thirdRow = "by Artificial Intelligence.";
+      button1 = "Conversational AI";
+      button2 = "Chatbot Development";
+      break;
+    default:
+      firstRow = "Lo que antes era imposible de automatizar";
+      secondRow =
+        "hoy es posible gracias a nuestros modelos de voz y texto impulsados";
+      thirdRow = "con inteligencia artificial.";
+  }
+
   return (
     <>
       <section
@@ -128,36 +156,40 @@ export default function HeroSection() {
                         color: "rgb(124, 108, 119)",
                         fontSize: "22px",
                       }}
-                    >{`Lo que antes era imposible de
-                  automatizar`}</span>
+                    >
+                      {firstRow}
+                    </span>
                     <br style={{ boxSizing: "border-box" }} />
-                    {
-                      "hoy es posible gracias a nuestros modelos de voz y texto impulsados"
-                    }
+                    {secondRow}
                     <br style={{ boxSizing: "border-box" }} />
-                    {"con inteligencia artificial."}
+                    {thirdRow}
                   </h1>
                 </div>
                 <div
                   id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d1-f9ae67f1"
                   style={{ boxSizing: "border-box" }}
                 >
-<div
-  className="box-border flex lg:flex-row justify-around gap-y-[1vw] lg:px-[22vw] flex-col px-[15vw]"
->
-  <a
+                  <div className="box-border flex lg:flex-row justify-around gap-y-[1vw] lg:px-[22vw] flex-col px-[15vw]">
+                    {/* <Link
     className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
     href="conversationai"
   >
-    IA Conversacional
-  </a>
-  <a
-    className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-    href="chatbotgeneration"
-  >
-    Desarrollo de chatbot
-  </a>
-</div>
+    {button1}
+  </Link> */}
+
+                    <Link
+                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
+                      href={"conversationai"}
+                    >
+                      {button1}
+                    </Link>
+                    <Link
+                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
+                      href="chatbotgeneration"
+                    >
+                      {button2}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

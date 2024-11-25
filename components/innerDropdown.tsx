@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function InnerDropdown() {
@@ -15,7 +16,7 @@ export default function InnerDropdown() {
           display: "inline-block",
         }}
       >
-        <a
+        <Link
           href="conversationai"
           style={{
             boxSizing: "border-box",
@@ -29,8 +30,8 @@ export default function InnerDropdown() {
           }}
         >
           IA Conversacional
-        </a>
-        <a
+        </Link>
+        <Link
           href="chatbotgeneration"
           style={{
             boxSizing: "border-box",
@@ -44,7 +45,7 @@ export default function InnerDropdown() {
           }}
         >
           Desarrollo de chatbot
-        </a>
+        </Link>
       </div>
       <style
         dangerouslySetInnerHTML={{

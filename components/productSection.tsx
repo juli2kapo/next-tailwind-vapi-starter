@@ -3,9 +3,82 @@ import { Loader2Icon, Mic, Phone } from "lucide-react";
 import "./productSection.css";
 import Orb from "./orb";
 import useVapi from "@/hooks/use-vapi";
+import { useLanguage } from "./componentProvider";
 
 export default function ProductSection(){
     const { isSessionActive, toggleCall, isLoading, endCall } = useVapi();
+    const { currentLanguage } = useLanguage();
+    let firstRow;
+    let secondRow;
+    let firstCardTitle;
+    let firstCardItem1;
+    let firstCardItem2;
+    let firstCardItem3;
+    let secondCardTitle;
+    let secondCardItem1;
+    let secondCardItem2;
+    let secondCardItem3;
+    let thirdCardTitle;
+    let thirdCardItem1;
+    let thirdCardItem2;
+    let thirdCardItem3;
+    let demoTitle;
+    let demoSubtitle;
+    switch (currentLanguage) {
+      case "ES":
+        firstRow = "IA Conversacional";
+        secondRow = "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
+        firstCardTitle = "Rotación de personal";
+        firstCardItem1 = "Evita entrenamientos repetitivos y contrataciones temporales.";
+        firstCardItem2 = "Aumenta la producción y maneja múltiples llamadas a la vez.";
+        firstCardItem3 = "Dedica el capital humano a tareas no automatizables.";
+        secondCardTitle = "Mejor experiencia del consumidor";
+        secondCardItem1 = "Libera recursos para dedicar a otras áreas.";
+        secondCardItem2 = "Se líder en atención al cliente.";
+        secondCardItem3 = "Valores tangibles de satisfacción del cliente.";
+        thirdCardTitle = "IA para servir, no para controlar";
+        thirdCardItem1 = "Automatización que resuelve como humano y escala como software.";
+        thirdCardItem2 = "Experiencia personalizada y segura.";
+        thirdCardItem3 = "Humanos involucrados para escalabilidad y autorizaciones.";
+        demoTitle = "Probar demo";
+        demoSubtitle = "Reserva de restaurante";
+        break;
+      case "EN":
+        firstRow = "Conversational AI";
+        secondRow = "Our service can handle complex conversations and tasks autonomously. Automating up to 90% of your daily interactions.";
+        firstCardTitle = "Staff rotation";
+        firstCardItem1 = "Avoid repetitive training and temporary hires.";
+        firstCardItem2 = "Increase production and handle multiple calls at once.";
+        firstCardItem3 = "Dedicate human capital to non-automatable tasks.";
+        secondCardTitle = "Better consumer experience";
+        secondCardItem1 = "Free up resources to dedicate to other areas.";
+        secondCardItem2 = "Be a leader in customer service.";
+        secondCardItem3 = "Tangible customer satisfaction values.";
+        thirdCardTitle = "AI to serve, not to control";
+        thirdCardItem1 = "Automation that solves like a human and scales like software.";
+        thirdCardItem2 = "Personalized and secure experience.";
+        thirdCardItem3 = "Humans involved for scalability and authorizations.";
+        demoTitle = "Try demo";
+        demoSubtitle = "Restaurant reservation";
+        break;
+      default:
+        firstRow = "IA Conversacional";
+        secondRow = "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
+        firstCardTitle = "Rotación de personal";
+        firstCardItem1 = "Evita entrenamientos repetitivos y contrataciones temporales.";
+        firstCardItem2 = "Aumenta la producción y maneja múltiples llamadas a la vez.";
+        firstCardItem3 = "Dedica el capital humano a tareas no automatizables.";
+        secondCardTitle = "Mejor experiencia del consumidor";
+        secondCardItem1 = "Libera recursos para dedicar a otras áreas.";
+        secondCardItem2 = "Se líder en atención al cliente.";
+        secondCardItem3 = "Valores tangibles de satisfacción del cliente.";
+        thirdCardTitle = "IA para servir, no para controlar";
+        thirdCardItem1 = "Automatización que resuelve como humano y escala como software.";
+        thirdCardItem2 = "Experiencia personalizada y segura.";
+        thirdCardItem3 = "Humanos involucrados para escalabilidad y autorizaciones.";
+        demoTitle = "Probar demo";
+        demoSubtitle = "Reserva de restaurante";
+      }
     return (
 
         <>
@@ -48,10 +121,10 @@ export default function ProductSection(){
                       <div className="flex flex-col">
 
                         <p className="text-white text-[14px] mr-2 mb-0">
-                            Probar demo
+                            {demoTitle}
                         </p>
                         <p className="text-white text-[9px] mr-2 opacity-65">
-                            Reserva de restaurante
+                            {demoSubtitle}
                         </p>
                       </div>
                     </div>
@@ -83,7 +156,7 @@ export default function ProductSection(){
             textTransform: "uppercase",
           }}
         >
-          IA Conversacional
+          {firstRow}
         </h1>
         <h2
           className="product-subheading text-[3vh]"
@@ -100,7 +173,7 @@ export default function ProductSection(){
           }}
         >
           {
-            "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias."
+            secondRow
           }
         </h2>
         <div
@@ -112,7 +185,7 @@ export default function ProductSection(){
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
   >
-    <h3 className="text-[4vh] font-bold mt-5 mb-4">Rotación de personal</h3>
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">{firstCardTitle}</h3>
     <ul className="features-list text-left text-gray-200">
       <li className="flex items-center mb-4">
         <img
@@ -121,7 +194,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Evita entrenamientos repetitivos y contrataciones temporales.
+          {firstCardItem1}
         </span>
       </li>
       <li className="flex items-center mb-4">
@@ -131,7 +204,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Aumenta la producción y maneja múltiples llamadas a la vez.
+          {firstCardItem2}
         </span>
       </li>
       <li className="flex items-center mb-4">
@@ -141,7 +214,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Dedica el capital humano a tareas no automatizables.
+          {firstCardItem3}
         </span>
       </li>
     </ul>
@@ -153,7 +226,7 @@ export default function ProductSection(){
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
   >
-    <h3 className="text-[4vh] font-bold mt-5 mb-4">Mejor experiencia del consumidor</h3>
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">{secondCardTitle}</h3>
     <ul className="features-list text-left text-gray-200">
       <li className="flex items-center mb-4">
         <img
@@ -162,7 +235,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Libera recursos para dedicar a otras áreas.
+          {secondCardItem1}
         </span>
       </li>
       <li className="flex items-center mb-4">
@@ -171,7 +244,9 @@ export default function ProductSection(){
           alt="Feature Icon"
           src="https://i.imgur.com/yHSIico.png"
         />
-        <span className="text-[2.5vh]">Se líder en atención al cliente.</span>
+        <span className="text-[2.5vh]">
+          {secondCardItem2}
+        </span>
       </li>
       <li className="flex items-center mb-4">
         <img
@@ -180,7 +255,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Valores tangibles de satisfacción del cliente.
+          {secondCardItem3}
         </span>
       </li>
     </ul>
@@ -192,7 +267,7 @@ export default function ProductSection(){
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
   >
-    <h3 className="text-[4vh] font-bold mt-5 mb-4">IA para servir, no para controlar</h3>
+    <h3 className="text-[4vh] font-bold mt-5 mb-4">{thirdCardTitle}</h3>
     <ul className="features-list text-left text-gray-200">
       <li className="flex items-center mb-4">
         <img
@@ -201,7 +276,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Automatización que resuelve como humano y escala como software.
+          {thirdCardItem1}
         </span>
       </li>
       <li className="flex items-center mb-4">
@@ -211,7 +286,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Experiencia personalizada y segura.
+          {thirdCardItem2}
         </span>
       </li>
       <li className="flex items-center mb-4">
@@ -221,7 +296,7 @@ export default function ProductSection(){
           src="https://i.imgur.com/yHSIico.png"
         />
         <span className="text-[2.5vh]">
-          Humanos involucrados para escalabilidad y autorizaciones.
+          {thirdCardItem3}
         </span>
       </li>
     </ul>

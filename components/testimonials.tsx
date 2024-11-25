@@ -1,20 +1,36 @@
 "use client"
 import { useState } from "react";
+import { useLanguage } from "./componentProvider";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
+  const {currentLanguage} = useLanguage();
+  let firstRow;
+  let faqUsar;
+  switch(currentLanguage){
+    case "ES":
+      firstRow = "Preguntas frecuentes";
+      faqUsar = faqData;
+      break;
+    case "EN":
+      firstRow = "Frequently asked questions";
+      faqUsar = faqDataEnglish;
+      break;
+    default:
+      firstRow = "Preguntas frecuentes";
+      faqUsar = faqData;
+  }
   const handleToggle = (index:number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  
   return (
     <div className="testimonials">
-      <h2 className="section-heading text-white">Preguntas frecuentes</h2>
+      <h2 className="section-heading text-white">{firstRow}</h2>
       <div className="flex flex-row justify-around pl-3 pr-3">
         <div className="parent-container pr-0">
           <ul className="faq space-y-6 text-center m-auto items-center pl-0 pr-0">
-            {faqData.map((item, index) => (
+            {faqUsar.map((item, index) => (
               <div key={index} className="text-center">
               <li
                 key={index}
@@ -71,3 +87,32 @@ const faqData = [
       "Cuando un posible prospecto ve un anuncio y expresa interés explícito, nuestra IA puede automáticamente realizar una llamada para discutir sobre el producto y agendar una reunión.",
   },
 ];
+
+const faqDataEnglish = [
+  {
+    question: "What exactly does the conversational AI service offer?",
+    answer:
+      "We provide an infrastructure specifically designed according to your needs for customer conversion. This includes the development and integration of our AI which is capable of making or receiving calls and managing SMS and/or emails to automate appointment scheduling and follow-up.",
+  },
+  {
+    question: "How are cold calls managed?",
+    answer:
+      "Efficiently. Our AI can make thousands of cold calls following any script and specific criteria.",
+  },
+  {
+    question:
+      "Is AI really capable of reducing my clients' no-show rate?",
+    answer:
+      "Yes. Our AI sends periodic reminders and can reschedule appointments.",
+  },
+  {
+    question: "How fast is AI able to respond to clients?",
+    answer:
+      "Instantly. Our AI answers calls and messages 24/7, in a matter of seconds.",
+  },
+  {
+    question: "How does your service integrate with existing market funnels?",
+    answer:
+      "When a potential prospect sees an ad and expresses explicit interest, our AI can automatically make a call to discuss the product and schedule a meeting.",
+  },
+]
