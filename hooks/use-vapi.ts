@@ -1,17 +1,11 @@
-"use client"
 import { useEffect, useRef, useState, useCallback } from "react";
 import Vapi from "@vapi-ai/web";
-import Cookies from "js-cookie";
 import { useLanguage } from "@/components/componentProvider";
-
-
-
-
+import Cookies from "js-cookie";
 
 const useVapi = () => {
-  const {currentLanguage} = useLanguage();
+  const publicKey = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY || ""; // Replace with your actual public key
   const [volumeLevel, setVolumeLevel] = useState(0);
-  const [assistantId, setAssistantId] = useState<string | undefined>();
   const [isSessionActive, setIsSessionActive] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -21,23 +15,8 @@ const useVapi = () => {
   const vapiRef = useRef<any>(null);
 
   const initializeVapi = useCallback(() => {
-    let assistantId : string | undefined;
-  const publicKey = process.env.NEXT_PUBLIC_VAPI_PUBLIC_KEY;
-
-  switch (currentLanguage) {
-      case "EN":
-          console.log("aca");
-          assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_EN;
-          break;
-      case "ES":
-          assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_ES;
-          break;
-      default:
-          assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_ES;
-  }
-
-    setAssistantId(assistantId);
-      const vapiInstance = new Vapi(publicKey ?? "");
+    if (!vapiRef.current) {
+      const vapiInstance = new Vapi(publicKey);
       vapiRef.current = vapiInstance;
 
       vapiInstance.on("call-start", () => {
@@ -122,7 +101,7 @@ const useVapi = () => {
         console.error("Vapi error:", e);
         setIsLoading(false);
       });
-    
+    }
   }, []);
 
   useEffect(() => {
@@ -135,7 +114,7 @@ const useVapi = () => {
         vapiRef.current = null;
       }
     };
-  }, [initializeVapi, currentLanguage]);
+  }, [initializeVapi]);
 
   const toggleCall = async () => {
     try {
@@ -143,6 +122,21 @@ const useVapi = () => {
       if (isSessionActive) {
         await vapiRef.current.stop();
       } else {
+        const currentLanguage = Cookies.get("preferredLanguage");
+        let assistantId : string | undefined;
+  
+
+        switch (currentLanguage) {
+            case "EN":
+                console.log("aca");
+                assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_EN;
+                break;
+            case "ES":
+                assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_ES;
+                break;
+            default:
+                assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID_ES;
+        }
         await vapiRef.current.start(assistantId);
       }
     } catch (err) {
