@@ -270,7 +270,7 @@
 	 transition: max-height 0.5s ease, padding-bottom 0.5s ease;
 }
 .faq .plus-minus-toggle {
-    color: white;
+    color: black;
     cursor: pointer;
     height: 21px;
     position: absolute;

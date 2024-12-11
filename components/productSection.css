@@ -279,7 +279,7 @@
   }
   
  .faq .plus-minus-toggle {
-    color: white;
+    color: black;
 	 cursor: pointer;
 	 height: 21px;
 	 position: absolute;
@@ -289,7 +289,7 @@
 	 z-index: 2;
 }
  .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
-	 background: white;
+	 background: black;
 	 content: '';
 	 height: 5px;
 	 left: 0;
