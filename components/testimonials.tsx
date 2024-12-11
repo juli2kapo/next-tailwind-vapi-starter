@@ -25,19 +25,19 @@ export default function Testimonials() {
   };
   
   return (
-    <div className="testimonials">
-      <h2 className="section-heading text-white">{firstRow}</h2>
+    <div className="testimonials bg-[#f0f0f0]">
+      <h2 className="section-heading text-black">{firstRow}</h2>
       <div className="flex flex-row justify-around pl-3 pr-3">
         <div className="parent-container pr-0">
-          <ul className="faq space-y-6 text-center m-auto items-center pl-0 pr-0">
+          <ul className="faq space-y-6 text-center m-auto items-center pl-0 pr-0 text-black">
             {faqUsar.map((item, index) => (
               <div key={index} className="text-center">
               <li
                 key={index}
-                className={`faq-item text-center  ${activeIndex === index ? "active" : ""}`}
+                className={`faq-item text-center border-black ${activeIndex === index ? "active" : ""}`}
               >
                 <h3
-                  className="question flex items-center cursor-pointer justify-center text-center mx-12"
+                  className="question flex items-center cursor-pointer justify-center text-center mx-12 text-black"
                   onClick={() => handleToggle(index)}
                 >
                   <div
@@ -48,7 +48,7 @@ export default function Testimonials() {
                   {item.question}
 
                 </h3>
-                <div className="answer">{item.answer}</div>
+                <div className="answer text-black">{item.answer}</div>
               </li>
             </div>
             ))}

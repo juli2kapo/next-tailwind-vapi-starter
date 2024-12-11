@@ -42,12 +42,12 @@ export default function HowItWorksChatBot() {
 return (
   <>
     <div
-      className="how-it-works"
+      className="how-it-works bg-[#f0f0f0]"
       style={{
         boxSizing: "border-box",
         padding: "3vh 1vh",
         color: "black",
-        backgroundColor: "white",
+        backgroundColor: "#f0f0f0",
         textAlign: "center",
       }}
     >
@@ -60,14 +60,14 @@ return (
           fontSize: "36px",
           fontWeight: 700,
           marginBottom: "20px",
-          backgroundColor: "white",
+          backgroundColor: "#f0f0f0",
           color: "black",
         }}
       >
         {title}
       </h2>
       <div
-        className="how-it-works"
+        className="how-it-works bg-[#f0f0f0]"
         style={{
           boxSizing: "border-box",
           padding: "3vh 1vh",

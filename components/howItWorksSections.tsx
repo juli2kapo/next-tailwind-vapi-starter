@@ -2,7 +2,7 @@
 import React from "react";
 import { useLanguage } from "./componentProvider";
 
-export default function Component() {
+export default function HowItWorks() {
   const { currentLanguage } = useLanguage();
   let firstRow;
   let firstItem;
@@ -18,7 +18,7 @@ export default function Component() {
       secondItem = "Soporte 24/7 y asistencia para todas tus necesidades.";
       thirdItem = "Servicio hecho para vos. Nos decís que necesitas y nosotros lo hacemos.";
       fourthItem = "Vas a ahorrar horas en entrada de datos y reducir errores.";
-      fifthItem = "Habilidad de manejar más de 100.000 llamadas al día.";
+      fifthItem = "Capacidad de manejar más de 100.000 llamadas al día.";
       sixthItem = "Enfoque multicanal (Voz, Email, SMS, Whatsapp, etc.)";
       break;
     case "EN":
@@ -36,7 +36,7 @@ export default function Component() {
       secondItem = "Soporte 24/7 y asistencia para todas tus necesidades.";
       thirdItem = "Servicio hecho para vos. Nos decís que necesitas y nosotros lo hacemos.";
       fourthItem = "Vas a ahorrar horas en entrada de datos y reducir errores.";
-      fifthItem = "Habilidad de manejar más de 100.000 llamadas al día.";
+      fifthItem = "Capacidad de manejar más de 100.000 llamadas al día.";
       sixthItem = "Enfoque multicanal (Voz, Email, SMS, Whatsapp, etc.)";
   }
 
@@ -47,8 +47,8 @@ export default function Component() {
         style={{
           boxSizing: "border-box",
           padding: "6vh 20px",
-          backgroundColor: "white",
-          color: "black",
+          backgroundColor: "black",
+          color: "white",
           textAlign: "center",
         }}
       >
@@ -62,8 +62,8 @@ export default function Component() {
             fontWeight: 700,
             marginBottom: "20px",
             textTransform: "uppercase",
-            backgroundColor: "white",
-            color: "black",
+            backgroundColor: "black",
+            color: "white",
             paddingBottom: "10vh",
           }}
         >
@@ -99,7 +99,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -115,7 +115,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}
@@ -139,7 +139,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -155,7 +155,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}
@@ -179,7 +179,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -195,7 +195,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}
@@ -219,7 +219,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -235,7 +235,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}
@@ -259,7 +259,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -275,7 +275,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}
@@ -299,7 +299,7 @@ export default function Component() {
             <img
               className="feature-icon"
               alt="Feature Icon"
-              src="https://i.imgur.com/uAx9MVb.png"
+              src="https://i.imgur.com/yHSIico.png"
               style={{
                 boxSizing: "border-box",
                 border: "0px",
@@ -315,7 +315,7 @@ export default function Component() {
             <span
               style={{
                 boxSizing: "border-box",
-                color: "black",
+                color: "white",
                 fontSize: "18px",
                 fontWeight: 500,
               }}

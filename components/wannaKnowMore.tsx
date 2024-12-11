@@ -8,7 +8,7 @@ export default function KnowMore() {
   let secondRow;
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Querés saber más?";
+      firstRow = "¿Querés saber más?";
       secondRow = "Contactanos";
       break;
     case "EN":
@@ -16,7 +16,7 @@ export default function KnowMore() {
       secondRow = "Contact us";
       break;
     default:
-      firstRow = "Querés saber más?";
+      firstRow = "¿Querés saber más?";
       secondRow = "Contactanos";
   }
   return (
