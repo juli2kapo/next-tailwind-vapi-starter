@@ -11,6 +11,8 @@ export default function HowItWorksChatBot() {
   let secondItemDescription;
   let thirdItemTitle;
   let thirdItemDescription;
+  let fourthItemTitle;
+  let fourthItemDescription;
   switch (currentLanguage){
       case "EN":
           title = "What is Elykia's added value?";
@@ -20,6 +22,8 @@ export default function HowItWorksChatBot() {
           secondItemDescription = "It is capable of handling multiple conversations simultaneously without compromising the quality of the response, while at the same time collecting and analyzing interaction data to continuously improve the service and better adapt to users.";
           thirdItemTitle = "ADAPTABLE.";
           thirdItemDescription = "In case of having access to user-related information, the chatbot is able to personalize the conversation to improve interaction or facilitate a sale.";
+          fourthItemTitle = "BETTER THAN THE COMPETITION.";
+          fourthItemDescription ="Our chatbots are 100% intelligent, without logical chains, conditions, or buttons. Practically like a human employee behind the chat.";
           break;
       case "ES":
           title = "¿Cual es el valor agregado de Elykia?";
@@ -29,6 +33,9 @@ export default function HowItWorksChatBot() {
           secondItemDescription = "Es capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
           thirdItemTitle = "ADAPTABLE.";
           thirdItemDescription = "En caso de contar con acceso a informacion relacionada al usuario, el chatbot es capaz de personalizar la conversacion para mejorar la interaccion o facilitar una venta.";
+          fourthItemTitle = "MEJOR QUE LA COMPETENCIA.";
+          fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Practicamente como un empleado humano tras el chat.";
+          
           break;
       default:
         title = "¿Cual es el valor agregado de Elykia?";
@@ -38,6 +45,9 @@ export default function HowItWorksChatBot() {
         secondItemDescription = "Es capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
         thirdItemTitle = "ADAPTABLE.";
         thirdItemDescription = "En caso de contar con acceso a informacion relacionada al usuario, el chatbot es capaz de personalizar la conversacion para mejorar la interaccion o facilitar una venta.";
+        fourthItemTitle = "MEJOR QUE LA COMPETENCIA.";
+        fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Practicamente como un empleado humano tras el chat.";
+
       }
 return (
   <>
@@ -261,6 +271,60 @@ return (
               }}
             >
               {thirdItemDescription}
+            </p>
+            <li
+              className="feature-item"
+              style={{
+                boxSizing: "border-box",
+                fontSize: "16px",
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                textAlign: "start",
+                flexDirection: "row",
+                marginBottom: "1vh",
+              }}
+            >
+              <img
+                className="feature-icon"
+                alt="Feature Icon"
+                src="https://i.imgur.com/uAx9MVb.png"
+                style={{
+                  boxSizing: "border-box",
+                  border: "0px",
+                  verticalAlign: "middle",
+                  maxWidth: "100%",
+                  display: "inline-block",
+                  marginLeft: "1vw",
+                  width: "5vh",
+                  height: "auto",
+                  marginRight: "1vw",
+                }}
+              />
+              <span
+                style={{
+                  boxSizing: "border-box",
+                  color: "black",
+                  fontSize: "22px",
+                  fontWeight: 700,
+                }}
+              >
+                {fourthItemTitle}
+              </span>
+            </li>
+            <p
+              style={{
+                boxSizing: "border-box",
+                marginTop: "0px",
+                fontWeight: 500,
+                fontSize: "17px",
+                marginLeft: "4.5vw",
+                marginRight: "6vw",
+                textAlign: "start",
+                marginBottom: "3vh",
+              }}
+            >
+              {fourthItemDescription}
             </p>
           </ul>
         </div>
