@@ -42,11 +42,11 @@ export default function HowItWorksChatBot() {
 return (
   <>
     <div
-      className="how-it-works bg-black"
+      className="how-it-works bg-white"
       style={{
         boxSizing: "border-box",
         padding: "3vh 1vh",
-        color: "white",
+        color: "black",
         backgroundColor: "#f0f0f0",
         textAlign: "center",
       }}
@@ -60,18 +60,18 @@ return (
           fontSize: "36px",
           fontWeight: 700,
           marginBottom: "20px",
-          backgroundColor: "black",
-          color: "white",
+          backgroundColor: "white",
+          color: "black",
         }}
       >
         {title}
       </h2>
       <div
-        className="how-it-works bg-black"
+        className="how-it-works bg-white"
         style={{
           boxSizing: "border-box",
           padding: "3vh 1vh",
-          color: "white",
+          color: "black",
           textAlign: "center",
         }}
       >
@@ -82,7 +82,7 @@ return (
             fontSize: "36px",
             fontWeight: 700,
             marginBottom: "20px",
-            color: "white",
+            color: "black",
           }}
         >
           <ul
@@ -116,7 +116,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/yHSIico.png"
+                src="https://i.imgur.com/uAx9MVb.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -132,7 +132,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "white",
+                  color: "black",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}
@@ -170,7 +170,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/yHSIico.png"
+                src="https://i.imgur.com/uAx9MVb.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -186,7 +186,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "white",
+                  color: "black",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}
@@ -224,7 +224,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/yHSIico.png"
+                src="https://i.imgur.com/uAx9MVb.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -240,7 +240,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "white",
+                  color: "black",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}

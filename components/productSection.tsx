@@ -91,16 +91,17 @@ export default function ProductSection(){
                 <div className="elykia-text text-white ml-2">ELYKIA</div>
                 </div>
                 <div className="horizontal-div flex pr-2 align-middle hover:cursor-pointer"
-                onClick={
-                  ()=>{
-                    if(isSessionActive){
-                      endCall();
-                    }
-                    else{
-                      toggleCall();
-                    }
-                  }
-                }>
+                // onClick={
+                //   ()=>{
+                //     if(isSessionActive){
+                //       endCall();
+                //     }
+                //     else{
+                //       toggleCall();
+                //     }
+                //   }
+                // }
+                >
                   {/* boton demo */}
                     {/* <div className="border-white rounded-full pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
                       <div className="mb-[2vh]">
