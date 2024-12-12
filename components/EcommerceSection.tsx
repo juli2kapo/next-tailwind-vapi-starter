@@ -12,6 +12,7 @@ export default function EcommerceSection(){
   let thirdDescription;
   let fourthTitle;
   let fourthDescription;
+  let secondParrafo;
   switch(currentLanguage){
     case "ES":
       firstRow = "¿A quien beneficia el servicio?";
@@ -23,6 +24,7 @@ export default function EcommerceSection(){
       thirdDescription = "Agendar citas, responder preguntas frecuentes, seguimientos y recordatorios.";
       fourthTitle = "Transporte y logística.";
       fourthDescription = "Confirmación de horarios, consulta sobre estado de pedidos.";
+      secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio. Cualquier empresa con un volumen significativo de llamadas o mensajes puede beneficiarse de nuestra tecnología."
       break;
     case "EN":
       firstRow = "Your privacy is important to us";
@@ -34,6 +36,7 @@ export default function EcommerceSection(){
       thirdDescription = "We develop robust chatbots that withstand threats and vulnerabilities without compromising functionality or user experience.";
       fourthTitle = "Data protection";
       fourthDescription = "We implement advanced data encryption measures to keep all information handled by chatbots secure.";
+      secondParrafo = "These are just initial proposals. Our service is not a pre-established solution, and we can adapt it to add or remove features according to the specific needs of your business. Any company with a significant volume of calls or messages can benefit from our technology, beyond the examples mentioned above."
       break;
     default:
       firstRow = "Tu privacidad es importante para nosotros";
@@ -45,7 +48,8 @@ export default function EcommerceSection(){
       thirdDescription = "Desarrollamos chatbots robustos que resisten amenazas y vulnerabilidades sin comprometer la funcionalidad ni la experiencia del usuario.";
       fourthTitle = "Protección de datos";
       fourthDescription = "Implementamos medidas avanzadas de cifrado de datos para mantener segura toda la información manejada por los chatbots.";
-  }
+      secondParrafo = "Estas son solo propuestas iniciales. Nuestro servicio no es una solución preestablecida, y podemos adaptarlo para agregar o eliminar funciones según las necesidades específicas de tu negocio. Cualquier empresa con un volumen significativo de llamadas o mensajes puede beneficiarse de nuestra tecnología, más allá de los ejemplos mencionados anteriormente."
+    }
     return (
         <section className="section services bg-white mt-[6vh]">
   <section id="services" data-w-id="b90accb7-49e1-4682-7912-de74aec760d2"
@@ -96,6 +100,7 @@ export default function EcommerceSection(){
           </div>
           
         </div>
+        <h4>{secondParrafo}</h4>
       </h1>
     </div>
   </section>

@@ -101,7 +101,8 @@ export default function ProductSection(){
                     }
                   }
                 }>
-                    <div className="border-white rounded-full pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
+                  {/* boton demo */}
+                    {/* <div className="border-white rounded-full pb-2 pr-2 pt-4 pl-4 flex flex-row items-center border-2">
                       <div className="mb-[2vh]">
                         {
                             isLoading ? (
@@ -127,6 +128,21 @@ export default function ProductSection(){
                             {demoSubtitle}
                         </p>
                       </div>
+                    </div> */}
+                    <div className="border-white rounded-full pb-2 pr-2 pt-0 pl-4 flex flex-col items-center ">
+                      <h4 className="text-white text-[14px] mr-2 mb-0">
+                          {demoTitle}
+                      </h4>
+                      <h4 className="text-white text-[13px] mr-2 mb-0 mt-0 opacity-80">
+                          {demoSubtitle}
+                      </h4>
+                      <div className="flex flex-row items-center">
+                        {/* <Phone size={20} color="white" className="mr-1" /> */}
+                      <h5 className="text-white text-[12px] mr-2 opacity-65 mt-0 items-center">
+                        +54 9 11 2270-0514
+                      </h5>
+                      </div>
+
                     </div>
                 </div>
             </div>
