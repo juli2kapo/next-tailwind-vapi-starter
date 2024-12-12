@@ -15,7 +15,7 @@ export default function HowItWorksChatBot() {
       case "EN":
           title = "What is Elykia's added value?";
           firstItemTitle = "BETTER THAN A HUMAN.";
-          firstItemDescription = "Thanks to the integration with artificial intelligence our chatbot is capable of responding intelligently and accurately, based on the information provided, 24 hours a day and immediately.";
+          firstItemDescription = "Thanks to the integration with artificial intelligence our chatbot is capable of responding accurately and intelligently (without buttons), based on the information provided, 24 hours a day and immediately.";
           secondItemTitle = "SCALABILITY.";
           secondItemDescription = "It is capable of handling multiple conversations simultaneously without compromising the quality of the response, while at the same time collecting and analyzing interaction data to continuously improve the service and better adapt to users.";
           thirdItemTitle = "ADAPTABLE.";
@@ -24,7 +24,7 @@ export default function HowItWorksChatBot() {
       case "ES":
           title = "¿Cual es el valor agregado de Elykia?";
           firstItemTitle = "MEJOR QUE UN HUMANO.";
-          firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma inteligente y precisa, basandose en la información provista, las 24 horas del día y de forma inmediata.";
+          firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basandose en la información provista, las 24 horas del día y de forma inmediata.";
           secondItemTitle = "ESCALABILIDAD.";
           secondItemDescription = "Es capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
           thirdItemTitle = "ADAPTABLE.";
@@ -33,7 +33,7 @@ export default function HowItWorksChatBot() {
       default:
         title = "¿Cual es el valor agregado de Elykia?";
         firstItemTitle = "MEJOR QUE UN HUMANO.";
-        firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma inteligente y precisa, basandose en la información provista, las 24 horas del día y de forma inmediata.";
+        firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basandose en la información provista, las 24 horas del día y de forma inmediata.";
         secondItemTitle = "ESCALABILIDAD.";
         secondItemDescription = "Es capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
         thirdItemTitle = "ADAPTABLE.";
@@ -42,11 +42,11 @@ export default function HowItWorksChatBot() {
 return (
   <>
     <div
-      className="how-it-works bg-[#f0f0f0]"
+      className="how-it-works bg-black"
       style={{
         boxSizing: "border-box",
         padding: "3vh 1vh",
-        color: "black",
+        color: "white",
         backgroundColor: "#f0f0f0",
         textAlign: "center",
       }}
@@ -60,18 +60,18 @@ return (
           fontSize: "36px",
           fontWeight: 700,
           marginBottom: "20px",
-          backgroundColor: "#f0f0f0",
-          color: "black",
+          backgroundColor: "black",
+          color: "white",
         }}
       >
         {title}
       </h2>
       <div
-        className="how-it-works bg-[#f0f0f0]"
+        className="how-it-works bg-black"
         style={{
           boxSizing: "border-box",
           padding: "3vh 1vh",
-          color: "black",
+          color: "white",
           textAlign: "center",
         }}
       >
@@ -82,7 +82,7 @@ return (
             fontSize: "36px",
             fontWeight: 700,
             marginBottom: "20px",
-            color: "black",
+            color: "white",
           }}
         >
           <ul
@@ -116,7 +116,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/uAx9MVb.png"
+                src="https://i.imgur.com/yHSIico.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -132,7 +132,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "black",
+                  color: "white",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}
@@ -170,7 +170,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/uAx9MVb.png"
+                src="https://i.imgur.com/yHSIico.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -186,7 +186,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "black",
+                  color: "white",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}
@@ -224,7 +224,7 @@ return (
               <img
                 className="feature-icon"
                 alt="Feature Icon"
-                src="https://i.imgur.com/uAx9MVb.png"
+                src="https://i.imgur.com/yHSIico.png"
                 style={{
                   boxSizing: "border-box",
                   border: "0px",
@@ -240,7 +240,7 @@ return (
               <span
                 style={{
                   boxSizing: "border-box",
-                  color: "black",
+                  color: "white",
                   fontSize: "22px",
                   fontWeight: 700,
                 }}

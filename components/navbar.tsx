@@ -15,6 +15,7 @@ export default function Navbar() {
   let inicio;
   let servicios;
   let contactanos;
+  let resell;
   let ia;
   let chat;
   switch (currentLanguage) {
@@ -24,12 +25,14 @@ export default function Navbar() {
       contactanos = "Contactanos";
       ia = "IA Conversacional";
       chat = "Desarrollo de chatbot";
+      resell = "Reventa";
       break;
     case "EN":
       inicio = "Home";
       servicios = "Services";
       contactanos = "Contact Us";
       ia = "Conversational AI";
+      resell = "Resell";
       chat = "Chatbot Development";
       break;
     default:
@@ -38,6 +41,7 @@ export default function Navbar() {
       contactanos = "Contactanos";
       ia = "IA Conversacional";
       chat = "Desarrollo de chatbot";
+      resell = "Reventa";
   }
   return (
     <>
@@ -81,6 +85,7 @@ export default function Navbar() {
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
                   </Link>
+                  
                   <div
                     className="flex flex-col dropdown-container"
                     onMouseEnter={() => setIsDropdownOpen(true)}
@@ -100,6 +105,9 @@ export default function Navbar() {
                       </div>
                     </div>
                   </div>
+                  <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
+                    <div className="nav-text">{resell}</div>
+                  </Link>
                 </nav>
                 <div>
                   <Link href="/contact" className="nav-link contact-button">
@@ -123,7 +131,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <nav
           role="navigation"
-          className={`nav-menu-mobile w-nav-menu ${
+          className={`nav-menu-mobile w-nav-menu fixed top-0 z-40 h-screen ${
             isMobileMenuOpen ? "open" : "closed"
           }`}
           style={{
@@ -132,7 +140,7 @@ export default function Navbar() {
         >
           <Link
             href="#"
-            className="close-nav-menu-link-block w-inline-block nav-link"
+            className="close-nav-menu-link-block w-inline-block nav-link fixed right-3"
             onClick={toggleMobileMenu}
           >
             <div className="close-icon w-embed">

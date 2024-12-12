@@ -32,7 +32,7 @@ export default function Home() {
       firstField = "Asunto";
       secondField = "Nombre";
       thirdField = "Email";
-      fourthField = "¿Cuál es tu presupuesto para este proyecto?";
+      fourthField = "¿Cuál es tu presupuesto para este proyecto? (USD)";
       firstBudgetOption = "Menos de $1,000";
       fifthField = "¿Qué servicio te interesa?";
       firstServiceOption = "IA Conversacional";
@@ -52,7 +52,7 @@ export default function Home() {
       firstField = "Subject";
       secondField = "Name";
       thirdField = "Email";
-      fourthField = "What is your budget for this project?";
+      fourthField = "What is your budget for this project? (USD)";
       firstBudgetOption = "Less than $1,000";
       fifthField = "What service are you interested in?";
       firstServiceOption = "Conversational AI";
@@ -72,7 +72,7 @@ export default function Home() {
       firstField = "Asunto";
       secondField = "Nombre";
       thirdField = "Email";
-      fourthField = "¿Cuál es tu presupuesto para este proyecto?";
+      fourthField = "¿Cuál es tu presupuesto para este proyecto? (USD)";
       firstBudgetOption = "Menos de $1,000";
       fifthField = "¿Qué servicio te interesa?";
       firstServiceOption = "IA Conversacional";
@@ -208,7 +208,7 @@ export default function Home() {
                 >
                   <input
                     id="asunto"
-                    className="text-field w-input"
+                    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
                     name="Asunto"
                     type="text"
                     maxLength={256}
@@ -258,7 +258,7 @@ export default function Home() {
                   >
                     <input
                       id="nombre"
-                      className="text-field w-input"
+                      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
                       name="nombre"
                       type="text"
                       maxLength={256}
@@ -295,7 +295,7 @@ export default function Home() {
                     />
                     <input
                       id="email"
-                      className="text-field w-input"
+                      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
                       name="email"
                       type="email"
                       maxLength={256}
@@ -347,7 +347,7 @@ export default function Home() {
                   </div>
                   <select
                     id="budget"
-                    className="text-field dropdown w-select"
+                    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
                     name="Budget"
                     required
                     style={{
@@ -444,7 +444,7 @@ export default function Home() {
                   </div>
                   <select
                     id="service"
-                    className="text-field dropdown w-select"
+                    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
                     name="Service"
                     required
                     style={{
@@ -532,7 +532,7 @@ export default function Home() {
                   </div>
                   <input
                     id="rubro"
-                    className="text-field w-input"
+                    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
                     name="rubro"
                     type="text"
                     maxLength={256}
@@ -569,7 +569,7 @@ export default function Home() {
                   />
                   <textarea
                     id="description"
-                    className="text-field large w-input"
+                    className="text-field large w-input border-r-0 border-t-0 border-l-0 rounded-none"
                     name="How-can-we-help"
                     maxLength={5000}
                     required
