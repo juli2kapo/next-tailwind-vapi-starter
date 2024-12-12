@@ -113,23 +113,12 @@ export default function Home() {
             transformStyle: "preserve-3d",
           }}
         >
-          <div
-            id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f6578-3a1b43b1"
-            className="w-layout-layout contact-grid wf-layout-layout"
-            style={{
-              boxSizing: "border-box",
-              display: "grid",
-              padding: "20px",
-              gridAutoColumns: "1fr",
-              justifyContent: "center",
-              gap: "40px",
-              gridTemplateRows: "auto",
-              gridTemplateColumns: "1fr 1.5fr",
-            }}
-          >
+      <div
+        id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f6578-3a1b43b1"
+        className="w-layout-layout contact-grid wf-layout-layout box-border md:grid p-5 auto-cols-fr justify-center gap-10 md:grid-rows-auto md:grid-cols-[1fr_1.5fr] flex flex-col"
+      >
             <div
               id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f6579-3a1b43b1"
-              className="w-layout-cell"
               style={{
                 boxSizing: "border-box",
                 flexDirection: "column",
