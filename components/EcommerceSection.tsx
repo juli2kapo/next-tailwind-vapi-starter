@@ -1,7 +1,7 @@
 "use client"
 import { useLanguage } from "./componentProvider";
 
-export default function WhoBenefits(){
+export default function EcommerceSection(){
   const {currentLanguage} = useLanguage();
   let firstRow;
   let firstTitle;
@@ -25,31 +25,29 @@ export default function WhoBenefits(){
       fourthDescription = "Confirmación de horarios, consulta sobre estado de pedidos.";
       break;
     case "EN":
-      firstRow = "Who does the service benefit?";
-      firstTitle = "Restaurants.";
-      firstDescription = "Manage reservations, delivery and inquiries.";
-      secondTitle = "Hotels and tourism.";
-      secondDescription = "Reservations, inquiries about services and events or provide information about destinations.";
-      thirdTitle = "Clinics and sanatoriums.";
-      thirdDescription = "Schedule appointments, answer frequently asked questions, follow-ups and reminders.";
-      fourthTitle = "Transport and logistics.";
-      fourthDescription = "Confirmation of schedules, consultation on order status.";
-      
+      firstRow = "Your privacy is important to us";
+      firstTitle = "Security as a fundamental pillar";
+      firstDescription = "At Elykia, data protection and user interactions are a central priority.";
+      secondTitle = "Compliance with requirements";
+      secondDescription = "We align with your security and compliance needs, ensuring that our chatbots meet your needs.";
+      thirdTitle = "Defense against vulnerabilities";
+      thirdDescription = "We develop robust chatbots that withstand threats and vulnerabilities without compromising functionality or user experience.";
+      fourthTitle = "Data protection";
+      fourthDescription = "We implement advanced data encryption measures to keep all information handled by chatbots secure.";
       break;
     default:
-      firstRow = "¿A quien beneficia el servicio?";
-      firstTitle = "Restaurantes.";
-      firstDescription = "Gestiona reservas, delivery y consultas.";
-      secondTitle = "Hoteles y turismo.";
-      secondDescription = "Reservas, consultas sobre servicios y eventos o brindar información sobre destinos.";
-      thirdTitle = "Clínicas y sanatorios.";
-      thirdDescription = "Agendar citas, responder preguntas frecuentes, seguimientos y recordatorios.";
-      fourthTitle = "Transporte y logística.";
-      fourthDescription = "Confirmación de horarios, consulta sobre estado de pedidos.";
-      
+      firstRow = "Tu privacidad es importante para nosotros";
+      firstTitle = "Seguridad como pilar fundamental";
+      firstDescription = "En Elykia, la protección de datos y las interacciones de los usuarios es una prioridad central.";
+      secondTitle = "Cumplimiento de requisitos";
+      secondDescription = "Nos alineamos con tus necesidades de seguridad y cumplimiento, garantizando que nuestros chatbots estén a la altura de tus necesidades.";
+      thirdTitle = "Defensa contra vulnerabilidades";
+      thirdDescription = "Desarrollamos chatbots robustos que resisten amenazas y vulnerabilidades sin comprometer la funcionalidad ni la experiencia del usuario.";
+      fourthTitle = "Protección de datos";
+      fourthDescription = "Implementamos medidas avanzadas de cifrado de datos para mantener segura toda la información manejada por los chatbots.";
   }
     return (
-        <section className="section services bg-white mt-[4vh]">
+        <section className="section services bg-white mt-[6vh]">
   <section id="services" data-w-id="b90accb7-49e1-4682-7912-de74aec760d2"
     className="w-layout-blockcontainer container w-container transform opacity-100 translate-y-0 scale-100 rotate-0 skew-0 preserve-3d transition">
     <div id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1" 

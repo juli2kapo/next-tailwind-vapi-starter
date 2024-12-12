@@ -3,6 +3,7 @@ import ServicesSection from "@/components/servicesSection";
 import HeroSection from "@/components/heroSection";
 // import Navbar from "./components/navbar";
 import PrivacySection from "@/components/privacySection";
+import ReferralSection from "@/components/referralSection";
 
 
 
