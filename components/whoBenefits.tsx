@@ -63,12 +63,12 @@ export default function WhoBenefits(){
           <span className="green text-black text-[30px] ">{firstRow}</span><br />
         </div>  
         
-        <div className="grid grid-cols-2 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
           
           <div className="flex flex-col items-center text-center justify-center">
             <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="star" 
                  className="mb-[1vh]" width="45" />
-            <span className="color-white text-black text-[23px] leading-[2.4vh]">
+            <span className="color-white text-black text-[23px] md:leading-[2.4vh] leading-9">
               {firstTitle}
               <h4>{firstDescription}</h4>
             </span>
@@ -77,7 +77,7 @@ export default function WhoBenefits(){
           <div className="flex flex-col items-center text-center justify-center">
             <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="star" 
                  className="mb-[1vh]" width="45" />
-            <span className="color-white text-black text-[23px] leading-[2.4vh]">
+            <span className="color-white text-black text-[23px] md:leading-[2.4vh] leading-9">
               {secondTitle}
               <h4>{secondDescription}</h4>
             </span>
@@ -86,7 +86,7 @@ export default function WhoBenefits(){
           <div className="flex flex-col items-center text-center justify-center">
             <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="star" 
                  className="mb-[1vh]" width="45" />
-            <span className="color-white text-black text-[23px] leading-[2.4vh]">
+            <span className="color-white text-black text-[23px] md:leading-[2.4vh] leading-9">
               {thirdTitle}
               <h4>{thirdDescription}</h4>
             </span>
@@ -95,7 +95,7 @@ export default function WhoBenefits(){
           <div className="flex flex-col items-center text-center justify-center">
             <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="star" 
                  className="mb-[1vh]" width="45" />
-            <span className="color-white text-black text-[23px] leading-[2.4vh]">
+            <span className="color-white text-black text-[23px] md:leading-[2.4vh] leading-9">
               {fourthTitle}
               <h4>{fourthDescription}</h4>
             </span>

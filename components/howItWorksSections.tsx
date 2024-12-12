@@ -69,20 +69,7 @@ export default function HowItWorks() {
         >
           {firstRow}
         </h2>
-        <ul
-          style={{
-            boxSizing: "border-box",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            placeItems: "start",
-            gap: "20px",
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            marginTop: "6vh",
-            marginBottom: "10vh",
-            justifyContent: "start",
-          }}
-        >
+        <ul className="box-border px-2 grid grid-cols-1 md:grid-cols-2 mt-6vh mb-10vh gap-5 place-items-start justify-start">
           <li
             className="feature-item"
             style={{

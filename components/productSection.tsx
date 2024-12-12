@@ -87,8 +87,8 @@ export default function ProductSection(){
             <div className="horizontal-div flex items-center justify-between">
                 <div className="horizontal-div flex">
                     
-                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
-                <div className="elykia-text text-white ml-2">ELYKIA</div>
+                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="md:w-[40px] w-[25px] " width="40" />
+                <div className=" text-white ml-2 md:text-[14px] text-[11px]">ELYKIA</div>
                 </div>
                 <div className="horizontal-div flex pr-2 align-middle 
                 
@@ -133,15 +133,15 @@ export default function ProductSection(){
                       </div>
                     </div> */}
                     <div className="border-white rounded-full pb-2 pr-2 pt-0 pl-4 flex flex-col items-center ">
-                      <h4 className="text-white text-[14px] mr-2 mb-0">
+                      <h4 className="text-white md:text-[14px] text-[11px] mr-2 mb-0">
                           {demoTitle}
                       </h4>
-                      <h4 className="text-white text-[13px] mr-2 mb-0 mt-0 opacity-80">
+                      <h4 className="text-white md:text-[13px] text-[10px] mr-2 mb-0 mt-0 opacity-80">
                           {demoSubtitle}
                       </h4>
                       <div className="flex flex-row items-center">
                         {/* <Phone size={20} color="white" className="mr-1" /> */}
-                      <h5 className="text-white text-[12px] mr-2 opacity-65 mt-0 items-center">
+                      <h5 className="text-white md:text-[12px] text-[9px] mr-2 opacity-65 mt-0 items-center">
                         +54 9 11 2270-0514
                       </h5>
                       </div>
@@ -162,7 +162,7 @@ export default function ProductSection(){
         }}
       >
         <h1
-          className="product-heading text-[6vh]"
+          className="product-heading md:text-[6vh] text-[20px]"
           style={{
             boxSizing: "border-box",
             margin: "0.67em 0px",
@@ -178,7 +178,7 @@ export default function ProductSection(){
           {firstRow}
         </h1>
         <h2
-          className="product-subheading text-[3vh]"
+          className="product-subheading md:text-[3vh] text-base "
           style={{
             boxSizing: "border-box",
             marginTop: "20px",

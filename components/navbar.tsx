@@ -1,17 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LanguageSelector from "./languageDropdown";
 import { useLanguage } from "./componentProvider";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { currentLanguage } = useLanguage();
-
+  const currentPath = usePathname();
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  },[currentPath])
   let inicio;
   let servicios;
   let contactanos;

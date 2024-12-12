@@ -59,7 +59,7 @@ export default function Footer() {
             Elykia
           </div>
         </div>
-        <div className="footer-right-div">
+        <div className="footer-right-div md:ml-0 ml-12">
           <div className="footer-right-div-top-div horizontal-div columnifmedia">
             <div>
               <div className="horizontal-div flex items-center space-x-2">
