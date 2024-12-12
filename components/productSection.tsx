@@ -90,7 +90,9 @@ export default function ProductSection(){
                 <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
                 <div className="elykia-text text-white ml-2">ELYKIA</div>
                 </div>
-                <div className="horizontal-div flex pr-2 align-middle hover:cursor-pointer"
+                <div className="horizontal-div flex pr-2 align-middle 
+                
+                "
                 // onClick={
                 //   ()=>{
                 //     if(isSessionActive){
