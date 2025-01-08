@@ -14,14 +14,14 @@ export default function HeroSection() {
     case "ES":
       firstRow = "Lo que antes era imposible de automatizar";
       secondRow =
-        "hoy es posible gracias a nuestros modelos de voz y texto impulsados";
+        "hoy es posible gracias a nuestros empleados virtuales con inteligencia artificial";
       thirdRow = "con inteligencia artificial.";
       button1 = "IA Conversacional";
       button2 = "Desarrollo de chatbot";
       break;
     case "EN":
       firstRow = "What was once impossible to automate";
-      secondRow = "is now possible thanks to our voice and text models powered";
+      secondRow = "is now possible thanks to our virtual employees powered with AI";
       thirdRow = "by Artificial Intelligence.";
       button1 = "Conversational AI";
       button2 = "Chatbot Development";
@@ -29,7 +29,7 @@ export default function HeroSection() {
     default:
       firstRow = "Lo que antes era imposible de automatizar";
       secondRow =
-        "hoy es posible gracias a nuestros modelos de voz y texto impulsados";
+        "hoy es posible gracias a nuestros empleados virtuales con inteligencia artificial";
       thirdRow = "con inteligencia artificial.";
   }
 
