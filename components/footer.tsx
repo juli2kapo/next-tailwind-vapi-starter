@@ -32,8 +32,8 @@ export default function Footer() {
           }}
         >
           <img
-            src="Images/icon.jpg"
-            srcSet="Images/icon.jpg"
+            src="Images/icon.png"
+            srcSet="Images/icon.png"
             style={{
               boxSizing: "border-box",
               height: "60px",
