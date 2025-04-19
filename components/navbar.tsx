@@ -70,7 +70,7 @@ export default function Navbar() {
                 aria-label="home"
               >
                 <img
-                  src="https://i.imgur.com/ycaBSDa.jpeg"
+                  src="Images/icon.png"
                   loading="lazy"
                   alt="Elykia Logo"
                   className="nav-image"
