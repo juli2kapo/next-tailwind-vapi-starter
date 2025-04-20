@@ -4,11 +4,11 @@ import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
-export async function Header() {
+export function Header() {
     const pathName = usePathname();
     console.log("pathName", pathName);
     return (
-    <header className="sticky top-0 z-40 w-full border-b border-zinc-800 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/60 pr-6">
+    <header className="sticky top-0 z-40 w-full border-zinc-800 bg-black/80 backdrop-blur supports-[backdrop-filter]:bg-black/60 pr-6">
       <div className="container flex h-20 items-center">
           <div className="mr-4 flex">
             <Link

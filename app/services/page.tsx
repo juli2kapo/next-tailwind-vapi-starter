@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, Bot, Brain, CheckCircle, Code, Cpu, BarChart3, La
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function ServicesPage() {
   return (
@@ -20,11 +21,11 @@ export default function ServicesPage() {
 
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+              {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
                 <Sparkles className="mr-1 h-3.5 w-3.5" />
                 <span>Our Services</span>
-              </div>
-              <div className="space-y-2">
+              </div> */}
+              <div className="space-y-2 pt-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                   AI-Powered Solutions
                 </h1>
@@ -87,11 +88,11 @@ export default function ServicesPage() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-2xl blur-xl"></div>
                 <img
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/Images/test.png"
                   alt="AI Expertise"
-                  className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full"
-                  width={500}
-                  height={500}
+                  className="relative mx-auto rounded-xl object-cover sm:w-full h-auto"
+                  
+                  
                 />
               </div>
             </div>
@@ -107,7 +108,7 @@ export default function ServicesPage() {
                 <span>Pre-established Solutions</span>
               </div> */}
               <div className="space-y-2">
-                <h2 className="text-3xl pt-6 font-bold tracking-tighter sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+                <h2 className="text-3xl pt-16 font-bold tracking-tighter sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
                   Ready-to-Implement AI Solutions
                 </h2>
                 <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -123,10 +124,10 @@ export default function ServicesPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+                {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
                   <Bot className="mr-1 h-3.5 w-3.5" />
                   <span>Chatbot Development</span>
-                </div>
+                </div> */}
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                     Intelligent Conversational Agents
@@ -194,10 +195,10 @@ export default function ServicesPage() {
                 />
               </div>
               <div className="flex flex-col justify-center space-y-4">
-                <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+                {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
                   <Brain className="mr-1 h-3.5 w-3.5" />
                   <span>Conversational AI</span>
-                </div>
+                </div> */}
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                     Advanced AI Interactions
@@ -249,10 +250,10 @@ export default function ServicesPage() {
 
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+              {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
                 <Code className="mr-1 h-3.5 w-3.5" />
                 <span>Custom AI Solutions</span>
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                   Tailored AI Development
@@ -322,10 +323,10 @@ export default function ServicesPage() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+              {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
                 <Sparkles className="mr-1 h-3.5 w-3.5" />
                 <span>Our Process</span>
-              </div>
+              </div> */}
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
                   AI Development Methodology
@@ -416,82 +417,7 @@ export default function ServicesPage() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-6 md:py-12 bg-black border-t border-zinc-800">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <Sparkles className="h-6 w-6 text-purple-500" />
-                <span className="font-bold text-xl">AI Solutions Pro</span>
-              </Link>
-              <p className="text-sm text-zinc-400">Transforming business through intelligent AI solutions since 2015</p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Services</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="/services/chatbot-development" className="hover:text-purple-400 transition-colors">
-                    Chatbot Development
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/conversational-ai" className="hover:text-purple-400 transition-colors">
-                    Conversational AI
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/custom-development" className="hover:text-purple-400 transition-colors">
-                    Custom AI Solutions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Company</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="/about" className="hover:text-purple-400 transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-purple-400 transition-colors">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers" className="hover:text-purple-400 transition-colors">
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Connect</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    Twitter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    GitHub
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-zinc-800 pt-8 text-center text-sm text-zinc-400">
-            © {new Date().getFullYear()} AI Solutions Pro. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

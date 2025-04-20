@@ -3,6 +3,8 @@ import { ArrowRight, Sparkles, Bot, Zap, Brain, Cpu, BarChart3, Code, Layers } f
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Header } from "@/components/header"
+import  SpaceBackground from "@/components/space"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
@@ -14,7 +16,16 @@ export default function Home() {
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
           {/* Abstract background elements */}
-          <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden"
+                            // style={{
+                            //   backgroundImage: "url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fHww')",
+                            //   backgroundSize: "cover", 
+                            //   backgroundPosition: "center",
+                            //   backgroundRepeat: "no-repeat",
+                            //   padding: "2rem" // Optional padding to ensure content isn't too close to edges
+                            // }}
+          >
+            <SpaceBackground />
             
             {/* <div className="relative top-4 left-4 text-white">
               <img src="/Images/LogoConTextoBlanco.png" alt="Logo" className="h-16 w-auto" />
@@ -33,7 +44,8 @@ export default function Home() {
                   <Sparkles className="mr-1 h-3.5 w-3.5" />
                   <span>AI-Powered Innovation</span>
                 </div> */}
-                <div className="space-y-2">
+                <div className="space-y-2"
+                >
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                     Artificial Intelligence Solutions for the Future
                   </h1>
@@ -71,7 +83,9 @@ export default function Home() {
         </section>
 
         {/* AI Expertise Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900" style={{ 
+            backgroundImage: 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 24, 27) 15%, rgb(24, 24, 27) 100%)'
+          }}>
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               {/* <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
@@ -79,7 +93,7 @@ export default function Home() {
                 <span>AI Expertise</span>
               </div> */}
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+                <h2 className="text-3xl pt-12 font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
                   Artificial Intelligence at Our Core
                 </h2>
                 <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -337,82 +351,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-6 md:py-12 bg-black border-t border-zinc-800">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
-                <Sparkles className="h-6 w-6 text-purple-500" />
-                <span className="font-bold text-xl">AI Solutions Pro</span>
-              </Link>
-              <p className="text-sm text-zinc-400">Transforming business through intelligent AI solutions since 2015</p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Services</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="/services/chatbot-development" className="hover:text-purple-400 transition-colors">
-                    Chatbot Development
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/conversational-ai" className="hover:text-purple-400 transition-colors">
-                    Conversational AI
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/custom-development" className="hover:text-purple-400 transition-colors">
-                    Custom AI Solutions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Company</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="/about" className="hover:text-purple-400 transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-purple-400 transition-colors">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers" className="hover:text-purple-400 transition-colors">
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium text-white">Connect</h4>
-              <ul className="space-y-2 text-sm text-zinc-400">
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    Twitter
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-purple-400 transition-colors">
-                    GitHub
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-zinc-800 pt-8 text-center text-sm text-zinc-400">
-            © {new Date().getFullYear()} AI Solutions Pro. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
