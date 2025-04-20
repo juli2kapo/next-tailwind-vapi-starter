@@ -1,698 +1,399 @@
-"use client"
-import { useLanguage } from "@/components/componentProvider";
-import React from "react";
- 
+import Link from "next/link"
+import { Sparkles, Mail, Phone, MapPin, Send, Brain } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Header } from "@/components/header"
 
-export default function Home() {
-  const {currentLanguage} = useLanguage();
-  let firstTitle;
-  let secondTitle;
-  let firstParrafo;
-  let secondParrafo;
-  let firstField;
-  let secondField;
-  let thirdField;
-  let fourthField;
-  let firstBudgetOption;
-  let fifthField;
-  let firstServiceOption;
-  let secondServiceOption;
-  let thirdServiceOption;
-  let fourthServiceOption;
-  let sixthField;
-  let seventhField;
-  let button;
-  let sixthFieldPlaceholder;
-  switch(currentLanguage){
-    case "ES":
-      firstTitle = "EL FUTURO ";
-      secondTitle = "ESPERA";
-      firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
-      secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
-      firstField = "Asunto";
-      secondField = "Nombre";
-      thirdField = "Email";
-      fourthField = "¿Cuál es tu presupuesto para este proyecto? (USD)";
-      firstBudgetOption = "Menos de $1,000";
-      fifthField = "¿Qué servicio te interesa?";
-      firstServiceOption = "IA Conversacional";
-      secondServiceOption = "Desarrollo de chatbots";
-      thirdServiceOption = "Consultoría empresarial";
-      fourthServiceOption = "Consulta general";
-      sixthField = "¿A qué se dedica tu empresa?";
-      sixthFieldPlaceholder = "Rubro";
-      seventhField = "¿Cómo podemos ayudarte?";
-      button = "Enviar";
-      break;
-    case "EN":
-      firstTitle = "THE FUTURE ";
-      secondTitle = "AWAITS";
-      firstParrafo = "Artificial intelligence is a powerful tool to take your company to the next level. By integrating AI, you will optimize operations, reduce costs and increase productivity. It is not just an investment in technology, but in the future of your business. Seize this opportunity to lead your industry and maximize results.";
-      secondParrafo = "If you have questions or just want to find out about what we do, don't hesitate to contact us. At Elykia we are at your disposal to guide and help you";
-      firstField = "Subject";
-      secondField = "Name";
-      thirdField = "Email";
-      fourthField = "What is your budget for this project? (USD)";
-      firstBudgetOption = "Less than $1,000";
-      fifthField = "What service are you interested in?";
-      firstServiceOption = "Conversational AI";
-      secondServiceOption = "Chatbot Development";
-      thirdServiceOption = "Business consulting";
-      fourthServiceOption = "General inquiry";
-      sixthField = "What does your company do?";
-      sixthFieldPlaceholder = "Industry";
-      seventhField = "How can we help you?";
-      button = "Send";
-      break;
-    default:
-      firstTitle = "EL FUTURO ";
-      secondTitle = "ESPERA";
-      firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
-      secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
-      firstField = "Asunto";
-      secondField = "Nombre";
-      thirdField = "Email";
-      fourthField = "¿Cuál es tu presupuesto para este proyecto? (USD)";
-      firstBudgetOption = "Menos de $1,000";
-      fifthField = "¿Qué servicio te interesa?";
-      firstServiceOption = "IA Conversacional";
-      secondServiceOption = "Desarrollo de chatbots";
-      thirdServiceOption = "Consultoría empresarial";
-      fourthServiceOption = "Consulta general";
-      sixthField = "¿A qué se dedica tu empresa?";
-      sixthFieldPlaceholder = "Rubro";
-      seventhField = "¿Cómo podemos ayudarte?";
-      button = "Enviar";
-  }
-
+export default function ContactPage() {
   return (
-    <>
-      <div className="bg-black">
-      <div
-        className="w-layout-blockcontainer container w-container bg-black"
-        style={{
-          boxSizing: "border-box",
-          display: "block",
-          padding: "20px",
-          width: "100%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          backgroundColor: "black",
-        }}
-      >
-        <div
-          className="hero-box"
-          style={{
-            boxSizing: "border-box",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            display: "flex",
-            opacity: 1,
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
-          }}
-        >
-      <div
-        id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f6578-3a1b43b1"
-        className="w-layout-layout contact-grid wf-layout-layout box-border md:grid p-5 auto-cols-fr justify-center gap-10 md:grid-rows-auto md:grid-cols-[1fr_1.5fr] flex flex-col"
-      >
-            <div
-              id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f6579-3a1b43b1"
-              style={{
-                boxSizing: "border-box",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                display: "flex",
-              }}
-            >
-              <h2
-                className="h2"
-                style={{
-                  boxSizing: "border-box",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                  marginTop: "0px",
-                  marginBottom: "0px",
-                  fontSize: "50px",
-                  lineHeight: "50px",
-                  color: "white",
-                }}
-              >
-                {firstTitle}
-                <span
-                  style={{
-                    boxSizing: "border-box",
-                    color: "rgb(124, 108, 119)",
-                  }}
-                >
-                  {secondTitle}
-                </span>
-              </h2>
-              <div
-                className="text margin-top"
-                style={{
-                  boxSizing: "border-box",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  lineHeight: "18px",
-                  marginTop: "49px",
-                  color: "white",
-                }}
-              >
-                {firstParrafo}
-                <br style={{ boxSizing: "border-box" }} />
-                <br style={{ boxSizing: "border-box" }} />
-                {secondParrafo}
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-black to-zinc-900 text-white">
+      {/* Header/Navigation */}
+      <Header />
+
+      <main className="flex-1">
+        {/* Contact Hero */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="container px-4 md:px-6 relative z-10">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+                <Brain className="mr-1 h-3.5 w-3.5" />
+                <span>Get in Touch</span>
               </div>
-            </div>
-            <div
-              id="w-node-_9da753b1-3363-aa89-00d9-9b6bd11f657e-3a1b43b1"
-              className="w-layout-cell button-cell-top-right"
-              style={{
-                boxSizing: "border-box",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                display: "flex",
-                alignItems: "flex-end",
-              }}
-            >
-              <div
-                id="Contact-Us-Form-Block"
-                className="contact-form w-form"
-                style={{
-                  boxSizing: "border-box",
-                  margin: "0px 0px 15px",
-                  width: "100%",
-                }}
-              >
-                <form
-                  id="email-form"
-                  name="email-form"
-                  action="https://formspree.io/f/mgveedbr"
-                  aria-label="Email Form"
-                  method="POST"
-                  style={{ boxSizing: "border-box" }}
-                >
-                  <input
-                    id="asunto"
-                    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
-                    name="Asunto"
-                    type="text"
-                    maxLength={256}
-                    required
-                    placeholder={firstField}
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      padding: "8px 12px",
-                      verticalAlign: "middle",
-                      width: "100%",
-                      height: "38px",
-                      marginBottom: "10px",
-                      fontSize: "14px",
-                      lineHeight: 1.42857,
-                      display: "block",
-                      borderWidth: "1px 1px 2px",
-                      borderColor: "rgb(0, 0, 0)",
-                      borderImage: "initial",
-                      backgroundColor: "rgba(255, 255, 255, 0)",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
-                      fontFamily: "Montserrat, sans-serif",
-                      border: "1px solid rgb(204, 204, 204)",
-                      borderRadius: "10px",
-                      borderTopStyle: "solid",
-                      borderRightStyle: "solid",
-                      borderBottomStyle: "solid",
-                      borderLeftStyle: "solid",
-                      color: "white",
-                      fontWeight: "bold",
-                    }}
-                  />
-                  <div
-                    className="horizontal-div"
-                    style={{
-                      boxSizing: "border-box",
-                      gap: "8px",
-                      flexDirection: "row",
-                      justifyContent: "flex-start",
-                      alignItems: "center",
-                      marginBottom: "-2px",
-                      fontWeight: 500,
-                      display: "flex",
-                    }}
-                  >
-                    <input
-                      id="nombre"
-                      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
-                      name="nombre"
-                      type="text"
-                      maxLength={256}
-                      required
-                      placeholder={secondField}
-                      style={{
-                        boxSizing: "border-box",
-                        font: "inherit",
-                        margin: "0px",
-                        padding: "8px 12px",
-                        verticalAlign: "middle",
-                        width: "100%",
-                        height: "38px",
-                        marginBottom: "10px",
-                        fontSize: "14px",
-                        lineHeight: 1.42857,
-                        display: "block",
-                        borderWidth: "1px 1px 2px",
-                        borderColor: "rgb(0, 0, 0)",
-                        borderImage: "initial",
-                        backgroundColor: "rgba(255, 255, 255, 0)",
-                        paddingTop: "5px",
-                        paddingBottom: "5px",
-                        fontFamily: "Montserrat, sans-serif",
-                        border: "1px solid rgb(204, 204, 204)",
-                        borderRadius: "10px",
-                        borderTopStyle: "solid",
-                        borderRightStyle: "solid",
-                        borderBottomStyle: "solid",
-                        borderLeftStyle: "solid",
-                        color: "white",
-                        fontWeight: "bold",
-                      }}
-                    />
-                    <input
-                      id="email"
-                      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
-                      name="email"
-                      type="email"
-                      maxLength={256}
-                      required
-                      placeholder={thirdField}
-                      style={{
-                        boxSizing: "border-box",
-                        font: "inherit",
-                        margin: "0px",
-                        padding: "8px 12px",
-                        verticalAlign: "middle",
-                        width: "100%",
-                        height: "38px",
-                        marginBottom: "10px",
-                        fontSize: "14px",
-                        lineHeight: 1.42857,
-                        display: "block",
-                        borderWidth: "1px 1px 2px",
-                        borderColor: "rgb(0, 0, 0)",
-                        borderImage: "initial",
-                        backgroundColor: "rgba(255, 255, 255, 0)",
-                        paddingTop: "5px",
-                        paddingBottom: "5px",
-                        fontFamily: "Montserrat, sans-serif",
-                        border: "1px solid rgb(204, 204, 204)",
-                        borderRadius: "10px",
-                        borderTopStyle: "solid",
-                        borderRightStyle: "solid",
-                        borderBottomStyle: "solid",
-                        borderLeftStyle: "solid",
-                        color: "white",
-                        fontWeight: "bold",
-                      }}
-                    />
-                  </div>
-                  <div
-                    className="contact-form-text"
-                    style={{
-                      boxSizing: "border-box",
-                      color: "rgb(155, 155, 155)",
-                      paddingLeft: "8px",
-                    }}
-                  >
-                    <strong
-                      style={{ boxSizing: "border-box", fontWeight: "bold" }}
-                    >
-                      {fourthField}
-                    </strong>
-                  </div>
-                  <select
-                    id="budget"
-                    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
-                    name="Budget"
-                    required
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      textTransform: "none",
-                      padding: "8px 12px",
-                      verticalAlign: "middle",
-                      height: "38px",
-                      marginBottom: "10px",
-                      fontSize: "14px",
-                      lineHeight: 1.42857,
-                      borderWidth: "1px 1px 2px",
-                      borderColor: "rgb(0, 0, 0)",
-                      borderImage: "initial",
-                      backgroundColor: "rgba(255, 255, 255, 0)",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
-                      fontFamily: "Montserrat, sans-serif",
-                      justifyContent: "space-around",
-                      width: "100%",
-                      display: "flex",
-                      paddingLeft: "8px",
-                      border: "1px solid rgb(204, 204, 204)",
-                      borderRadius: "10px",
-                      borderTopStyle: "solid",
-                      borderRightStyle: "solid",
-                      borderBottomStyle: "solid",
-                      borderLeftStyle: "solid",
-                      color: "white",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    <option
-                      value="Menos de $1,000"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {firstBudgetOption}
-                    </option>
-                    <option
-                      value="$1,000 - $5,000"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {"$1,000 - $5,000"}
-                    </option>
-                    <option
-                      value="$5,000 - $10,000"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {"$5,000 - $10,000"}
-                    </option>
-                    <option
-                      value="$10,000 - $20,000"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {"$10,000 - $20,000"}
-                    </option>
-                    <option
-                      value="$20,000 +"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {"$20,000 +"}
-                    </option>
-                  </select>
-                  <div
-                    className="contact-form-text"
-                    style={{
-                      boxSizing: "border-box",
-                      color: "rgb(155, 155, 155)",
-                      paddingLeft: "8px",
-                    }}
-                  >
-                    <strong
-                      style={{ boxSizing: "border-box", fontWeight: "bold" }}
-                    >
-                      {fifthField}
-                    </strong>
-                  </div>
-                  <select
-                    id="service"
-                    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
-                    name="Service"
-                    required
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      textTransform: "none",
-                      padding: "8px 12px",
-                      verticalAlign: "middle",
-                      height: "38px",
-                      marginBottom: "10px",
-                      fontSize: "14px",
-                      lineHeight: 1.42857,
-                      borderWidth: "1px 1px 2px",
-                      borderColor: "rgb(0, 0, 0)",
-                      borderImage: "initial",
-                      backgroundColor: "rgba(255, 255, 255, 0)",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
-                      fontFamily: "Montserrat, sans-serif",
-                      justifyContent: "space-around",
-                      width: "100%",
-                      display: "flex",
-                      paddingLeft: "8px",
-                      border: "1px solid rgb(204, 204, 204)",
-                      borderRadius: "10px",
-                      borderTopStyle: "solid",
-                      borderRightStyle: "solid",
-                      borderBottomStyle: "solid",
-                      borderLeftStyle: "solid",
-                      color: "white",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    <option
-                      value="conversationai"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {firstServiceOption}
-                    </option>
-                    <option
-                      value="chatbot"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {secondServiceOption}
-                    </option>
-                    <option
-                      value="consult"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {thirdServiceOption}
-                    </option>
-                    <option
-                      value="chat"
-                      style={{
-                        boxSizing: "border-box",
-                        backgroundColor: "black",
-                      }}
-                    >
-                      {fourthServiceOption}
-                    </option>
-                  </select>
-                  <div
-                    className="contact-form-text"
-                    style={{
-                      boxSizing: "border-box",
-                      color: "rgb(155, 155, 155)",
-                      paddingLeft: "8px",
-                    }}
-                  >
-                    <strong
-                      style={{ boxSizing: "border-box", fontWeight: "bold" }}
-                    >
-                      {sixthField}
-                    </strong>
-                  </div>
-                  <input
-                    id="rubro"
-                    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
-                    name="rubro"
-                    type="text"
-                    maxLength={256}
-                    required
-                    placeholder={sixthFieldPlaceholder}
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      padding: "8px 12px",
-                      verticalAlign: "middle",
-                      width: "100%",
-                      height: "38px",
-                      fontSize: "14px",
-                      lineHeight: 1.42857,
-                      display: "block",
-                      borderWidth: "1px 1px 2px",
-                      borderColor: "rgb(0, 0, 0)",
-                      borderImage: "initial",
-                      backgroundColor: "rgba(255, 255, 255, 0)",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
-                      fontFamily: "Montserrat, sans-serif",
-                      border: "1px solid rgb(204, 204, 204)",
-                      borderRadius: "10px",
-                      borderTopStyle: "solid",
-                      borderRightStyle: "solid",
-                      borderBottomStyle: "solid",
-                      borderLeftStyle: "solid",
-                      color: "white",
-                      fontWeight: "bold",
-                      marginBottom: "3vh",
-                    }}
-                  />
-                  <textarea
-                    id="description"
-                    className="text-field large w-input border-r-0 border-t-0 border-l-0 rounded-none"
-                    name="How-can-we-help"
-                    maxLength={5000}
-                    required
-                    placeholder={seventhField}
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      overflow: "auto",
-                      padding: "8px 12px",
-                      verticalAlign: "middle",
-                      marginBottom: "10px",
-                      fontSize: "14px",
-                      lineHeight: 1.42857,
-                      display: "block",
-                      borderWidth: "1px 1px 2px",
-                      borderColor: "rgb(0, 0, 0)",
-                      borderImage: "initial",
-                      backgroundColor: "rgba(255, 255, 255, 0)",
-                      paddingTop: "5px",
-                      paddingBottom: "5px",
-                      fontFamily: "Montserrat, sans-serif",
-                      height: "auto",
-                      width: "100%",
-                      minHeight: "70px",
-                      maxHeight: "200px",
-                      marginTop: "10px",
-                      border: "1px solid rgb(204, 204, 204)",
-                      borderRadius: "10px",
-                      borderTopStyle: "solid",
-                      borderRightStyle: "solid",
-                      borderBottomStyle: "solid",
-                      borderLeftStyle: "solid",
-                      color: "white",
-                      fontWeight: "bold",
-                    }}
-                  />
-                  <button
-                    id="submit"
-                    className="form-button w-button contact-button"
-                    type="submit"
-                    value="Enviar"
-                    style={{
-                      boxSizing: "border-box",
-                      font: "inherit",
-                      margin: "0px",
-                      overflow: "visible",
-                      textTransform: "none",
-                      appearance: "button",
-                      textDecoration: "none",
-                      lineHeight: "inherit",
-                      cursor: "pointer",
-                      display: "inline-block",
-                      border: "1px solid white",
-                      fontWeight: "bold",
-                      borderRadius: "10px",
-                      padding: "20px",
-                      transition: "background-color 0.2s",
-                      width: "100%",
-                      marginTop: "20px",
-                      fontSize: "16px",
-                      backgroundColor: "white",
-                      color: "black",
-                      marginLeft: "0px",
-                    }}
-                  >
-                    {button}
-                  </button>
-                </form>
-                <div
-                  className="w-form-done"
-                  aria-label="Email Form success"
-                  role="region"
-                  tabIndex={-1}
-                  style={{
-                    boxSizing: "border-box",
-                    padding: "20px",
-                    textAlign: "center",
-                    backgroundColor: "rgb(221, 221, 221)",
-                    display: "none",
-                  }}
-                >
-                  <div style={{ boxSizing: "border-box" }}>
-                    {"Thank you! Your submission has been received!"}
-                  </div>
-                </div>
-                <div
-                  className="w-form-fail"
-                  aria-label="Email Form failure"
-                  role="region"
-                  tabIndex={-1}
-                  style={{
-                    boxSizing: "border-box",
-                    padding: "10px",
-                    backgroundColor: "rgb(255, 222, 222)",
-                    marginTop: "10px",
-                    display: "none",
-                  }}
-                >
-                  <div style={{ boxSizing: "border-box" }}>
-                    {"Oops! Something went wrong while submitting the form."}
-                  </div>
-                </div>
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                  Connect With Our AI Experts
+                </h1>
+                <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Reach out to discuss how our AI expertise can transform your business and solve your most complex
+                  challenges
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-html {
-  box-sizing: border-box;
-  text-size-adjust: 100%;
-  font-family: sans-serif;
-  height: 100%;
-}
+        </section>
 
-body {
-  box-sizing: border-box;
-  margin: 0px;
-  background-color: rgb(255, 255, 255);
-  min-height: 100%;
-  color: rgb(0, 0, 0);
-  font-family: Montserrat, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  isolation: isolate;
-}
-`,
-        }}
-      />
-    </>
-  );
+        {/* Contact Form and Info */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+              {/* Contact Form */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-2xl blur-xl"></div>
+                <Card className="relative bg-zinc-900/60 border-zinc-800 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white">Send us a message</CardTitle>
+                    <CardDescription className="text-zinc-400">
+                      Fill out the form below and we'll get back to you as soon as possible.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <form className="space-y-4">
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div className="space-y-2">
+                          <label
+                            htmlFor="first-name"
+                            className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                          >
+                            First name
+                          </label>
+                          <Input
+                            id="first-name"
+                            placeholder="John"
+                            className="bg-zinc-950/50 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500/20"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label
+                            htmlFor="last-name"
+                            className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                          >
+                            Last name
+                          </label>
+                          <Input
+                            id="last-name"
+                            placeholder="Doe"
+                            className="bg-zinc-950/50 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500/20"
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="email"
+                          className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          Email
+                        </label>
+                        <Input
+                          id="email"
+                          placeholder="john.doe@example.com"
+                          type="email"
+                          className="bg-zinc-950/50 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500/20"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="company"
+                          className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          Company
+                        </label>
+                        <Input
+                          id="company"
+                          placeholder="Your company"
+                          className="bg-zinc-950/50 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500/20"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="project-type"
+                          className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          What AI solution are you interested in?
+                        </label>
+                        <select
+                          id="project-type"
+                          className="flex h-10 w-full rounded-md border border-zinc-800 bg-zinc-950/50 px-3 py-2 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500"
+                        >
+                          <option value="" className="bg-zinc-900">
+                            Select an option
+                          </option>
+                          <option value="chatbot" className="bg-zinc-900">
+                            Chatbot Development
+                          </option>
+                          <option value="conversational-ai" className="bg-zinc-900">
+                            Conversational AI
+                          </option>
+                          <option value="custom-ai" className="bg-zinc-900">
+                            Custom AI Solution
+                          </option>
+                          <option value="machine-learning" className="bg-zinc-900">
+                            Machine Learning
+                          </option>
+                          <option value="computer-vision" className="bg-zinc-900">
+                            Computer Vision
+                          </option>
+                          <option value="other" className="bg-zinc-900">
+                            Other
+                          </option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label
+                          htmlFor="message"
+                          className="text-sm font-medium leading-none text-zinc-300 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                          Message
+                        </label>
+                        <Textarea
+                          id="message"
+                          placeholder="Tell us about your project or inquiry"
+                          className="min-h-[150px] bg-zinc-950/50 border-zinc-800 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:ring-purple-500/20"
+                        />
+                      </div>
+                      <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                        Send Message
+                        <Send className="ml-2 h-4 w-4" />
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Contact Information */}
+              <div className="flex flex-col space-y-6">
+                <Card className="bg-zinc-900/60 border-zinc-800 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white">Contact Information</CardTitle>
+                    <CardDescription className="text-zinc-400">
+                      Here's how you can reach our AI team directly
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400">
+                        <Mail className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-white">Email</h3>
+                        <p className="text-sm text-zinc-400">ai@aisolutionspro.com</p>
+                        <p className="text-sm text-zinc-400">support@aisolutionspro.com</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400">
+                        <Phone className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-white">Phone</h3>
+                        <p className="text-sm text-zinc-400">+1 (555) 123-4567</p>
+                        <p className="text-sm text-zinc-400">Mon-Fri, 9am-5pm EST</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 text-purple-400">
+                        <MapPin className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-medium text-white">Office</h3>
+                        <p className="text-sm text-zinc-400">
+                          123 AI Innovation Center, Suite 400
+                          <br />
+                          San Francisco, CA 94103
+                          <br />
+                          United States
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-zinc-900/60 border-zinc-800 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white">Schedule a Demo</CardTitle>
+                    <CardDescription className="text-zinc-400">
+                      See our AI solutions in action with a personalized demo
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-zinc-400 mb-4">
+                      Our team of AI experts can walk you through a customized demonstration of our solutions tailored
+                      to your specific business needs.
+                    </p>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Book a Demo Session</Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-zinc-900/60 border-zinc-800 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white">Office Hours</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2 text-zinc-400">
+                      <div className="flex justify-between">
+                        <span>Monday - Friday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Saturday</span>
+                        <span>Closed</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-zinc-900">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
+              <div className="inline-flex items-center rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-sm text-purple-400">
+                <MapPin className="mr-1 h-3.5 w-3.5" />
+                <span>Our Location</span>
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                  Visit Our AI Innovation Center
+                </h2>
+                <p className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  We're located in the heart of San Francisco's technology district
+                </p>
+              </div>
+            </div>
+            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950/50 shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-xl blur-sm"></div>
+              <img
+                src="/placeholder.svg?height=400&width=800"
+                alt="Office Location Map"
+                className="relative aspect-video w-full object-cover"
+                width={800}
+                height={400}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
+          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10 bg-cover bg-center"></div>
+          <div className="container px-4 md:px-6 relative z-10">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                  Ready to Transform Your Business with AI?
+                </h2>
+                <p className="max-w-[900px] text-zinc-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Let's start a conversation about how our AI expertise can help you achieve your goals
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
+                  Schedule a Consultation
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-purple-700 text-purple-400 hover:bg-purple-950/50"
+                >
+                  View Case Studies
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full py-6 md:py-12 bg-black border-t border-zinc-800">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="space-y-4">
+              <Link href="/" className="flex items-center space-x-2">
+                <Sparkles className="h-6 w-6 text-purple-500" />
+                <span className="font-bold text-xl">AI Solutions Pro</span>
+              </Link>
+              <p className="text-sm text-zinc-400">Transforming business through intelligent AI solutions since 2015</p>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium text-white">Services</h4>
+              <ul className="space-y-2 text-sm text-zinc-400">
+                <li>
+                  <Link href="/services/chatbot-development" className="hover:text-purple-400 transition-colors">
+                    Chatbot Development
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/conversational-ai" className="hover:text-purple-400 transition-colors">
+                    Conversational AI
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/custom-development" className="hover:text-purple-400 transition-colors">
+                    Custom AI Solutions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium text-white">Company</h4>
+              <ul className="space-y-2 text-sm text-zinc-400">
+                <li>
+                  <Link href="/about" className="hover:text-purple-400 transition-colors">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-purple-400 transition-colors">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers" className="hover:text-purple-400 transition-colors">
+                    Careers
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium text-white">Connect</h4>
+              <ul className="space-y-2 text-sm text-zinc-400">
+                <li>
+                  <Link href="#" className="hover:text-purple-400 transition-colors">
+                    Twitter
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-purple-400 transition-colors">
+                    LinkedIn
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-purple-400 transition-colors">
+                    GitHub
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-zinc-800 pt-8 text-center text-sm text-zinc-400">
+            © {new Date().getFullYear()} AI Solutions Pro. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
 }

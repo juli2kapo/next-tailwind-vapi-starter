@@ -1,35 +1,26 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
-import LanguageProvider from "@/components/componentProvider";
-import NoSsr from "@/components/noSsr";
+import type React from "react"
+import { ThemeProvider } from "@/components/theme-provider"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Elykia",
-  description: "Elykia",
-};
+export const metadata = {
+  title: "IT Solutions Pro - Custom IT Development Solutions",
+  description:
+    "Professional IT development company specializing in custom solutions with pre-established services including chatbot development and conversational AI.",
+    generator: 'v0.dev'
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <link rel="icon" href="/icon.png" />
-      <body className={inter.className}>
-        <LanguageProvider>
-          <NoSsr >
-          <Navbar />
-            {children}
-          <Footer />
-          </NoSsr>
-        </LanguageProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
