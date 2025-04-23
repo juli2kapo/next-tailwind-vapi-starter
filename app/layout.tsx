@@ -25,7 +25,7 @@ export default function RootLayout({
         <LanguageProvider>
           <NoSsr >
           <Navbar />
-          <main className="z-40">
+          <main>
             {children}
           </main>
           <Footer />

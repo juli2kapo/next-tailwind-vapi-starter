@@ -29,14 +29,16 @@ export default function ServicesSection() {
   return (
     <section className="section">
       <div id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2cf-f9ae67f1">
-        <div className="flex flex-col p-8 lg:px-[15vw] bg-gray-100">
+        <div className="flex flex-col p-8 py-4 lg:px-[15vw] bg-gradient-to-b from-gray-400 to-gray-100 to-[5%]">
           <div
             id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1"
             className="w-layout-cell flex justify-center items-center m-auto text-center self-center"
           >
-            <div className="mb-[1vh] m-auto">
+            <div className=" m-auto">
               <h1 className="h1 mainh1 text-black">
-                <span className="text-[#9B5DE5] text-[32px] leading-[3]">
+                {/* <span className="text-[#9B5DE5] text-[32px] leading-[3]"> */}
+                <span className="text-blue-400 text-[32px] leading-[3]">
+
                   {firstRow}
                 </span>
               </h1>
