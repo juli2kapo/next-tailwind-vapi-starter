@@ -12,25 +12,25 @@ export default function HeroSection() {
   let button2;
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Lo que antes era imposible de automatizar";
-      secondRow =
-        "hoy es posible gracias a nuestros empleados virtuales";
-      thirdRow = "con inteligencia artificial.";
-      button1 = "IA Conversacional";
-      button2 = "Desarrollo de chatbot";
+      firstRow = "Soluciones de desarrollo IT potenciadas";
+      secondRow = "por inteligencia artificial para transformar";
+      thirdRow = "tu negocio en la era digital.";
+      button1 = "Nuestros Servicios";
+      button2 = "Productos IA";
       break;
     case "EN":
-      firstRow = "What was once impossible to automate";
-      secondRow = "is now possible thanks to our virtual employees powered";
-      thirdRow = "by Artificial Intelligence.";
-      button1 = "Conversational AI";
-      button2 = "Chatbot Development";
+      firstRow = "IT development solutions powered";
+      secondRow = "by artificial intelligence to transform";
+      thirdRow = "your business in the digital era.";
+      button1 = "Our Services";
+      button2 = "AI Products";
       break;
     default:
-      firstRow = "Lo que antes era imposible de automatizar";
-      secondRow =
-        "hoy es posible gracias a nuestros empleados virtuales";
-      thirdRow = "con inteligencia artificial.";
+      firstRow = "Soluciones de desarrollo IT potenciadas";
+      secondRow = "por inteligencia artificial para transformar";
+      thirdRow = "tu negocio en la era digital.";
+      button1 = "Nuestros Servicios";
+      button2 = "Productos IA";
   }
 
   return (
