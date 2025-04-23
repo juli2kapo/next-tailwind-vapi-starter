@@ -14,7 +14,7 @@ export default function HeroSection() {
     case "ES":
       firstRow = "Soluciones de IA personalizadas";
       secondRow =
-        "diseñadas a la medida para transformar";
+        "Diseñadas a la medida para transformar";
       thirdRow = "tu negocio y maximizar resultados.";
       button1 = "Consultaría de IA";
       button2 = "Nuestros servicios";
@@ -43,7 +43,7 @@ export default function HeroSection() {
           boxSizing: "border-box",
           display: "block",
           backgroundColor: "rgb(0, 0, 0)",
-          paddingBottom: "6vh",
+          paddingBottom: "12vh",
         }}
       >
         <div
@@ -135,6 +135,7 @@ export default function HeroSection() {
                     justifyContent: "center",
                     alignItems: "center",
                     textAlign: "center",
+                    marginBottom: "4vh"
                   }}
                 >
                   <h1
@@ -152,8 +153,9 @@ export default function HeroSection() {
                     }}
                   >
                     <span
-                      // className="green text-4xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 "
-                      className="green text-4xl text-[#9B5DE5]"
+                      // className="green text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 "
+                      className="green text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-[30%] to-purple-400 "
+                      // className="green text-4xl text-[#9B5DE5]"
                       style={{
                         boxSizing: "border-box",
                         // color: "rgb(124, 108, 119)",
@@ -168,16 +170,18 @@ export default function HeroSection() {
                     <br style={{ boxSizing: "border-box" }} />
                     <p 
                     // className="mb-0 mt-4 text-lg bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400" 
-                    className="text-[rgba(154,93,229,0.7)] mb-0 mt-4 text-lg"
+                    // className="text-[rgba(154,93,229,0.7)] mb-0 mt-4 text-lg"
+                    className="text-gray-400 mb-0 mt-4 text-base normal-case"
                     >
                       {secondRow}
                     </p>
                     {/* <br style={{ boxSizing: "border-box" }} /> */}
                     <p 
                     // className="bg-clip-text text-lg text-transparent bg-gradient-to-r from-white to-purple-400"
-                    className="text-[rgba(154,93,229,0.7)] text-lg"
+                    // className="text-[rgba(154,93,229,0.7)] text-lg"
+                    className="text-gray-400 text-base normal-case"
                     style={{
-                      "lineHeight": "3vh"
+                      "lineHeight": "2vh"
                     }}>
                       {thirdRow}
                     </p>
@@ -203,7 +207,7 @@ export default function HeroSection() {
                     </Link>
                     <Link
                       className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href="contact"
+                      href="services"
                     >
                       {button2}
                     </Link>

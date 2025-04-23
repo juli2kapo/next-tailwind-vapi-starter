@@ -63,16 +63,18 @@ export default function Navbar() {
       {
         currentPath === "/" ? 
         (
-          <SpaceBackground className="h-[55vh] z-0" gradientOpacity={true} />
+          <SpaceBackground className="h-[68vh] z-0" gradientOpacity={true} />
         ) 
         : 
         (
           <SpaceBackground className="h-[20vh] z-0" amount={200} gradientOpacity={true} gradientStartY={0.1} gradientMultiplier={1} />
         )
       }
-      
-      <div className="pointer-events-none absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
-      <div className="pointer-events-none absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
+      <div className="relative overflow-x-hidden"> 
+
+        <div className="pointer-events-none absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
+        <div className="pointer-events-none absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
+      </div>
       <div
         data-animation="over-left"
         className="navbar w-nav"
