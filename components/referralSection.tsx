@@ -54,7 +54,7 @@ export default function ReferralSection() {
           >
             <div className="mb-[1vh] m-auto">
               <h1 className="h1 mainh1 text-black">
-                <span className="text-[#7C6C77] text-[32px] leading-[3]">
+                <span className="text-[#9B5DE5] text-[32px] leading-[3]">
                   {firstRow}
                 </span>
               </h1>
@@ -67,7 +67,7 @@ export default function ReferralSection() {
           </div>
           <div className="mx-auto my-[4vh] flex lg:flex-row flex-col justify-between">
             <div className="flex-col pr-4 flex-1 text-center">
-              <p className= " text-[#7C6C77] text-[32px] leading-[3] uppercase font-bold">
+              <p className= " text-[#9B5DE5] text-[32px] leading-[3] uppercase font-bold">
                 {secondRow}
               </p>
               <p className="text-black text-[17px] leading-4 lg:leading-8 uppercase font-bold">
@@ -79,7 +79,7 @@ export default function ReferralSection() {
               </p>
             </div>
             <div className="flex-col flex-1 text-center">
-              <span className="text-[#7C6C77] text-[32px] leading-[3] uppercase font-bold">
+              <span className="text-[#9B5DE5] text-[32px] leading-[3] uppercase font-bold">
                 {thirdRow}
               </span>
               <p className="text-black text-[17px] leading-4 lg:leading-8 uppercase font-bold">

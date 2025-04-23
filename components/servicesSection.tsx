@@ -9,21 +9,21 @@ export default function ServicesSection() {
   let button;
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Consultoría empresarial";
+      firstRow = "Desarrollo personalizado con IA";
       parrafo =
-        "En Elykia entendemos que cada empresa tiene objetivos, retos y panoramas únicos. Por eso, aprovechamos nuestro profundo conocimiento del sector e ideas de vanguardia para diseñar una estrategia IA coherente y práctica, cuidadosamente adaptada según las necesidades específicas de su empresa.";
+        "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
       button = "Contactanos";
       break;
     case "EN":
-      firstRow = "Business consulting";
+      firstRow = "Custom AI Development";
       parrafo =
-        "At Elykia we understand that each company has unique objectives, challenges, and landscapes. That's why we leverage our deep sector knowledge and cutting-edge ideas to design a coherent and practical AI strategy, carefully tailored to the specific needs of your company.";
+        "At Elykia, we specialize in creating tailored solutions that address your business's specific challenges. We combine our technical expertise with deep industry knowledge to develop and implement technologies that seamlessly integrate into your existing systems. Additionally, we leverage our understanding of Artificial Intelligence to bring you previously impossible automations, generating tangible results and competitive advantages for your company.";
       button = "Contact us";
       break;
     default:
-      firstRow = "Consultoría empresarial";
+      firstRow = "Desarrollo personalizado de IA";
       parrafo =
-        "En Elykia entendemos que cada empresa tiene objetivos, retos y panoramas únicos. Por eso, aprovechamos nuestro profundo conocimiento del sector e ideas de vanguardia para diseñar una estrategia IA coherente y práctica, cuidadosamente adaptada según las necesidades específicas de su empresa.";
+        "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
       button = "Contactanos";
   }
   return (
@@ -36,7 +36,7 @@ export default function ServicesSection() {
           >
             <div className="mb-[1vh] m-auto">
               <h1 className="h1 mainh1 text-black">
-                <span className="text-[#7C6C77] text-[32px] leading-[3]">
+                <span className="text-[#9B5DE5] text-[32px] leading-[3]">
                   {firstRow}
                 </span>
               </h1>
@@ -47,14 +47,14 @@ export default function ServicesSection() {
               </p>
             </div>
           </div>
-          <div className="mx-auto my-[4vh]">
+          {/* <div className="mx-auto my-[4vh]">
             <Link
               href="/contact"
               className="nav-link contact-button !bg-black !text-white !px-[7vw] !py-4"
             >
               {button}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

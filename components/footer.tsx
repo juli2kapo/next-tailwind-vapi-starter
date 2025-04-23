@@ -88,7 +88,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-text text-white">{address}</div>
               </div>
-              <div className="footer-text text-[#7C6C77] mt-1">
+              <div className="footer-text text-[#9B5DE5] mt-1">
                 Buenos Aires, Argentina
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function Footer() {
               </div>
               <a
                 href="mailto:info@elykia.com.ar?subject=Asunto"
-                className="footer-text text-[#7C6C77]"
+                className="footer-text text-[#9B5DE5]"
               >
                 info@elykia.com.ar
               </a>
