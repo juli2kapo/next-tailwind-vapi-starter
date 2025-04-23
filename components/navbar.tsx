@@ -4,6 +4,7 @@ import LanguageSelector from "./languageDropdown";
 import { useLanguage } from "./componentProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SpaceBackground from "./spaceBackground";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,12 +55,17 @@ export default function Navbar() {
         href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
         media="all"
       />
+
+      <SpaceBackground />
+      <div className="absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
       <div
         data-animation="over-left"
         className="navbar w-nav"
         role="banner"
         id="particles-js"
       >
+        
         <div className="hero-container w-container">
           <div className="nav-box" style={{ opacity: 1 }}>
             <div className="nav-core-component">

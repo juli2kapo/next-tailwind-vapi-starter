@@ -1,7 +1,6 @@
-"use client";
-import Link from "next/link";
-import React from "react";
+"use client"
 import { useLanguage } from "./componentProvider";
+import Link from "next/link";
 
 export default function HeroSection() {
   const { currentLanguage } = useLanguage();
@@ -10,27 +9,30 @@ export default function HeroSection() {
   let thirdRow;
   let button1;
   let button2;
+  let button3;
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Lo que antes era imposible de automatizar";
+      firstRow = "Soluciones de IA personalizadas";
       secondRow =
-        "hoy es posible gracias a nuestros empleados virtuales";
-      thirdRow = "con inteligencia artificial.";
-      button1 = "IA Conversacional";
-      button2 = "Desarrollo de chatbot";
+        "diseñadas a la medida para transformar";
+      thirdRow = "tu negocio y maximizar resultados.";
+      button1 = "Consultaría de IA";
+      button2 = "Nuestros servicios";
       break;
     case "EN":
-      firstRow = "What was once impossible to automate";
-      secondRow = "is now possible thanks to our virtual employees powered";
-      thirdRow = "by Artificial Intelligence.";
-      button1 = "Conversational AI";
-      button2 = "Chatbot Development";
+      firstRow = "Custom AI solutions";
+      secondRow = "tailored to transform your business";
+      thirdRow = "and maximize results.";
+      button1 = "Custom Development";
+      button2 = "AI Consulting";
       break;
     default:
-      firstRow = "Lo que antes era imposible de automatizar";
+      firstRow = "Soluciones de IA personalizadas";
       secondRow =
-        "hoy es posible gracias a nuestros empleados virtuales";
-      thirdRow = "con inteligencia artificial.";
+        "diseñadas a la medida para transformar";
+      thirdRow = "tu negocio y maximizar resultados.";
+      button1 = "Consultaría de IA";
+      button2 = "Nuestros servicios";
   }
 
   return (
@@ -69,7 +71,7 @@ export default function HeroSection() {
               transformStyle: "preserve-3d",
             }}
           >
-            <div
+            {/* <div
               className="horizontal-div logo-sectionstart"
               style={{
                 boxSizing: "border-box",
@@ -105,7 +107,7 @@ export default function HeroSection() {
               >
                 ELYKIA
               </div>
-            </div>
+            </div> */}
             <div
               id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2cf-f9ae67f1"
               style={{
@@ -146,23 +148,28 @@ export default function HeroSection() {
                       fontWeight: 700,
                       lineHeight: "55px",
                       fontSize: "22px",
-                      color: "white",
+                      // color: "white",
                     }}
                   >
                     <span
-                      className="green"
+                      className="green bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400"
                       style={{
                         boxSizing: "border-box",
-                        color: "rgb(124, 108, 119)",
+                        // color: "rgb(124, 108, 119)",
+                        // color: "#9B5DE5",
                         fontSize: "22px",
                       }}
                     >
                       {firstRow}
                     </span>
                     <br style={{ boxSizing: "border-box" }} />
-                    {secondRow}
-                    <br style={{ boxSizing: "border-box" }} />
-                    {thirdRow}
+                    <p className="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                      {secondRow}
+                    </p>
+                    {/* <br style={{ boxSizing: "border-box" }} /> */}
+                    <p className="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                      {thirdRow}
+                    </p>
                   </h1>
                 </div>
                 <div
@@ -179,16 +186,22 @@ export default function HeroSection() {
 
                     <Link
                       className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href={"conversationai"}
+                      href={"contact"}
                     >
                       {button1}
                     </Link>
                     <Link
                       className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href="chatbotgeneration"
+                      href="contact"
                     >
                       {button2}
                     </Link>
+                    {/* <Link
+                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
+                      href="contact"
+                    >
+                      {button3}
+                    </Link> */}
                   </div>
                 </div>
               </div>
