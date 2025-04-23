@@ -82,13 +82,13 @@ export default function ProductSection(){
     return (
 
         <>
-        <div className="bg-black">
+        <div className="bg-black z-20">
         <div className="container bg-black pb-0">
             <div className="horizontal-div flex items-center justify-between">
                 <div className="horizontal-div flex">
                     
-                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="md:w-[40px] w-[25px] " width="40" />
-                <div className=" text-white ml-2 md:text-[14px] text-[11px]">ELYKIA</div>
+                {/* <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="md:w-[40px] w-[25px] " width="40" /> */}
+                {/* <div className=" text-white ml-2 md:text-[14px] text-[11px]">ELYKIA</div> */}
                 </div>
                 <div className="horizontal-div flex pr-2 align-middle 
                 

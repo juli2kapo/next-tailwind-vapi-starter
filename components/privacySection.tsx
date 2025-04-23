@@ -54,7 +54,7 @@ export default function PrivacySection(){
          className="w-layout-cell flex justify-center items-center mx-auto text-center">
       <h1 className="h1 mainh1 text-2xl text-black text-center">
         <div className="mx-[10vw] text-center">
-          <span className="green text-white text-[25px]">{firstRow}</span><br />
+          <span className="green text-white text-[25px] pt-7">{firstRow}</span><br />
         </div>  
         
         <div className="grid grid-cols-2 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">

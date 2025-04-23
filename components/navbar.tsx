@@ -11,6 +11,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { currentLanguage } = useLanguage();
   const currentPath = usePathname();
+  console.log("currentPath", currentPath);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -23,6 +24,7 @@ export default function Navbar() {
   let resell;
   let ia;
   let chat;
+  let desarrollo;
   switch (currentLanguage) {
     case "ES":
       inicio = "Inicio";
@@ -30,6 +32,7 @@ export default function Navbar() {
       contactanos = "Contactanos";
       ia = "IA Conversacional";
       chat = "Desarrollo de chatbot";
+      desarrollo = "Desarrollo a medida";
       resell = "Reventa";
       break;
     case "EN":
@@ -39,6 +42,7 @@ export default function Navbar() {
       ia = "Conversational AI";
       resell = "Resell";
       chat = "Chatbot Development";
+      desarrollo = "Custom Development";
       break;
     default:
       inicio = "Inicio";
@@ -47,6 +51,7 @@ export default function Navbar() {
       ia = "IA Conversacional";
       chat = "Desarrollo de chatbot";
       resell = "Reventa";
+      desarrollo = "Desarrollo a medida";
   }
   return (
     <>
@@ -55,10 +60,19 @@ export default function Navbar() {
         href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
         media="all"
       />
-
-      <SpaceBackground />
-      <div className="absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
-      <div className="absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
+      {
+        currentPath === "/" ? 
+        (
+          <SpaceBackground className="h-[55vh] z-0" gradientOpacity={true} />
+        ) 
+        : 
+        (
+          <SpaceBackground className="h-[20vh] z-0" amount={200} gradientOpacity={true} gradientStartY={0.1} gradientMultiplier={1} />
+        )
+      }
+      
+      <div className="pointer-events-none absolute -top-[30%] -left-[10%] w-[50%] h-[70%] bg-purple-900/20 rounded-full blur-3xl"></div>
+      <div className="pointer-events-none absolute top-[20%] -right-[10%] w-[40%] h-[60%] bg-blue-900/20 rounded-full blur-3xl"></div>
       <div
         data-animation="over-left"
         className="navbar w-nav"
@@ -66,7 +80,7 @@ export default function Navbar() {
         id="particles-js"
       >
         
-        <div className="hero-container w-container">
+        <div className="hero-container w-container pt-2">
           <div className="nav-box" style={{ opacity: 1 }}>
             <div className="nav-core-component">
               <Link
@@ -95,13 +109,22 @@ export default function Navbar() {
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
                   </Link>
-                  
+                  <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
+                    <div className="nav-text">{resell}</div>
+                  </Link>
                   <div
                     className="flex flex-col dropdown-container"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
-                    <div className="nav-link dropdown-trigger">
+                    <div 
+                    // className="nav-link dropdown-trigger"
+                    className={
+                      `nav-link dropdown-trigger w-inline-block ${
+                        isDropdownOpen ? "bg-white text-black" : ""
+                      }`
+                    }
+                    >
                       <div className="nav-text">{servicios}</div>
                     </div>
                     <div
@@ -112,14 +135,13 @@ export default function Navbar() {
                       <div className="inner-dropdown">
                         <Link href="/conversationai">{ia}</Link>
                         <Link href="/chatbotgeneration">{chat}</Link>
+                        <Link href="/customdevelopment">{desarrollo}</Link>
                       </div>
                     </div>
                   </div>
-                  <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
-                    <div className="nav-text">{resell}</div>
-                  </Link>
+                  
                 </nav>
-                <div>
+                <div className="z-10">
                   <Link href="/contact" className="nav-link contact-button">
                     {contactanos}
                   </Link>

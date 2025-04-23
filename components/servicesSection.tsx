@@ -42,7 +42,7 @@ export default function ServicesSection() {
               </h1>
             </div>
             <div>
-              <p className=" uppercase font-bold text-black text-[17px] leading-4 lg:leading-8">
+              <p className=" font-medium text-black text-[17px] leading-4 lg:leading-8 pb-8">
                 {parrafo}
               </p>
             </div>

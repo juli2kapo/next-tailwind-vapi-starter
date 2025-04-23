@@ -144,7 +144,8 @@ export default function Home() {
                 <span
                   style={{
                     boxSizing: "border-box",
-                    color: "rgb(124, 108, 119)",
+                    // color: "rgb(124, 108, 119)",
+                    color: "#9a5de5"
                   }}
                 >
                   {secondTitle}

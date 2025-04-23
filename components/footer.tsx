@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useLanguage } from "./componentProvider";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const { currentLanguage } = useLanguage();
+  const pathName = usePathname();
   let address;
   let contact;
   switch (currentLanguage) {
@@ -22,7 +24,7 @@ export default function Footer() {
   return (
     <section className="footer">
       <div className="w-layout-blockcontainer hero-container footer w-container">
-        <div
+      <div
           className="footer-left-div"
           style={{
             boxSizing: "border-box",
@@ -31,6 +33,9 @@ export default function Footer() {
             display: "flex",
           }}
         >
+        {
+          pathName !== "/contact" && (
+            <>
           <img
             src="Images/icon.png"
             srcSet="Images/icon.png"
@@ -58,6 +63,9 @@ export default function Footer() {
           >
             Elykia
           </div>
+          </>
+          )
+        }
         </div>
         <div className="footer-right-div md:ml-0 ml-12">
           <div className="footer-right-div-top-div horizontal-div columnifmedia">
@@ -88,7 +96,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-text text-white">{address}</div>
               </div>
-              <div className="footer-text text-[#9B5DE5] mt-1">
+              <div className="footer-text text-[#9a5de5d3] mt-1">
                 Buenos Aires, Argentina
               </div>
             </div>
@@ -114,7 +122,7 @@ export default function Footer() {
               </div>
               <a
                 href="mailto:info@elykia.com.ar?subject=Asunto"
-                className="footer-text text-[#9B5DE5]"
+                className="footer-text text-[#9a5de5d3]"
               >
                 info@elykia.com.ar
               </a>

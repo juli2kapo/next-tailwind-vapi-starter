@@ -47,7 +47,7 @@ export default function HeroSection() {
         }}
       >
         <div
-          className="w-layout-blockcontainer hero mobile w-container"
+          className="w-layout-blockcontainer hero mobile w-container pt-16"
           style={{
             boxSizing: "border-box",
             display: "block",
@@ -146,28 +146,39 @@ export default function HeroSection() {
                       textTransform: "uppercase",
                       marginTop: "0px",
                       fontWeight: 700,
-                      lineHeight: "55px",
+                      // lineHeight: "55px",
                       fontSize: "22px",
                       // color: "white",
                     }}
                   >
                     <span
-                      className="green bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400"
+                      // className="green text-4xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 "
+                      className="green text-4xl text-[#9B5DE5]"
                       style={{
                         boxSizing: "border-box",
                         // color: "rgb(124, 108, 119)",
                         // color: "#9B5DE5",
-                        fontSize: "22px",
+                        fontFamily: "Montserrat, sans-serif",
+                        color: "white",
+                        // fontSize: "22px",
                       }}
                     >
                       {firstRow}
                     </span>
                     <br style={{ boxSizing: "border-box" }} />
-                    <p className="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                    <p 
+                    // className="mb-0 mt-4 text-lg bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400" 
+                    className="text-[rgba(154,93,229,0.7)] mb-0 mt-4 text-lg"
+                    >
                       {secondRow}
                     </p>
                     {/* <br style={{ boxSizing: "border-box" }} /> */}
-                    <p className="bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
+                    <p 
+                    // className="bg-clip-text text-lg text-transparent bg-gradient-to-r from-white to-purple-400"
+                    className="text-[rgba(154,93,229,0.7)] text-lg"
+                    style={{
+                      "lineHeight": "3vh"
+                    }}>
                       {thirdRow}
                     </p>
                   </h1>

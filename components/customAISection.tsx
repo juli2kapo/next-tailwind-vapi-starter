@@ -53,7 +53,7 @@ export default function CustomAISection() {
         >
           <div className="mb-[1vh] m-auto">
             <h1 className="h1 mainh1 text-black">
-              <span className="text-[#9B5DE5] text-[32px] leading-[3]">
+              <span className="text-black text-[32px] leading-[3]">
                 {title}
               </span>
             </h1>
