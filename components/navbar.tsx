@@ -63,11 +63,11 @@ export default function Navbar() {
       {
         currentPath === "/" ? 
         (
-          <SpaceBackground className="h-[73vh] z-0" gradientOpacity={true} />
+          <SpaceBackground className="h-[65vh] z-0" gradientOpacity={true} />
         ) 
         : 
         (
-          <SpaceBackground className="h-[20vh] z-0" amount={200} gradientOpacity={true} gradientStartY={0.1} gradientMultiplier={1} />
+          <SpaceBackground className="h-[20vh] z-0" amount={225} gradientOpacity={true} gradientStartY={0.1} gradientMultiplier={1} />
         )
       }
       <div className="relative overflow-x-hidden"> 
@@ -116,10 +116,11 @@ export default function Navbar() {
                   <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
                     <div className="nav-text">{resell}</div>
                   </Link>
-                  <div
+                  <Link
                     className="flex flex-col dropdown-container"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
+                    href="/services"
                   >
                     <div 
                     // className="nav-link dropdown-trigger"
@@ -142,7 +143,7 @@ export default function Navbar() {
                         <Link href="/customdevelopment">{desarrollo}</Link>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   
                 </nav>
                 <div className="z-10">

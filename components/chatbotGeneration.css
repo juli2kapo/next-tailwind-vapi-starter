@@ -281,7 +281,7 @@
 }
 
  .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
-	 background: white;
+	 background: black;
 	 content: '';
 	 height: 5px;
 	 right: 40px;
