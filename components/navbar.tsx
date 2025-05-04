@@ -63,7 +63,7 @@ export default function Navbar() {
       {
         currentPath === "/" ? 
         (
-          <SpaceBackground className="h-[68vh] z-0" gradientOpacity={true} />
+          <SpaceBackground className="h-[73vh] z-0" gradientOpacity={true} />
         ) 
         : 
         (
