@@ -18,7 +18,7 @@ export default function CustomDevCTA() {
     case "ES":
       title = "¿Listo para Transformar tu Negocio?";
       description = "Discutamos cómo nuestras soluciones de IA personalizadas pueden elevar tus operaciones e impulsar el crecimiento. Contáctanos para una consulta sin compromiso.";
-      buttonText = "Programa una Consulta Gratuita";
+      buttonText = "Comunicate con nosotros";
       break;
     default:
       title = "¿Listo para Transformar tu Negocio?";
@@ -27,7 +27,9 @@ export default function CustomDevCTA() {
   }
 
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 py-16 md:py-24">
+    // <section className="bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 py-16 md:py-24">
+    <section className="bg-gray-100 py-16 md:py-24">
+    
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           {title}
@@ -37,7 +39,7 @@ export default function CustomDevCTA() {
         </p>
         <Link
           href="/contact"
-          className="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:-translate-y-1"
+          className="inline-block px-8 py-3 bg-purple-400 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 transition duration-300 ease-in-out transform hover:-translate-y-1"
         >
           {buttonText}
         </Link>

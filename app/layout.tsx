@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className="bg-black">
       {/* <link rel="icon" href="Images/iconBlack.svg" /> */}
       <link rel="icon" href="Images/6.svg" />
 
-      <body className={inter.className}>
+      <body className={inter.className }>
         <LanguageProvider>
           <NoSsr >
           <Navbar />

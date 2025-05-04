@@ -3,124 +3,82 @@
 import { useLanguage } from "./componentProvider";
 
 export default function CustomDevProductSection() {
-    const {currentLanguage} = useLanguage();
+    const { currentLanguage } = useLanguage();
     let title;
+    let subtitle;
     let description;
-    let firstItem;
-    let secondItem;
-    let thirdItem;
-    let fourthItem;
-    let fifthItem;
-    let sixthItem;
+    let benefits = [];
 
-    switch (currentLanguage){
+    switch (currentLanguage) {
         case "EN":
-            title = "Custom Software Development";
-            description = "We create tailored software solutions that adapt to your business needs and help you stay ahead of the competition";
-            firstItem = "Personalized development strategy aligned with your business goals.";
-            secondItem = "Flexible architecture that scales with your business growth.";
-            thirdItem = "Integration with existing systems and databases.";
-            fourthItem = "Modern technology stack with optional AI capabilities.";
-            fifthItem = "Rigorous quality assurance and testing protocols.";
-            sixthItem = "Ongoing technical support and maintenance.";
+            title = "Innovative Technology Solutions";
+            subtitle = "Transforming Ideas into Reality";
+            description = "At Elykia, we're passionate about turning your ideas into successful digital products. Our expert team combines creativity, cutting-edge technology, and strategic thinking to develop customized solutions that drive your business forward.";
+            benefits = [
+                "Strategic development aligned with your business vision and objectives",
+                "Scalable architecture designed for seamless growth and adaptation",
+                "Seamless integration with your existing systems and data architecture",
+                "Advanced technology stack with AI-powered capabilities",
+                "Comprehensive quality assurance ensuring flawless performance",
+                "Dedicated support and continuous improvement services"
+            ];
             break;
         case "ES":
-            title = "Desarrollo de Software a Medida";
-            description = "Creamos soluciones de software personalizadas que se adaptan a las necesidades de tu negocio y te ayudan a mantenerte por delante de la competencia";
-            firstItem = "Estrategia de desarrollo personalizada alineada con tus objetivos de negocio.";
-            secondItem = "Arquitectura flexible que escala con el crecimiento de tu negocio.";
-            thirdItem = "Integración con sistemas y bases de datos existentes.";
-            fourthItem = "Stack tecnológico moderno con capacidades de IA opcionales.";
-            fifthItem = "Protocolos rigurosos de control de calidad y pruebas.";
-            sixthItem = "Soporte técnico y mantenimiento continuo.";
+            title = "Desarrollo de software a medida";
+            subtitle = "Transformamos Ideas en Realidad";
+            description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología de vanguardia y pensamiento estratégico para desarrollar soluciones personalizadas que impulsan tu negocio.";
+            benefits = [
+                "Desarrollo estratégico alineado con tu visión y objetivos empresariales",
+                "Arquitectura escalable diseñada para un crecimiento y adaptación sin fricciones",
+                "Integración perfecta con tus sistemas existentes y arquitectura de datos",
+                "Stack tecnológico avanzado con capacidades potenciadas por IA",
+                "Garantía de calidad integral que asegura un rendimiento impecable",
+                "Servicios de soporte dedicado y mejora continua"
+            ];
             break;
         default:
-            title = "Desarrollo de Software a Medida";
-            description = "Creamos soluciones de software personalizadas que se adaptan a las necesidades de tu negocio y te ayudan a mantenerte por delante de la competencia";
-            firstItem = "Estrategia de desarrollo personalizada alineada con tus objetivos de negocio.";
-            secondItem = "Arquitectura flexible que escala con el crecimiento de tu negocio.";
-            thirdItem = "Integración con sistemas y bases de datos existentes.";
-            fourthItem = "Stack tecnológico moderno con capacidades de IA opcionales.";
-            fifthItem = "Protocolos rigurosos de control de calidad y pruebas.";
-            sixthItem = "Soporte técnico y mantenimiento continuo.";
+            title = "Soluciones Tecnológicas Innovadoras";
+            subtitle = "Transformamos Ideas en Realidad";
+            description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología de vanguardia y pensamiento estratégico para desarrollar soluciones personalizadas que impulsan tu negocio.";
+            benefits = [
+                "Desarrollo estratégico alineado con tu visión y objetivos empresariales",
+                "Arquitectura escalable diseñada para un crecimiento y adaptación sin fricciones",
+                "Integración perfecta con tus sistemas existentes y arquitectura de datos",
+                "Stack tecnológico avanzado con capacidades potenciadas por IA",
+                "Garantía de calidad integral que asegura un rendimiento impecable",
+                "Servicios de soporte dedicado y mejora continua"
+            ];
     }
 
     return (
-        <section className="section services bg-black">
-            {/* <div className="horizontal-div pl-6 pt-6">
-                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
-                <div className="elykia-text text-white">ELYKIA</div>
-            </div> */}
-            
+        <section className=" bg-black py-16">
             <section id="services" data-w-id="b90accb7-49e1-4682-7912-de74aec760d2"
                 className="w-layout-blockcontainer container w-container transform opacity-100 translate-y-0 scale-100 rotate-0 skew-0 preserve-3d transition">
-                <div id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1" 
-                    className="w-layout-cell flex justify-center items-center mx-auto text-center">
-                    <h1 className="h1 mainh1 text-2xl text-white text-center">
-                        <div className="mx-[10vw] text-center pt-[2vh]">
-                            <span className="green text-white text-[30px]">{title}</span><br />
-                        </div>  
-                        
-                        <div className="product-subheading px-[12vw] text-gray-300 mb-[5vh]">
-                            {description}
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {firstItem.split('.')[0]}
-                                    <h4>{firstItem.split('.').slice(1).join('.')}</h4>
-                                </span>
+                <div className="w-layout-cell flex flex-col justify-center items-center mx-auto text-center max-w-6xl">
+                    
+                    <h1 className="text-4xl font-bold mb-3 uppercase bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-40 to-purple-400">{title}</h1>
+                    {/* <h2 className="text-2xl text-green-400 mb-6">{subtitle}</h2> */}
+                    
+                    <div className="text-gray-300 text-lg mb-12 mx-auto max-w-3xl px-4">
+                        {description}
+                    </div>
+                    
+                    <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-8 mb-12">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex flex-col items-center text-center justify-start p-6 bg-black bg-opacity-60 rounded-lg border border-gray-800 hover:border-purple-400 transition-all h-full">
+                                <div className="mb-4">
+                                    <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" width="45" />
+                                </div>
+                                <p className="text-white text-lg font-medium">{benefit}</p>
                             </div>
-                            
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {secondItem.split('.')[0]}
-                                    <h4>{secondItem.split('.').slice(1).join('.')}</h4>
-                                </span>
-                            </div>
-                            
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {thirdItem.split('.')[0]}
-                                    <h4>{thirdItem.split('.').slice(1).join('.')}</h4>
-                                </span>
-                            </div>
-                            
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {fourthItem.split('.')[0]}
-                                    <h4>{fourthItem.split('.').slice(1).join('.')}</h4>
-                                </span>
-                            </div>
-                            
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {fifthItem.split('.')[0]}
-                                    <h4>{fifthItem.split('.').slice(1).join('.')}</h4>
-                                </span>
-                            </div>
-                            
-                            <div className="flex flex-col items-center text-center justify-center">
-                                <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" 
-                                    className="mb-[1vh]" width="45" />
-                                <span className="color-white text-white text-[23px] md:leading-[2.4vh] leading-9">
-                                    {sixthItem.split('.')[0]}
-                                    <h4>{sixthItem.split('.').slice(1).join('.')}</h4>
-                                </span>
-                            </div>
-                        </div>
-                    </h1>
+                        ))}
+                    </div>
+                    
+                    {/* <div className="mt-12">
+                        <button className="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                            {currentLanguage === "EN" ? "Get Started" : "Comienza Ahora"}
+                        </button>
+                    </div> */}
                 </div>
             </section>
         </section>

@@ -92,9 +92,7 @@ export default function ProductSection(){
                 {/* <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="md:w-[40px] w-[25px] " width="40" /> */}
                 {/* <div className=" text-white ml-2 md:text-[14px] text-[11px]">ELYKIA</div> */}
                 </div>
-                <div className="horizontal-div flex pr-2 align-middle 
-                
-                "
+                <div className="horizontal-div flex pr-2 align-middle"
                 // onClick={
                 //   ()=>{
                 //     if(isSessionActive){
@@ -134,7 +132,7 @@ export default function ProductSection(){
                         </p>
                       </div>
                     </div> */}
-                    <div className="border-white rounded-full pb-2 pr-2 pt-0 pl-4 flex flex-col items-center ">
+                    {/* <div className="border-white rounded-full pb-2 pr-2 pt-0 pl-4 flex flex-col items-center ">
                       <h4 className="text-white md:text-[14px] text-[11px] mr-2 mb-0">
                           {demoTitle}
                       </h4>
@@ -147,7 +145,7 @@ export default function ProductSection(){
                       </h5>
                       </div>
 
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -164,6 +162,7 @@ export default function ProductSection(){
       >
         <h1
           className="product-heading md:text-[6vh] text-[20px]"
+          // className="md:text-[6vh] text-[20px] mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 from-15% z-40 to-purple-400"
           style={{
             boxSizing: "border-box",
             margin: "0.67em 0px",

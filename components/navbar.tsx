@@ -32,7 +32,7 @@ export default function Navbar() {
       contactanos = "Contactanos";
       ia = "IA Conversacional";
       chat = "Desarrollo de chatbot";
-      desarrollo = "Desarrollo a medida";
+      desarrollo = "Desarrollo de software";
       resell = "Reventa";
       break;
     case "EN":
@@ -116,11 +116,12 @@ export default function Navbar() {
                   {/* <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
                     <div className="nav-text">{resell}</div>
                   </Link> */}
-                  <Link
-                    className="flex flex-col dropdown-container"
+                  <div
+                    className="flex flex-col dropdown-container cursor-default
+"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
-                    href="/services"
+                    // href="/services"
                   >
                     <div 
                     // className="nav-link dropdown-trigger"
@@ -143,7 +144,7 @@ export default function Navbar() {
                         <Link href="/customdevelopment">{desarrollo}</Link>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                   
                 </nav>
                 <div className="z-10">

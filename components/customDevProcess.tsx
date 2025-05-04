@@ -52,7 +52,7 @@ export default function CustomDevProcess() {
   return (
     <>
       <div
-        className="how-it-works bg-white"
+        className="how-it-works bg-gray-100"
         style={{
           boxSizing: "border-box",
           padding: "3vh 1vh",
@@ -62,7 +62,7 @@ export default function CustomDevProcess() {
         }}
       >
         <h2
-          className="section-heading"
+          className="section-heading bg-gray-100"
           style={{
             boxSizing: "border-box",
             marginTop: "20px",
@@ -70,14 +70,14 @@ export default function CustomDevProcess() {
             fontSize: "36px",
             fontWeight: 700,
             marginBottom: "20px",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             color: "black",
           }}
         >
           {title}
         </h2>
         <div
-          className="how-it-works bg-white"
+          className="how-it-works bg-gray-100"
           style={{
             boxSizing: "border-box",
             padding: "3vh 1vh",

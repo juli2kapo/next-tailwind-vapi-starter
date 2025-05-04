@@ -9,6 +9,13 @@ export default function Home() {
   let secondTitle;
   let firstParrafo;
   let secondParrafo;
+  let contactTitle;
+  let emailLabel;
+  let emailValue;
+  let phoneLabel;
+  let phoneValue;
+  let addressLabel;
+  let addressValue;
   let firstField;
   let secondField;
   let thirdField;
@@ -29,6 +36,13 @@ export default function Home() {
       secondTitle = "ESPERA";
       firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
       secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
+      contactTitle = "INFORMACIÓN DE CONTACTO";
+      emailLabel = "Email:";
+      emailValue = "info@elykia.com";
+      phoneLabel = "Teléfono:";
+      phoneValue = "+54 11 1234-5678";
+      addressLabel = "Dirección:";
+      addressValue = "Av. Corrientes 1234, CABA, Argentina";
       firstField = "Asunto";
       secondField = "Nombre";
       thirdField = "Email";
@@ -37,7 +51,7 @@ export default function Home() {
       fifthField = "¿Qué servicio te interesa?";
       firstServiceOption = "IA Conversacional";
       secondServiceOption = "Desarrollo de chatbots";
-      thirdServiceOption = "Consultoría empresarial";
+      thirdServiceOption = "Desarrollo de software";
       fourthServiceOption = "Consulta general";
       sixthField = "¿A qué se dedica tu empresa?";
       sixthFieldPlaceholder = "Rubro";
@@ -49,6 +63,13 @@ export default function Home() {
       secondTitle = "AWAITS";
       firstParrafo = "Artificial intelligence is a powerful tool to take your company to the next level. By integrating AI, you will optimize operations, reduce costs and increase productivity. It is not just an investment in technology, but in the future of your business. Seize this opportunity to lead your industry and maximize results.";
       secondParrafo = "If you have questions or just want to find out about what we do, don't hesitate to contact us. At Elykia we are at your disposal to guide and help you";
+      contactTitle = "CONTACT INFORMATION";
+      emailLabel = "Email:";
+      emailValue = "info@elykia.com";
+      phoneLabel = "Phone:";
+      phoneValue = "+1 (555) 123-4567";
+      addressLabel = "Address:";
+      addressValue = "123 AI Boulevard, Tech Valley, CA 94025";
       firstField = "Subject";
       secondField = "Name";
       thirdField = "Email";
@@ -69,6 +90,13 @@ export default function Home() {
       secondTitle = "ESPERA";
       firstParrafo = "La inteligencia artificial es una herramienta poderosa para llevar tu empresa al siguiente nivel. Al integrar IA, optimizarás operaciones, reducirás costos y aumentarás la productividad. No es solo una inversión en tecnología, sino en el futuro de tu negocio. Aprovecha esta oportunidad para liderar tu industria y maximizar resultados.";
       secondParrafo = "Si tenés preguntas o simplemente querés informarte sobre lo que hacemos, no dudes en ponerte en contacto con nosotros. En Elykia estamos a su disposición para guiarlo y ayudarlo";
+      contactTitle = "INFORMACIÓN DE CONTACTO";
+      emailLabel = "Email:";
+      emailValue = "info@elykia.com";
+      phoneLabel = "Teléfono:";
+      phoneValue = "+54 11 1234-5678";
+      addressLabel = "Dirección:";
+      addressValue = "Av. Corrientes 1234, CABA, Argentina";
       firstField = "Asunto";
       secondField = "Nombre";
       thirdField = "Email";
@@ -166,6 +194,116 @@ export default function Home() {
                 <br style={{ boxSizing: "border-box" }} />
                 <br style={{ boxSizing: "border-box" }} />
                 {secondParrafo}
+              </div>
+              
+              {/* Contact Information Section */}
+              <div
+                className="contact-info-section"
+                style={{
+                  boxSizing: "border-box",
+                  marginTop: "30px",
+                  padding: "20px",
+                  borderRadius: "10px",
+                  border: "1px solid #9a5de5",
+                  width: "100%",
+                }}
+              >
+                <h3
+                  style={{
+                    boxSizing: "border-box",
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                    marginTop: "0px",
+                    marginBottom: "15px",
+                    fontSize: "20px",
+                    color: "#9a5de5",
+                  }}
+                >
+                  {contactTitle}
+                </h3>
+                <div
+                  className="contact-info-item"
+                  style={{
+                    boxSizing: "border-box",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      fontWeight: "bold",
+                      marginRight: "10px",
+                      color: "white",
+                    }}
+                  >
+                    {emailLabel}
+                  </span>
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      color: "white",
+                    }}
+                  >
+                    {emailValue}
+                  </span>
+                </div>
+                <div
+                  className="contact-info-item"
+                  style={{
+                    boxSizing: "border-box",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      fontWeight: "bold",
+                      marginRight: "10px",
+                      color: "white",
+                    }}
+                  >
+                    {phoneLabel}
+                  </span>
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      color: "white",
+                    }}
+                  >
+                    {phoneValue}
+                  </span>
+                </div>
+                {/* <div
+                  className="contact-info-item"
+                  style={{
+                    boxSizing: "border-box",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      fontWeight: "bold",
+                      marginRight: "10px",
+                      color: "white",
+                    }}
+                  >
+                    {addressLabel}
+                  </span>
+                  <span
+                    style={{
+                      boxSizing: "border-box",
+                      color: "white",
+                    }}
+                  >
+                    {addressValue}
+                  </span>
+                </div> */}
               </div>
             </div>
             <div
@@ -682,7 +820,7 @@ html {
 body {
   box-sizing: border-box;
   margin: 0px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   min-height: 100%;
   color: rgb(0, 0, 0);
   font-family: Montserrat, sans-serif;
