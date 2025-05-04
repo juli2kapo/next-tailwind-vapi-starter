@@ -48,10 +48,17 @@ export default function ServicesSection() {
               </h1>
             </div>
             <div>
-              <p className=" font-medium text-black text-[17px] leading-4 lg:leading-8 pb-8">
+              <p className=" font-medium text-black text-[17px] leading-4 lg:leading-8 pb-4">
                 {parrafo}
               </p>
             </div>
+            <Link href="/contact" 
+                  // className="nav-link contact-button bg-"
+              // className=" py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
+                className="py-4 px-6 rounded-md border border-black bg-transparent hover:bg-black hover:text-white text-black font-bold text-center transition-colors duration-300"
+              >
+                Solución personalizada
+              </Link>
           </div>
           {/* <div className="mx-auto my-[4vh]">
             <Link

@@ -44,20 +44,41 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md z-30 pb-10">
-              <Link
+              {/* <Link
                 href="contact"
                 className="w-full py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
               >
                 {ctaPrimary}
-              </Link>
+              </Link> */}
               
-              <Link
+              {/* <Link
                 href="services"
                 className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
               >
                 {ctaSecondary}
+              </Link> */}
+              <Link
+                href="services"
+                className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
+              >
+                Desarrollo de chatbot
+              </Link>
+              <Link
+                href="services"
+                className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
+              >
+                IA Conversacional
               </Link>
             </div>
+            {/* <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md z-30 pb-10">
+              
+              <Link
+                href="contact"
+                className=" w-5/6 ml-8 py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
+              >
+                {ctaPrimary}
+              </Link>
+            </div> */}
           </div>
         </div>
       </section>

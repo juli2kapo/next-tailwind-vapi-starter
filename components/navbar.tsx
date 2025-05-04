@@ -113,9 +113,9 @@ export default function Navbar() {
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
                   </Link>
-                  <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
+                  {/* <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
                     <div className="nav-text">{resell}</div>
-                  </Link>
+                  </Link> */}
                   <Link
                     className="flex flex-col dropdown-container"
                     onMouseEnter={() => setIsDropdownOpen(true)}
@@ -147,7 +147,10 @@ export default function Navbar() {
                   
                 </nav>
                 <div className="z-10">
-                  <Link href="/contact" className="nav-link contact-button">
+                  <Link href="/contact" 
+                  className="nav-link contact-button "
+                  // className="w-full py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
+                  >
                     {contactanos}
                   </Link>
                 </div>

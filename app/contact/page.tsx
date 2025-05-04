@@ -89,7 +89,7 @@ export default function Home() {
     <>
       <div className="bg-black">
       <div
-        className="w-layout-blockcontainer container w-container bg-black"
+        className="w-layout-blockcontainer  container w-container bg-black"
         style={{
           boxSizing: "border-box",
           display: "block",

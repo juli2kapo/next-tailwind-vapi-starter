@@ -24,7 +24,7 @@ export default function WhoBenefits(){
       thirdDescription = "Agendar citas, responder preguntas frecuentes, seguimientos y recordatorios.";
       fourthTitle = "Transporte y logística.";
       fourthDescription = "Confirmación de horarios, consulta sobre estado de pedidos.";
-      secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio. Cualquier empresa con un volumen significativo de llamadas o mensajes puede beneficiarse de nuestra tecnología."
+      secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio."
 
       break;
     case "EN":
@@ -102,7 +102,7 @@ export default function WhoBenefits(){
           </div>
           
         </div>
-        <h4 className="text-black">{secondParrafo}</h4>
+        <h4 className="text-black px-44">{secondParrafo}</h4>
       </h1>
     </div>
   </section>

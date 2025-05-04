@@ -27,18 +27,20 @@ export default function ProductSection(){
     switch (currentLanguage) {
       case "ES":
         firstRow = "IA Conversacional";
-        secondRow = "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
+        secondRow = "Nuestro servicio puede manejar llamadas y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
         firstCardTitle = "Rotación de personal";
         firstCardItem1 = "Evita entrenamientos repetitivos y contrataciones temporales.";
-        firstCardItem2 = "Aumenta la productividad y maneja múltiples llamadas a la vez.";
+        firstCardItem2 = "Aumenta la productividad de tu negocio";
         firstCardItem3 = "Dedica el capital humano a tareas no automatizables.";
         secondCardTitle = "Mejor experiencia del consumidor";
-        secondCardItem1 = "Libera recursos para dedicar a otras áreas.";
+        // secondCardItem1 = "Libera recursos para dedicar a otras áreas.";
+        secondCardItem1 = "Atiende multiples clientes a la vez las 24 horas"
         secondCardItem2 = "Sé líder en atención al cliente.";
-        secondCardItem3 = "Atiende multiples clientes a la vez las 24 horas";
+        secondCardItem3 = "Experiencia personalizada y segura.";
         thirdCardTitle = "IA para servir, no para controlar";
         thirdCardItem1 = "Automatización que resuelve como humano y escala como software.";
-        thirdCardItem2 = "Experiencia personalizada y segura.";
+        // thirdCardItem2 = "Experiencia personalizada y segura.";
+        thirdCardItem2 = "Libera recursos para dedicar a otras áreas.";
         thirdCardItem3 = "Humanos involucrados para escalabilidad y autorizaciones.";
         demoTitle = "Probar demo";
         demoSubtitle = "Reserva de restaurante";
@@ -63,10 +65,10 @@ export default function ProductSection(){
         break;
       default:
         firstRow = "IA Conversacional";
-        secondRow = "Nuestro servicio puede manejar conversaciones y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
+        secondRow = "Nuestro servicio puede manejar llamadas y tareas complejas de forma autónoma. Logrando automatizar hasta un 90% de tus interacciones diarias.";
         firstCardTitle = "Rotación de personal";
         firstCardItem1 = "Evita entrenamientos repetitivos y contrataciones temporales.";
-        firstCardItem2 = "Aumenta la productividad y maneja múltiples llamadas a la vez.";
+        firstCardItem2 = "Aumenta la productividad de tu negocio";
         firstCardItem3 = "Dedica el capital humano a tareas no automatizables.";
         secondCardTitle = "Mejor experiencia del consumidor";
         secondCardItem1 = "Libera recursos para dedicar a otras áreas.";
@@ -140,7 +142,6 @@ export default function ProductSection(){
                           {demoSubtitle}
                       </h4>
                       <div className="flex flex-row items-center">
-                        {/* <Phone size={20} color="white" className="mr-1" /> */}
                       <h5 className="text-white md:text-[12px] text-[9px] mr-2 opacity-65 mt-0 items-center">
                         +54 9 11 2270-0514
                       </h5>
