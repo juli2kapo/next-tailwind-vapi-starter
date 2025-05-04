@@ -25,9 +25,9 @@ export default function ProductSectionChatbot() {
         case "ES":
             title = "Desarrollo de chatbot";
             description = "Nuestros chatbots aumentan la productividad empresarial y maximizan las oportunidades de compra en tu negocio";
-            firstItem = "Integracion con IA, para que las interacciones no sean roboticas.";
-            secondItem = "Soporte 24/7 y asistencia para todas las necesidades de tus clientes.";
-            thirdItem = "Soporte multilenguaje y multiplataforma.";
+            firstItem = "Desarrollado con IA, para que las interacciones sean naturales.";
+            thirdItem = "Soporte 24/7 y asistencia para todas las necesidades de tus clientes.";
+            secondItem = "Soporte multilenguaje y multiplataforma.";
             fourthItem = "Personalización completa para adaptarse a la identidad de tu marca.";
             fifthItem = "Análisis de datos en tiempo real para mejorar continuamente las respuestas.";
             sixthItem = "Capaz de retener y exponer informacion seleccionada";
@@ -44,11 +44,12 @@ export default function ProductSectionChatbot() {
     }
     return (
         <>
-            <div className="horizontal-div pl-6 pt-6">
+            {/* <div className="horizontal-div pl-6 pt-6">
                 <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
                 <div className="elykia-text text-white">ELYKIA</div>
-            </div>
-            <div className="product-section">
+            </div> */}
+            
+            <div className="product-section pt-12">
                 <h1 className="product-heading">{title}</h1>
                 <h2 className="product-subheading px-[12vw]">
                     {description}

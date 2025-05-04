@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <link rel="icon" href="/icon.png" />
+      {/* <link rel="icon" href="Images/iconBlack.svg" /> */}
+      <link rel="icon" href="Images/6.svg" />
+
       <body className={inter.className}>
         <LanguageProvider>
           <NoSsr >

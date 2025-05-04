@@ -20,7 +20,7 @@ export default function KnowMore() {
       secondRow = "Contactanos";
   }
   return (
-    <div className="cta-section flex flex-col items-center justify-center">
+    <div className="cta-section flex flex-col items-center justify-center bg-gray-100">
       <h2 className="section-heading">{firstRow}</h2>
       <div className="mx-auto">
         <Link

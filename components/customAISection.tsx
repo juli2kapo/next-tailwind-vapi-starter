@@ -41,7 +41,7 @@ export default function CustomAISection() {
       service3Desc = "Optimización y evolución 24/7 de tus soluciones por nuestro equipo dedicado de especialistas en IA";
       service4Title = "Consultoría Estratégica";
       service4Desc = "Insights basados en datos y guía experta para maximizar el ROI y acelerar la transformación empresarial";
-      ctaButton = "Transforma Tu Empresa Ahora";
+      ctaButton = "Hablar con un experto ahora";
   }
 
   return (
@@ -152,9 +152,15 @@ export default function CustomAISection() {
         </div>
 
         <div className="mx-auto my-[4vh]">
-          <Link
+          {/* <Link
             href="/contact"
             className="nav-link contact-button !bg-white !text-black !px-[7vw] !py-4"
+          >
+            {ctaButton}
+          </Link> */}
+          <Link
+            href="contact"
+            className="py-4 px-12 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
           >
             {ctaButton}
           </Link>
