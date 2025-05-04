@@ -34,36 +34,56 @@ export default function Footer() {
           }}
         >
         {
-          pathName !== "/contact" && (
-            <>
+          pathName !== "/contact" && 
+          (
+          //   <>
+          // <img
+          //   src="Images/icon.png"
+          //   srcSet="Images/icon.png"
+          //   style={{
+          //     boxSizing: "border-box",
+          //     height: "60px",
+          //     width: "auto",
+          //     border: "0px",
+          //     verticalAlign: "middle",
+          //     maxWidth: "100%",
+          //     display: "inline-block",
+          //   }}
+          // />
+          // <div
+          //   className="elykia-text"
+          //   style={{
+          //     boxSizing: "border-box",
+          //     color: "white",
+          //     position: "relative",
+          //     left: "10px",
+          //     top: "20px",
+          //     fontSize: "26px",
+          //     fontWeight: "bold",
+          //   }}
+          // >
+          //   Elykia
+          // </div>
+          // </>
           <img
-            src="Images/icon.png"
-            srcSet="Images/icon.png"
-            style={{
-              boxSizing: "border-box",
-              height: "60px",
-              width: "auto",
-              border: "0px",
-              verticalAlign: "middle",
-              maxWidth: "100%",
-              display: "inline-block",
-            }}
-          />
-          <div
-            className="elykia-text"
-            style={{
-              boxSizing: "border-box",
-              color: "white",
-              position: "relative",
-              left: "10px",
-              top: "20px",
-              fontSize: "26px",
-              fontWeight: "bold",
-            }}
-          >
-            Elykia
-          </div>
-          </>
+                  // src="Images/icon.png"
+                  // src="Images/iconWhite.svg"
+                  src="Images/iconWithNameWhite.svg"
+                  loading="lazy"
+                  alt="Elykia Logo"
+                  style={{
+                        boxSizing: "border-box",
+                        height: "50px",
+                        width: "auto",
+                        border: "0px",
+                        verticalAlign: "middle",
+                        maxWidth: "100%",
+                        display: "inline-block",
+                      }}
+                  // className="nav-image"
+                  className="pl-2"
+                  width={200}
+                />
           )
         }
         </div>
@@ -100,7 +120,7 @@ export default function Footer() {
                 Buenos Aires, Argentina
               </div>
             </div>
-            <div className="div-block-5">
+            <div className="div-block-5 flex flex-col pt-4">
               <div className="horizontal-div flex items-center mb-1 space-x-2">
                 <div className="email-icon w-embed">
                   <svg
@@ -120,12 +140,25 @@ export default function Footer() {
                 </div>
                 <div className="footer-text text-white">{contact}</div>
               </div>
-              <a
-                href="mailto:info@elykia.com.ar?subject=Asunto"
-                className="footer-text text-[#9a5de5d3]"
-              >
-                info@elykia.com.ar
-              </a>
+              <div className="text-white">
+              {/* {"Mail: "}  */}
+                <a
+                  href="mailto:info@elykia.com.ar?subject=Asunto"
+                  className="footer-text text-[#9a5de5d3]"
+                >
+                  info@elykia.com.ar
+                </a>
+              </div>
+              <div className="text-white">
+              {/* {"Numero: "}  */}
+                <a
+                  // href="callto:+5491122915006"
+                  className="footer-text text-[#9a5de5d3] pt-1"
+                >
+                  +54 9 11 2291-5006
+                </a>
+              </div>
+              
             </div>
           </div>
         </div>

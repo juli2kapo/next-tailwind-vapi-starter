@@ -4,226 +4,64 @@ import Link from "next/link";
 
 export default function HeroSection() {
   const { currentLanguage } = useLanguage();
-  let firstRow;
-  let secondRow;
-  let thirdRow;
-  let button1;
-  let button2;
-  let button3;
+  let headline;
+  let subheadline;
+  let ctaPrimary;
+  let ctaSecondary;
+
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Soluciones de IA personalizadas";
-      secondRow =
-        "Diseñadas a la medida para transformar";
-      thirdRow = "tu negocio y maximizar resultados.";
-      button1 = "Consultaría de IA";
-      button2 = "Nuestros servicios";
+      headline = "Potencia tu empresa con inteligencia artificial";
+      // subheadline = "Soluciones personalizadas que impulsan resultados reales y transforman tu negocio";
+      subheadline = "Automatiza la atención al cliente, las ventas y los procesos internos utilizando soluciones personalizadas que trabajan 24/7."
+      ctaPrimary = "Hablar con un experto";
+      ctaSecondary = "Ver servicios";
       break;
     case "EN":
-      firstRow = "Custom AI solutions";
-      secondRow = "tailored to transform your business";
-      thirdRow = "and maximize results.";
-      button1 = "Custom Development";
-      button2 = "AI Consulting";
+      headline = "Empower Your Business with AI";
+      subheadline = "Custom solutions that drive real results and transform your business";
+      ctaPrimary = "Talk to an Expert";
+      ctaSecondary = "View Services";
       break;
     default:
-      firstRow = "Soluciones de IA personalizadas";
-      secondRow =
-        "diseñadas a la medida para transformar";
-      thirdRow = "tu negocio y maximizar resultados.";
-      button1 = "Consultaría de IA";
-      button2 = "Nuestros servicios";
+      headline = "Potencia tu empresa con inteligencia artificial";
+      subheadline = "Soluciones personalizadas que impulsan resultados reales y transforman tu negocio";
+      ctaPrimary = "Hablar con un experto";
+      ctaSecondary = "Ver servicios";
   }
 
   return (
     <>
-      <section
-        className="section"
-        style={{
-          boxSizing: "border-box",
-          display: "block",
-          backgroundColor: "rgb(0, 0, 0)",
-          paddingBottom: "12vh",
-        }}
-      >
-        <div
-          className="w-layout-blockcontainer hero mobile w-container pt-16"
-          style={{
-            boxSizing: "border-box",
-            display: "block",
-            padding: "20px",
-            width: "100%",
-            marginLeft: "auto",
-            marginRight: "auto",
-            // height: "",
-          }}
-        >
-          <div
-            className="hero-box main-hero"
-            style={{
-              boxSizing: "border-box",
-              justifyContent: "space-between",
-              display: "flex",
-              flexDirection: "column",
-              opacity: 1,
-              transform:
-                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg)",
-              transformStyle: "preserve-3d",
-            }}
-          >
-            {/* <div
-              className="horizontal-div logo-sectionstart"
-              style={{
-                boxSizing: "border-box",
-                gap: "8px",
-                flexDirection: "row",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                marginBottom: "-2px",
-                fontWeight: 500,
-                display: "flex",
-              }}
-            >
-              <img
-                width={40}
-                alt="star"
-                src="https://i.imgur.com/yHSIico.png"
-                style={{
-                  boxSizing: "border-box",
-                  border: "0px",
-                  verticalAlign: "middle",
-                  maxWidth: "100%",
-                  display: "inline-block",
-                }}
-              />
-              <div
-                className="elykia-text"
-                style={{
-                  boxSizing: "border-box",
-                  fontSize: "20px",
-                  fontWeight: 500,
-                  color: "white",
-                }}
+      <section className="bg-black py-8 z-40">
+        <div className="container mx-auto px-6 md:px-8">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-40 to-purple-400">
+              {headline}
+            </h1>
+            
+            <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl">
+              {subheadline}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md z-30 pb-10">
+              <Link
+                href="contact"
+                className="w-full py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
               >
-                ELYKIA
-              </div>
-            </div> */}
-            <div
-              id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2cf-f9ae67f1"
-              style={{
-                boxSizing: "border-box",
-                gridTemplateRows: "auto",
-                gridTemplateColumns: "1.25fr 1fr",
-                maxWidth: "100%",
-              }}
-            >
-              <div
-                style={{
-                  boxSizing: "border-box",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
+                {ctaPrimary}
+              </Link>
+              
+              <Link
+                href="services"
+                className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
               >
-                <div
-                  id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1"
-                  className="w-layout-cell"
-                  style={{
-                    boxSizing: "border-box",
-                    flexDirection: "column",
-                    margin: "auto",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    textAlign: "center",
-                    marginBottom: "4vh"
-                  }}
-                >
-                  <h1
-                    className="h1 mainh1"
-                    style={{
-                      boxSizing: "border-box",
-                      margin: "0.67em 0px",
-                      marginBottom: "10px",
-                      textTransform: "uppercase",
-                      marginTop: "0px",
-                      fontWeight: 700,
-                      // lineHeight: "55px",
-                      fontSize: "22px",
-                      // color: "white",
-                    }}
-                  >
-                    <span
-                      // className="green text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 "
-                      className="green text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-[30%] to-purple-400 "
-                      // className="green text-4xl text-[#9B5DE5]"
-                      style={{
-                        boxSizing: "border-box",
-                        // color: "rgb(124, 108, 119)",
-                        // color: "#9B5DE5",
-                        fontFamily: "Montserrat, sans-serif",
-                        color: "white",
-                        // fontSize: "22px",
-                      }}
-                    >
-                      {firstRow}
-                    </span>
-                    <br style={{ boxSizing: "border-box" }} />
-                    <p 
-                    // className="mb-0 mt-4 text-lg bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400" 
-                    // className="text-[rgba(154,93,229,0.7)] mb-0 mt-4 text-lg"
-                    className="text-gray-400 mb-0 mt-4 text-base normal-case"
-                    >
-                      {secondRow}
-                    </p>
-                    {/* <br style={{ boxSizing: "border-box" }} /> */}
-                    <p 
-                    // className="bg-clip-text text-lg text-transparent bg-gradient-to-r from-white to-purple-400"
-                    // className="text-[rgba(154,93,229,0.7)] text-lg"
-                    className="text-gray-400 text-base normal-case"
-                    style={{
-                      "lineHeight": "2vh"
-                    }}>
-                      {thirdRow}
-                    </p>
-                  </h1>
-                </div>
-                <div
-                  id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d1-f9ae67f1"
-                  style={{ boxSizing: "border-box" }}
-                >
-                  <div className="box-border flex lg:flex-row justify-around gap-y-[1vw] lg:px-[22vw] flex-col px-[15vw]">
-                    {/* <Link
-    className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-    href="conversationai"
-  >
-    {button1}
-  </Link> */}
-
-                    <Link
-                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href={"contact"}
-                    >
-                      {button1}
-                    </Link>
-                    <Link
-                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href="services"
-                    >
-                      {button2}
-                    </Link>
-                    {/* <Link
-                      className="box-border rounded-md m-[0px_1px] p-[14px_30px] no-underline transition-colors duration-200 flex justify-center items-center border border-white bg-white text-black font-bold ml-[1vw] text-center"
-                      href="contact"
-                    >
-                      {button3}
-                    </Link> */}
-                  </div>
-                </div>
-              </div>
+                {ctaSecondary}
+              </Link>
             </div>
           </div>
         </div>
       </section>
+      
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -233,7 +71,6 @@ html {
   font-family: sans-serif;
   height: 100%;
 }
-
 body {
   box-sizing: border-box;
   margin: 0px;

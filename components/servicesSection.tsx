@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useLanguage } from "./componentProvider";
+import DripTransition from "./BlackToWhite";
 
 export default function ServicesSection() {
   const { currentLanguage } = useLanguage();
@@ -9,9 +10,10 @@ export default function ServicesSection() {
   let button;
   switch (currentLanguage) {
     case "ES":
-      firstRow = "Desarrollo personalizado con IA";
+      firstRow = "Soluciones de IA y software a medida para tu negocio";
       parrafo =
-        "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
+        // "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
+        "En Elykia nos dedicamos a desarrollar una solucion especifica para tu negocio, usamos nuestro conocimiento y experiencia para implementar o crear nuevas tecnologias perfectas para tus sistemas existentes. Nuestras herramientas para garantizarte esto son una profunda dedicacion a la comprension de tu negocio y la oportunidad de utilizar IA para abordar desafios que previamente se consideraban imposibles, generando resultados tangibles y ventajas competitivas para tu empresa"
       button = "Contactanos";
       break;
     case "EN":
@@ -29,16 +31,18 @@ export default function ServicesSection() {
   return (
     <section className="section">
       <div id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2cf-f9ae67f1">
-        <div className="flex flex-col p-8 py-4 lg:px-[15vw] bg-gradient-to-b from-gray-400 to-gray-100 to-[5%]">
+        <div className=" bg-gradient-to-b from-gray-400 to-gray-200 h-[2vh] "/>
+        {/* <DripTransition /> */}
           <div
             id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1"
-            className="w-layout-cell flex justify-center items-center m-auto text-center self-center"
+            className="w-layout-cell flex justify-center items-center m-auto text-center self-center
+             flex-col p-8 pb-4 pt-0 lg:px-[15vw] bg-gray-200
+            "
           >
-            <div className=" m-auto">
+            <div className=" m-auto pb-0">
               <h1 className="h1 mainh1 text-black">
                 {/* <span className="text-[#9B5DE5] text-[32px] leading-[3]"> */}
-                <span className="text-blue-400 text-[32px] leading-[3]">
-
+                <span className="text-black text-[32px] leading-[3]">
                   {firstRow}
                 </span>
               </h1>
@@ -57,7 +61,7 @@ export default function ServicesSection() {
               {button}
             </Link>
           </div> */}
-        </div>
+        
       </div>
     </section>
   );

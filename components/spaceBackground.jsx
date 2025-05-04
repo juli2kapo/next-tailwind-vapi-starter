@@ -26,6 +26,7 @@ const SpaceBackground = ({
         this.y = Math.random() * this.canvasHeight;
         this.radius = Math.random() * 1.5;
         this.velocity = this.radius * 0.35;
+        // this.velocity = 0;
       }
 
       update() {
@@ -53,7 +54,10 @@ const SpaceBackground = ({
 
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`; // Use rgba for opacity
+        // ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`; // Use rgba for opacity
+        ctx.fillStyle = `rgba(156, 163, 175, ${opacity})`; // Tailwind gray-700 with variable opacity
+        // ctx.fillStyle = `rgba(192, 132, 252, ${opacity})`; // Tailwind gray-700 with variable opacity
+        
         ctx.fill();
       }
     }

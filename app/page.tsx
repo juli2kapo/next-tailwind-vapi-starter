@@ -11,9 +11,9 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <CustomAISection />
         <PrivacySection />
         {/* <ReferralSection /> */}
-        <CustomAISection />
       </main>
     </>
   );
