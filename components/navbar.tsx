@@ -82,7 +82,7 @@ export default function Navbar() {
         id="particles-js"
       >
         
-        <div className="hero-container w-container pt-2">
+        <div className="hero-container w-container pt-4">
           <div className="nav-box" style={{ opacity: 1 }}>
             <div className="nav-core-component">
               <Link
@@ -92,11 +92,13 @@ export default function Navbar() {
                 aria-label="home"
               >
                 <img
-                  src="Images/icon.png"
+                  // src="Images/icon.png"
+                  // src="Images/iconWhite.svg"
+                  src="Images/iconWithNameWhite.svg"
                   loading="lazy"
                   alt="Elykia Logo"
                   className="nav-image"
-                  width={60}
+                  width={200}
                 />
               </Link>
               {/* <LanguageSelector /> */}
