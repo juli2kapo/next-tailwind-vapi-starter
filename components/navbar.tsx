@@ -5,12 +5,16 @@ import { useLanguage } from "./componentProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SpaceBackground from "./spaceBackground";
+import useWindowDimensions from "@/hooks/dimensionsHook";
+
+
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { currentLanguage } = useLanguage();
   const currentPath = usePathname();
+  const { height, width } = useWindowDimensions();
   console.log("currentPath", currentPath);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -63,7 +67,10 @@ export default function Navbar() {
       {
         currentPath === "/" ? 
         (
-          <SpaceBackground className="h-[65vh] z-0" gradientOpacity={true} />
+          width >= 768 ?
+          <SpaceBackground className="h-[75%] z-0" gradientOpacity={true} />
+          :
+          <SpaceBackground className="h-[110vh] z-0" gradientOpacity={true} gradientStartY={0.1} gradientMultiplier={1} amount={1500} />
         ) 
         : 
         (
@@ -97,8 +104,8 @@ export default function Navbar() {
                   src="Images/iconWithNameWhite.svg"
                   loading="lazy"
                   alt="Elykia Logo"
-                  className="nav-image"
-                  width={200}
+                  className="nav-image w-[10vw]"
+                  // width={200}
                 />
               </Link>
               {/* <LanguageSelector /> */}
@@ -134,7 +141,7 @@ export default function Navbar() {
                       <div className="nav-text">{servicios}</div>
                     </div>
                     <div
-                      className={`dropdown-menu absolute ${
+                      className={`dropdown-menu absolute z-50 ${
                         isDropdownOpen ? "flex" : "hidden"
                       }`}
                     >
@@ -181,7 +188,7 @@ export default function Navbar() {
         >
           <Link
             href="#"
-            className="close-nav-menu-link-block w-inline-block nav-link fixed right-3"
+            className="close-nav-menu-link-block w-inline-block nav-link fixed right-8"
             onClick={toggleMobileMenu}
           >
             <div className="close-icon w-embed">
@@ -193,18 +200,22 @@ export default function Navbar() {
               </svg>
             </div>
           </Link>
-          <Link href="/" className="nav-link w-inline-block">
+          <Link href="/" className="nav-link w-inline-block pb-2">
             <div className="nav-text">{inicio}</div>
           </Link>
-          <Link href="/conversationai" className="nav-link w-inline-block">
+          <Link href="/conversationai" className="nav-link w-inline-block pb-2">
             <div className="nav-text">{ia}</div>
           </Link>
-          <Link href="/chatbotgeneration" className="nav-link w-inline-block">
+          <Link href="/chatbotgeneration" className="nav-link w-inline-block pb-2">
             <div className="nav-text">{chat}</div>
+          </Link>
+          <Link href="/customdevelopment" className="nav-link w-inline-block pb-2">
+            <div className="nav-text">{desarrollo}</div>
           </Link>
           <Link href="/contact" className="nav-link w-inline-block">
             <div className="nav-text">{contactanos}</div>
           </Link>
+          
         </nav>
       </div>
       <style jsx>{`

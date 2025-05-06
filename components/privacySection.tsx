@@ -57,7 +57,7 @@ export default function PrivacySection(){
           <span className="green text-black text-[25px] pt-7 px-4 py-2 rounded">{firstRow}</span><br />
         </div>  
         
-        <div className="grid grid-cols-2 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
+        <div className="grid grid-cols-1 gap-5 mt-[6vh] mb-[10vh] justify-center items-center">
           
           <div className="flex flex-col items-center text-center justify-center">
             <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="star" 
