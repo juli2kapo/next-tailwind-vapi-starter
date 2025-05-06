@@ -4002,7 +4002,7 @@
         background-color: #000;
         /* background-image: url("https://cdn.prod.website-files.com/6542f11fb6b9075af9ae67ed/6542feb3dec5e115f1c824ef_services-card-bg2.png"); */
         background-image: url("/Images/test.jpg");
-        background-position: 100% 0;
+        background-position: 50% 0;
         background-repeat: no-repeat;
         background-size: cover;
         border-style: none;
@@ -4249,9 +4249,9 @@
     .hero-container {
       height: 40vh;
     } */
-    .navbar {
+    /* .navbar {
       height: 40vh;
-    }
+    } */
     .hero-container {
       padding-left: 10px;
       padding-right: 10px;
@@ -4538,9 +4538,9 @@
   }
   
   @media screen and (max-width: 600px) {
-    .navbar {
+    /* .navbar {
       height: 40vh;
-    }
+    } */
     .homeButtons {
       display: flex;
       flex-direction: row;
