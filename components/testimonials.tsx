@@ -25,7 +25,7 @@ export default function Testimonials() {
   };
   
   return (
-    <div className="testimonials bg-[#f0f0f0]">
+    <div className="testimonials bg-gray-100">
       <h2 className="section-heading text-black">{firstRow}</h2>
       <div className="flex flex-row justify-around pl-3 pr-3">
         <div className="parent-container pr-0">
