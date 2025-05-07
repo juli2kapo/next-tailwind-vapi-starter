@@ -161,7 +161,7 @@ export default function ProductSection(){
         }}
       >
         <h1
-          className="product-heading md:text-[6vh] text-[20px]"
+          className="product-heading md:text-[6vh] text-[30px]"
           // className="md:text-[6vh] text-[20px] mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 from-15% z-40 to-purple-400"
           style={{
             boxSizing: "border-box",
@@ -178,14 +178,14 @@ export default function ProductSection(){
           {firstRow}
         </h1>
         <h2
-          className="product-subheading md:text-[3vh] text-base "
+          className="product-subheading md:text-[3vh] text-[20px] leading-none md:mb-[50px] mb-[20px] "
           style={{
             boxSizing: "border-box",
             marginTop: "20px",
             lineHeight: "36px",
             // fontSize: "24px",
             fontWeight: 300,
-            marginBottom: "50px",
+            // marginBottom: "50px",
             color: "rgb(170, 170, 170)",
             paddingLeft: "12vw",
             paddingRight: "12vw",
@@ -196,10 +196,10 @@ export default function ProductSection(){
           }
         </h2>
         <div
-  className="card-list flex flex-col lg:flex-row justify-around gap-6 mt-[15vh] mx-[5vw]"
->
+          className="card-list items-center lg:items-start flex flex-col lg:flex-row justify-around gap-6 mt-9 md:mt-[15vh] mx-[5vw] "
+    >
   <div
-    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    className="details-card border-3 border-white w-[80vw] xl:w-auto rounded-lg p-4 md:mb-0 mb-4 text-white min-h-[60vh] md:min-h-[35vh] lg:min-h-[60vh] xl:min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
     style={{
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
@@ -240,7 +240,7 @@ export default function ProductSection(){
   </div>
 
   <div
-    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    className="details-card border-3 border-white w-[80vw] xl:w-auto rounded-lg p-4 md:mb-0 mb-4 text-white min-h-[60vh] md:min-h-[35vh] lg:min-h-[60vh] xl:min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
     style={{
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
@@ -281,7 +281,7 @@ export default function ProductSection(){
   </div>
 
   <div
-    className="details-card border-3 border-white rounded-lg p-4 text-white min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
+    className="details-card border-3 border-white rounded-lg w-[80vw] xl:w-auto p-4 md:mb-0 mb-4 text-white min-h-[60vh] md:min-h-[35vh] lg:min-h-[60vh] xl:min-h-[50vh] min-w-[25vw] max-h-[75vh] max-w-[80vw] bg-cover"
     style={{
       backgroundImage: 'url("https://www.elykia.com.ar/Images/product-bg.jpg")',
     }}
@@ -320,7 +320,7 @@ export default function ProductSection(){
       </li>
     </ul>
   </div>
-</div>
+        </div>
 
       </div>
 </div>
