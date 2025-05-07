@@ -106,13 +106,13 @@ return (
               boxSizing: "border-box",
               paddingLeft: "10px",
               paddingRight: "10px",
-              margin: "6vh 5vw 10vh",
+              margin: "6vh 5vw 10vh 5vw",
               placeItems: "start",
               gap: "0% 10vw",
               display: "grid",
               gridTemplateColumns: "repeat(1, 1fr)",
               marginTop: "6vh",
-              marginBottom: "10vh",
+              marginBottom: "0vh",
               justifyContent: "start",
             }}
           >

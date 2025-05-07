@@ -90,7 +90,7 @@ export default function Footer() {
         <div className="footer-right-div md:ml-0 ml-12">
           <div className="footer-right-div-top-div horizontal-div columnifmedia">
             <div>
-              <div className="horizontal-div flex items-center space-x-2">
+              <div className="horizontal-div flex items-center space-x-2 md:pt-0 pt-8">
                 <div className="address-icon w-embed">
                   <svg
                     width="20"

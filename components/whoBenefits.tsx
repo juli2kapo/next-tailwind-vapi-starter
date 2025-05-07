@@ -58,7 +58,7 @@ export default function WhoBenefits(){
     className="w-layout-blockcontainer container w-container transform opacity-100 translate-y-0 scale-100 rotate-0 skew-0 preserve-3d transition">
     <div id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1" 
          className="w-layout-cell flex justify-center items-center mx-auto text-center">
-      <h1 className="h1 mainh1 text-2xl text-white text-center">
+      <h1 className="h1 mainh1 text-2xl text-white text-center max-w-full">
         <div className="mx-[10vw] text-center pt-[2vh]">
           <span className="green text-black text-[30px] ">{firstRow}</span><br />
         </div>  
@@ -102,7 +102,7 @@ export default function WhoBenefits(){
           </div>
           
         </div>
-        <h4 className="text-black px-44">{secondParrafo}</h4>
+        <h4 className="text-black px-8 md:px-20 lg:px-44">{secondParrafo}</h4>
       </h1>
     </div>
   </section>
