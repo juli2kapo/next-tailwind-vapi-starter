@@ -326,7 +326,7 @@ export default function Home() {
                   width: "100%",
                 }}
               >
-                <form
+                {/* <form
                   id="email-form"
                   name="email-form"
                   action="https://formspree.io/f/mgveedbr"
@@ -766,7 +766,448 @@ export default function Home() {
                   >
                     {button}
                   </button>
-                </form>
+                </form> */}
+                <form
+  id="email-form"
+  name="email-form"
+  action="https://api.elykia.com.ar/contact"
+  aria-label="Email Form"
+  method="POST"
+  style={{ boxSizing: "border-box" }}
+>
+  <input
+    id="subject"
+    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
+    name="subject"  // Changed from Asunto to subject
+    type="text"
+    maxLength={256}
+    required
+    placeholder={firstField}
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      padding: "8px 12px",
+      verticalAlign: "middle",
+      width: "100%",
+      height: "38px",
+      marginBottom: "10px",
+      fontSize: "14px",
+      lineHeight: 1.42857,
+      display: "block",
+      borderWidth: "1px 1px 2px",
+      borderColor: "rgb(0, 0, 0)",
+      borderImage: "initial",
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      fontFamily: "Montserrat, sans-serif",
+      border: "1px solid rgb(204, 204, 204)",
+      borderRadius: "10px",
+      borderTopStyle: "solid",
+      borderRightStyle: "solid",
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      color: "white",
+      fontWeight: "bold",
+    }}
+  />
+  <div
+    className="horizontal-div"
+    style={{
+      boxSizing: "border-box",
+      gap: "8px",
+      flexDirection: "row",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      marginBottom: "-2px",
+      fontWeight: 500,
+      display: "flex",
+    }}
+  >
+    <input
+      id="name"
+      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
+      name="name"  // Changed from nombre to name
+      type="text"
+      maxLength={256}
+      required
+      placeholder={secondField}
+      style={{
+        boxSizing: "border-box",
+        font: "inherit",
+        margin: "0px",
+        padding: "8px 12px",
+        verticalAlign: "middle",
+        width: "100%",
+        height: "38px",
+        marginBottom: "10px",
+        fontSize: "14px",
+        lineHeight: 1.42857,
+        display: "block",
+        borderWidth: "1px 1px 2px",
+        borderColor: "rgb(0, 0, 0)",
+        borderImage: "initial",
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        paddingTop: "5px",
+        paddingBottom: "5px",
+        fontFamily: "Montserrat, sans-serif",
+        border: "1px solid rgb(204, 204, 204)",
+        borderRadius: "10px",
+        borderTopStyle: "solid",
+        borderRightStyle: "solid",
+        borderBottomStyle: "solid",
+        borderLeftStyle: "solid",
+        color: "white",
+        fontWeight: "bold",
+      }}
+    />
+    <input
+      id="email"
+      className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
+      name="email"
+      type="email"
+      maxLength={256}
+      required
+      placeholder={thirdField}
+      style={{
+        boxSizing: "border-box",
+        font: "inherit",
+        margin: "0px",
+        padding: "8px 12px",
+        verticalAlign: "middle",
+        width: "100%",
+        height: "38px",
+        marginBottom: "10px",
+        fontSize: "14px",
+        lineHeight: 1.42857,
+        display: "block",
+        borderWidth: "1px 1px 2px",
+        borderColor: "rgb(0, 0, 0)",
+        borderImage: "initial",
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        paddingTop: "5px",
+        paddingBottom: "5px",
+        fontFamily: "Montserrat, sans-serif",
+        border: "1px solid rgb(204, 204, 204)",
+        borderRadius: "10px",
+        borderTopStyle: "solid",
+        borderRightStyle: "solid",
+        borderBottomStyle: "solid",
+        borderLeftStyle: "solid",
+        color: "white",
+        fontWeight: "bold",
+      }}
+    />
+  </div>
+  <div
+    className="contact-form-text"
+    style={{
+      boxSizing: "border-box",
+      color: "rgb(155, 155, 155)",
+      paddingLeft: "8px",
+    }}
+  >
+    <strong
+      style={{ boxSizing: "border-box", fontWeight: "bold" }}
+    >
+      {fourthField}
+    </strong>
+  </div>
+  <select
+    id="budget"
+    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
+    name="budget"  // Kept as budget
+    required
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      textTransform: "none",
+      padding: "8px 12px",
+      verticalAlign: "middle",
+      height: "38px",
+      marginBottom: "10px",
+      fontSize: "14px",
+      lineHeight: 1.42857,
+      borderWidth: "1px 1px 2px",
+      borderColor: "rgb(0, 0, 0)",
+      borderImage: "initial",
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      fontFamily: "Montserrat, sans-serif",
+      justifyContent: "space-around",
+      width: "100%",
+      display: "flex",
+      paddingLeft: "8px",
+      border: "1px solid rgb(204, 204, 204)",
+      borderRadius: "10px",
+      borderTopStyle: "solid",
+      borderRightStyle: "solid",
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      color: "white",
+      fontWeight: "bold",
+    }}
+  >
+    <option
+      value="Menos de $1,000"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {firstBudgetOption}
+    </option>
+    <option
+      value="$1,000 - $5,000"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {"$1,000 - $5,000"}
+    </option>
+    <option
+      value="$5,000 - $10,000"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {"$5,000 - $10,000"}
+    </option>
+    <option
+      value="$10,000 - $20,000"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {"$10,000 - $20,000"}
+    </option>
+    <option
+      value="$20,000 +"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {"$20,000 +"}
+    </option>
+  </select>
+  <div
+    className="contact-form-text"
+    style={{
+      boxSizing: "border-box",
+      color: "rgb(155, 155, 155)",
+      paddingLeft: "8px",
+    }}
+  >
+    <strong
+      style={{ boxSizing: "border-box", fontWeight: "bold" }}
+    >
+      {fifthField}
+    </strong>
+  </div>
+  <select
+    id="service"
+    className="text-field dropdown w-select border-r-0 border-t-0 border-l-0 rounded-none"
+    name="service"  // Kept as service
+    required
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      textTransform: "none",
+      padding: "8px 12px",
+      verticalAlign: "middle",
+      height: "38px",
+      marginBottom: "10px",
+      fontSize: "14px",
+      lineHeight: 1.42857,
+      borderWidth: "1px 1px 2px",
+      borderColor: "rgb(0, 0, 0)",
+      borderImage: "initial",
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      fontFamily: "Montserrat, sans-serif",
+      justifyContent: "space-around",
+      width: "100%",
+      display: "flex",
+      paddingLeft: "8px",
+      border: "1px solid rgb(204, 204, 204)",
+      borderRadius: "10px",
+      borderTopStyle: "solid",
+      borderRightStyle: "solid",
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      color: "white",
+      fontWeight: "bold",
+    }}
+  >
+    <option
+      value="conversationai"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {firstServiceOption}
+    </option>
+    <option
+      value="chatbot"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {secondServiceOption}
+    </option>
+    <option
+      value="consult"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {thirdServiceOption}
+    </option>
+    <option
+      value="chat"
+      style={{
+        boxSizing: "border-box",
+        backgroundColor: "black",
+      }}
+    >
+      {fourthServiceOption}
+    </option>
+  </select>
+  <div
+    className="contact-form-text"
+    style={{
+      boxSizing: "border-box",
+      color: "rgb(155, 155, 155)",
+      paddingLeft: "8px",
+    }}
+  >
+    <strong
+      style={{ boxSizing: "border-box", fontWeight: "bold" }}
+    >
+      {sixthField}
+    </strong>
+  </div>
+  <input
+    id="company"
+    className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
+    name="company"  // Changed from rubro to company
+    type="text"
+    maxLength={256}
+    required
+    placeholder={sixthFieldPlaceholder}
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      padding: "8px 12px",
+      verticalAlign: "middle",
+      width: "100%",
+      height: "38px",
+      fontSize: "14px",
+      lineHeight: 1.42857,
+      display: "block",
+      borderWidth: "1px 1px 2px",
+      borderColor: "rgb(0, 0, 0)",
+      borderImage: "initial",
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      fontFamily: "Montserrat, sans-serif",
+      border: "1px solid rgb(204, 204, 204)",
+      borderRadius: "10px",
+      borderTopStyle: "solid",
+      borderRightStyle: "solid",
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      color: "white",
+      fontWeight: "bold",
+      marginBottom: "3vh",
+    }}
+  />
+  <textarea
+    id="description"
+    className="text-field large w-input border-r-0 border-t-0 border-l-0 rounded-none"
+    name="description"  // Changed from How-can-we-help to description
+    maxLength={5000}
+    required
+    placeholder={seventhField}
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      overflow: "auto",
+      padding: "8px 12px",
+      verticalAlign: "middle",
+      marginBottom: "10px",
+      fontSize: "14px",
+      lineHeight: 1.42857,
+      display: "block",
+      borderWidth: "1px 1px 2px",
+      borderColor: "rgb(0, 0, 0)",
+      borderImage: "initial",
+      backgroundColor: "rgba(255, 255, 255, 0)",
+      paddingTop: "5px",
+      paddingBottom: "5px",
+      fontFamily: "Montserrat, sans-serif",
+      height: "auto",
+      width: "100%",
+      minHeight: "70px",
+      maxHeight: "200px",
+      marginTop: "10px",
+      border: "1px solid rgb(204, 204, 204)",
+      borderRadius: "10px",
+      borderTopStyle: "solid",
+      borderRightStyle: "solid",
+      borderBottomStyle: "solid",
+      borderLeftStyle: "solid",
+      color: "white",
+      fontWeight: "bold",
+    }}
+  />
+  <button
+    id="submit"
+    className="form-button w-button contact-button"
+    type="submit"
+    value="Enviar"
+    style={{
+      boxSizing: "border-box",
+      font: "inherit",
+      margin: "0px",
+      overflow: "visible",
+      textTransform: "none",
+      appearance: "button",
+      textDecoration: "none",
+      lineHeight: "inherit",
+      cursor: "pointer",
+      display: "inline-block",
+      border: "1px solid white",
+      fontWeight: "bold",
+      borderRadius: "10px",
+      padding: "20px",
+      transition: "background-color 0.2s",
+      width: "100%",
+      marginTop: "20px",
+      fontSize: "16px",
+      backgroundColor: "white",
+      color: "black",
+      marginLeft: "0px",
+    }}
+  >
+    {button}
+  </button>
+</form>
                 <div
                   className="w-form-done"
                   aria-label="Email Form success"
