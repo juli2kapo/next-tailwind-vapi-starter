@@ -36,19 +36,19 @@ export default function ServicesSection() {
           <div
             id="w-node-d8a56c8c-1256-140d-6c7f-68e87ac0b2d0-f9ae67f1"
             className="w-layout-cell flex justify-center items-center m-auto text-center self-center
-             flex-col p-8 pb-4 pt-0 lg:px-[15vw] bg-gray-200
+             flex-col p-8 pb-8 xl:pb-4 pt-0 lg:px-[15vw] bg-gray-200
             "
           >
             <div className=" m-auto pb-0">
-              <h1 className="h1 mainh1 text-black">
+              <h1 className="h1 mainh1 text-black md:my-5 lg:my-0">
                 {/* <span className="text-[#9B5DE5] text-[32px] leading-[3]"> */}
-                <span className="text-black text-[32px] leading-[3]">
+                <span className="text-black text-[20px] xl:text-[25px] 2xl:text-[32px] leading-none lg:leading-[3]">
                   {firstRow}
                 </span>
               </h1>
             </div>
             <div>
-              <p className=" font-medium text-black text-[17px] leading-4 lg:leading-8 pb-4">
+              <p className=" font-medium text-black text-[13px] 2xl:text-[17px] leading-4 lg:leading-8 pb-8 lg:pb-4">
                 {parrafo}
               </p>
             </div>

@@ -288,6 +288,12 @@
 	 top: 50%;
 	 z-index: 2;
 }
+    @media screen and (max-width: 400px) {
+        .faq .plus-minus-toggle {
+            left: -70px; /* Adjusted distance from -40px to -60px */
+        }
+        
+    }
  .faq .plus-minus-toggle:before, .faq .plus-minus-toggle:after {
 	 background: black;
 	 content: '';
