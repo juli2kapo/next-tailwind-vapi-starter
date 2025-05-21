@@ -50,13 +50,13 @@ export default function ProductSectionChatbot() {
             </div> */}
             
             <div className="product-section pt-12">
-                <h1 className="product-heading">{title}</h1>
-                <h2 className="product-subheading px-[12vw]">
+                <h1 className="product-heading lg:text-[48px] md:text-[35px] text-[30px] mb-0 leading-none">{title}</h1>
+                <h2 className="product-subheading lg:text-[24px] md:text-[21px] text-[16px] px-[12vw] leading-tight">
                     {description}
                 </h2>
                 <div className="how-it-works bg-black">
                     <div className="section-heading">
-                        <ul className="grid grid-cols-2 mt-[6vh] mb-[10vh] justify-start justify-items-start items-start gap-y-0 gap-x-[10vw] mx-[5vw]">
+                        <ul className="grid md:grid-cols-2 grid-cols-1  mt-[6vh] mb-[10vh] justify-start justify-items-start items-start gap-y-0 gap-x-[10vw] mx-[5vw]">
                             <li className="feature-item flex items-center">
                                 <img src="https://i.imgur.com/yHSIico.png" alt="Feature Icon" className="feature-icon w-[5vh] h-auto mr-[1vw]" />
                                 <span className="text-white text-[18px] font-medium normal-case">{firstItem}</span>

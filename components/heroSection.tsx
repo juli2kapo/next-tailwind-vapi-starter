@@ -32,18 +32,18 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="bg-black py-8 z-40">
+      <section className="bg-black pt-44 pb-5 md:py-4 2xl:py-8 z-40">
         <div className="container mx-auto px-6 md:px-8">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-40 to-purple-400">
+            <h1 className="sm:text-5xl text-[40px] font-bold mb-8 xl:mb-6 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-30 to-purple-400">
               {headline}
             </h1>
             
-            <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl">
+            <p className="text-gray-300 sm:text-lg text-[17px] md:text-xl mb-12 xl:mb-10 max-w-2xl">
               {subheadline}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md z-30 pb-10">
+            <div className="flex flex-col px-8 md:px-0 sm:flex-row gap-8 md:gap-4 w-full max-w-md z-30 pb-4 2xl:pb-10">
               {/* <Link
                 href="contact"
                 className="w-full py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
@@ -58,13 +58,13 @@ export default function HeroSection() {
                 {ctaSecondary}
               </Link> */}
               <Link
-                href="services"
-                className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
+                href="chatbotgeneration"
+                className=" md:w-full py-4 md:px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
               >
                 Desarrollo de chatbot
               </Link>
               <Link
-                href="services"
+                href="conversationai"
                 className="w-full py-4 px-6 rounded-md border border-white bg-transparent hover:bg-white hover:text-black text-white font-bold text-center transition-colors duration-300"
               >
                 IA Conversacional
