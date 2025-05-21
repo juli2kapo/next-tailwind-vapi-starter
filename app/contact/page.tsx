@@ -1,10 +1,12 @@
 "use client"
 import { useLanguage } from "@/components/componentProvider";
-import React from "react";
+import React, { useState } from "react";
  
 
 export default function Home() {
   const {currentLanguage} = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState({ show: false, message: "", type: "" });
   let firstTitle;
   let secondTitle;
   let firstParrafo;
@@ -30,6 +32,16 @@ export default function Home() {
   let seventhField;
   let button;
   let sixthFieldPlaceholder;
+
+  const Toast = ({ message, type }: { message: string; type: string }) => (
+    <div 
+      className={`fixed bottom-4 right-4 px-6 py-4 rounded-lg shadow-lg transition-opacity duration-500 
+        ${type === 'success' ? 'bg-green-600 text-white' : 'bg-red-600 text-white'}`}
+    >
+      {message}
+    </div>
+  );
+
   switch(currentLanguage){
     case "ES":
       firstTitle = "EL FUTURO ";
@@ -112,6 +124,67 @@ export default function Home() {
       seventhField = "¿Cómo podemos ayudarte?";
       button = "Enviar";
   }
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const formData = new FormData(e.target);
+    const formObject = Object.fromEntries(formData.entries());
+    console.log("Submitting form data:", formObject);
+    
+    try {
+      // First, try with more complete error handling and CORS mode
+      const response = await fetch('https://api.elykia.com.ar/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject),
+        mode: 'cors', // Explicitly set CORS mode
+        credentials: 'same-origin',
+      });
+      
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+      
+      if (response.ok) {
+        // Show success toast
+        setToast({
+          show: true,
+          message: currentLanguage === 'ES' ? 
+            "Mensaje enviado correctamente" : 
+            "Message sent successfully",
+          type: "success"
+        });
+        // Reset form
+        e.target.reset();
+      } else {
+        const errorText = await response.text();
+        console.error("Server response error:", errorText);
+        throw new Error(`Server responded with status ${response.status}: ${errorText}`);
+      }
+    } catch (error) {
+      console.log("Fetch error:", error);
+      console.error("Fetch error:", error);
+      // Show error toast
+      setToast({
+        show: true,
+        message: currentLanguage === 'ES' ? 
+          "Error al enviar el mensaje" : 
+          "Error sending message",
+        type: "error"
+      });
+    } finally {
+      setIsSubmitting(false);
+      
+      // Hide toast after 5 seconds
+      setTimeout(() => {
+        setToast({ show: false, message: "", type: "" });
+      }, 5000);
+    }
+};
+
 
   return (
     <>
@@ -768,13 +841,11 @@ export default function Home() {
                   </button>
                 </form> */}
                 <form
-  id="email-form"
-  name="email-form"
-  action="https://api.elykia.com.ar/contact"
-  aria-label="Email Form"
-  method="POST"
-  style={{ boxSizing: "border-box" }}
->
+                    id="email-form"
+                    name="email-form"
+                    onSubmit={handleSubmit}
+                    style={{ boxSizing: "border-box" }}
+                  >
   <input
     id="subject"
     className="text-field w-input rounded-none border-t-0 border-r-0 border-l-0 border-3"
@@ -1177,37 +1248,24 @@ export default function Home() {
     }}
   />
   <button
-    id="submit"
-    className="form-button w-button contact-button"
-    type="submit"
-    value="Enviar"
-    style={{
-      boxSizing: "border-box",
-      font: "inherit",
-      margin: "0px",
-      overflow: "visible",
-      textTransform: "none",
-      appearance: "button",
-      textDecoration: "none",
-      lineHeight: "inherit",
-      cursor: "pointer",
-      display: "inline-block",
-      border: "1px solid white",
-      fontWeight: "bold",
-      borderRadius: "10px",
-      padding: "20px",
-      transition: "background-color 0.2s",
-      width: "100%",
-      marginTop: "20px",
-      fontSize: "16px",
-      backgroundColor: "white",
-      color: "black",
-      marginLeft: "0px",
-    }}
-  >
-    {button}
-  </button>
+      id="submit"
+      className="form-button w-button contact-button hover:bg-gray-300 hover:border-white"
+      type="submit"
+      disabled={isSubmitting}
+      style={{
+        /* existing styles */
+        opacity: isSubmitting ? 0.7 : 1,
+        cursor: isSubmitting ? "not-allowed" : "pointer"
+      }}
+    >
+      {isSubmitting ? (
+        currentLanguage === "ES" ? "Enviando..." : "Sending..."
+      ) : (
+        button
+      )}
+    </button>
 </form>
+{toast.show && <Toast message={toast.message} type={toast.type} />}
                 <div
                   className="w-form-done"
                   aria-label="Email Form success"
