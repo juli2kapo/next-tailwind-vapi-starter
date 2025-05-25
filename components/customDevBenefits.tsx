@@ -55,7 +55,7 @@ export default function CustomDevBenefits() {
   }
 
   return (
-    <section className="py-16 md:py-20 bg-white text-black">
+    <section className="py-16 md:py-20 bg-gray-100 text-black">
       {/* Removed the Elykia logo row to match other sections better */}
       {/* <div className="horizontal-div pl-6 pt-6">
         <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" className="" width="40" />
