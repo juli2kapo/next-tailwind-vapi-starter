@@ -26,14 +26,14 @@ export default function CustomDevProductSection() {
         case "ES":
             title = "Desarrollo de software a medida";
             subtitle = "Transformamos Ideas en Realidad";
-            description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología de vanguardia y pensamiento estratégico para desarrollar soluciones personalizadas que impulsan tu negocio.";
+            description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología innovadora y enfoque estrategico para desarrollar soluciones personalizadas que impulsen tu negocio.";
             benefits = [
                 "Desarrollo estratégico alineado con tu visión y objetivos empresariales",
-                "Arquitectura escalable diseñada para un crecimiento y adaptación sin fricciones",
-                "Integración perfecta con tus sistemas existentes y arquitectura de datos",
+                "Arquitectura escalable diseñada para un crecimiento y adaptación sin dificultades",
+                "Integración perfecta con tus sistemas existentes y arquitectura de datos actuales",
                 "Stack tecnológico avanzado con capacidades potenciadas por IA",
-                "Garantía de calidad integral que asegura un rendimiento impecable",
-                "Servicios de soporte dedicado y mejora continua"
+                "Compromiso absoluto con la maxima excelencia y calidad",
+                "Servicios de soporte dedicado y mejora continua para asegurar el éxito a largo plazo"
             ];
             break;
         default:
@@ -42,10 +42,10 @@ export default function CustomDevProductSection() {
             description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología de vanguardia y pensamiento estratégico para desarrollar soluciones personalizadas que impulsan tu negocio.";
             benefits = [
                 "Desarrollo estratégico alineado con tu visión y objetivos empresariales",
-                "Arquitectura escalable diseñada para un crecimiento y adaptación sin fricciones",
+                "Arquitectura escalable diseñada para un crecimiento y adaptación sin dificultades",
                 "Integración perfecta con tus sistemas existentes y arquitectura de datos",
                 "Stack tecnológico avanzado con capacidades potenciadas por IA",
-                "Garantía de calidad integral que asegura un rendimiento impecable",
+                "Compromiso absoluto con la excelencia y calidad",
                 "Servicios de soporte dedicado y mejora continua"
             ];
     }
@@ -59,13 +59,13 @@ export default function CustomDevProductSection() {
                     <h1 className="text-4xl font-bold mb-3 uppercase bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-40 to-purple-400">{title}</h1>
                     {/* <h2 className="text-2xl text-green-400 mb-6">{subtitle}</h2> */}
                     
-                    <div className="text-gray-300 text-lg mb-12 mx-auto max-w-3xl px-4">
+                    <div className="text-gray-300 text-lg mb-12 mx-auto max-w-3xl px-3">
                         {description}
                     </div>
                     
                     <div className="grid md:grid-cols-3 grid-cols-1 gap-8 mt-8 mb-12">
                         {benefits.map((benefit, index) => (
-                            <div key={index} className="flex flex-col items-center text-center justify-start p-6 bg-black bg-opacity-60 rounded-lg border border-gray-800 hover:border-purple-400 transition-all h-full">
+                            <div key={index} className="flex flex-col items-center text-center justify-start p-6 bg-black bg-opacity-60 rounded-lg md:hover:scale-105 md:hover:bg-gray-800/40 transition-all h-full">
                                 <div className="mb-4">
                                     <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" width="45" />
                                 </div>

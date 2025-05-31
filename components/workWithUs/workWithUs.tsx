@@ -13,26 +13,27 @@ const workBenefits: Benefit[] = [
   {
     id: 1,
     iconUrl: 'https://i.imgur.com/yHSIico.png',
-    title: 'Innovación Constante',
+    title: 'Innovación constante',
     description: 'Participa en el desarrollo de soluciones de IA de vanguardia y redefine lo que es posible en tu campo.',
   },
   {
     id: 2,
     iconUrl: 'https://i.imgur.com/yHSIico.png',
-    title: 'Impacto Real y Significativo',
+    title: 'Impacto real y significativo',
     description: 'Tus contribuciones ayudarán a empresas a transformarse y a optimizar sus procesos con tecnología inteligente.',
   },
   {
     id: 3,
     iconUrl: 'https://i.imgur.com/yHSIico.png',
-    title: 'Crecimiento y Desarrollo',
-    description: 'Te ofrecemos un entorno dinámico para expandir tus habilidades, con mentoría y constantes nuevos desafíos.',
+    title: 'Crecimiento y desarrollo',
+    description: 'Te ofrecemos un entorno dinámico para expandir tus habilidades, sin pretensiones de arruinar tu balace trabajo-vida.',
   },
   {
     id: 4,
     iconUrl: 'https://i.imgur.com/yHSIico.png',
-    title: 'Cultura Colaborativa y Ágil',
-    description: 'Sé parte de un equipo talentoso y apasionado, donde la colaboración, la creatividad y las nuevas ideas son valoradas.',
+    title: 'Trabajo completamente remoto',
+    description: 'Disfruta de la flexibilidad de trabajar desde cualquier lugar, adaptando tu espacio y horario a tus necesidades.',
+
   },
 ];
 
@@ -132,11 +133,14 @@ const WorkWithUsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-2 md:mb-16">
           <h1 className="text-[25px] md:text-[40px] font-bold mb-6 xl:mb-8 pb-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 z-30 to-purple-400">
-            Únete a Nuestro Equipo
+            Únete al equipo de Elykia
           </h1>
           <p className="text-gray-300 text-[15px] md:text-[17px] md:text-xl max-w-2xl">
-            En Elykia, estamos construyendo el futuro con inteligencia artificial. Buscamos mentes curiosas, innovadoras y apasionadas que quieran generar un impacto real. Si te entusiasma la tecnología y los desafíos, ¡este es tu lugar!
+            Buscamos mentes curiosas, innovadoras y apasionadas que quieran generar un impacto real. Aun si no tienes experiencia previa, pero sí ganas de aprender, esperamos tu postulación.
           </p>
+          {/* <p className="text-gray-300 text-[15px] md:text-[17px] md:text-xl max-w-2xl">
+            Buscamos personas dedicadas y comprometidas, no tenemos pretensiones sobre 
+          </p> */}
         </div>
 
         {/* Benefits Grid */}
@@ -168,10 +172,10 @@ const WorkWithUsSection: React.FC = () => {
         {/* Call to Action & CV Upload Form */}
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            ¿Listo para Crear el Futuro con IA?
+            ¿Listo para crear el futuro con IA?
           </h2>
           <p className="text-gray-300 sm:text-lg md:text-xl mb-8">
-            Si crees que tienes lo necesario para unirte a nuestro equipo innovador, carga tu CV y envíanos un breve mensaje a continuación.
+            Si crees que tienes lo necesario para unirte a nuestro equipo, cargá tu CV y aguarda nuestro mensaje.
           </p>
 
           <form onSubmit={handleSubmitApplication} className="w-full max-w-lg mx-auto space-y-6">
