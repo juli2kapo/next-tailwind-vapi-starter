@@ -13,7 +13,7 @@ export default function Home() {
         <ServicesSection />
         <CustomAISection />
         <PrivacySection />
-        {/* <ReferralSection /> */}
+        {/* <ReferralSection /> test commit */}
       </main>
     </>
   );
