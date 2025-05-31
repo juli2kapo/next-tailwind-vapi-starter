@@ -84,7 +84,7 @@ export default function ProductSection(){
     return (
 
         <>
-        <div className="bg-black z-20">
+        <div className="bg-black z-20 pb-[3vh]">
         <div className="container bg-black pb-0">
             <div className="horizontal-div flex items-center justify-between">
                 <div className="horizontal-div flex">
@@ -152,7 +152,7 @@ export default function ProductSection(){
             </div>
         
             <div
-        className="product-section"
+        className="product-section pb-[6vh]"
         style={{
           boxSizing: "border-box",
           padding: "1px 1px 10vh",
@@ -323,6 +323,33 @@ export default function ProductSection(){
         </div>
 
       </div>
+
+      <div className="mb-5 mx-[5vw]">
+          <div className="bg-gradient-to-r  border border-purple-500/20 rounded-2xl p-8 text-center backdrop-blur-sm mb-12">
+            <h3 className="text-white text-[3.5vh] font-bold mb-4">
+              {demoTitle}
+            </h3>
+            <p className="text-gray-300 text-[2.2vh] mb-6 max-w-2xl mx-auto">
+              {demoSubtitle}
+            </p>
+            
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex items-center justify-center space-x-3 bg-black/40 rounded-full px-6 py-4 border border-purple-400/50">
+                <Phone size={24} color="#a855f7" className="animate-pulse" />
+                <span className="text-white text-[2.5vh] font-semibold tracking-wider">
+                  +54 9 11 5258-6782
+                </span>
+              </div>
+              
+              <p className="text-gray-400 text-[1.8vh] max-w-md mx-auto">
+                {currentLanguage === "EN" ? 
+                  "Call now to experience our AI assistant in action" : 
+                  "Llama ahora para experimentar nuestro asistente de IA en acción"
+                }
+              </p>
+            </div>
+          </div>
+        </div>
 </div>
         </>
     )

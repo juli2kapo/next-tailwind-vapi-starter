@@ -26,6 +26,7 @@ export default function Navbar() {
   let servicios;
   let contactanos;
   let resell;
+  let workWithUs;
   let ia;
   let chat;
   let desarrollo;
@@ -38,6 +39,7 @@ export default function Navbar() {
       chat = "Desarrollo de chatbot";
       desarrollo = "Desarrollo de software";
       resell = "Reventa";
+      workWithUs = "Súmate";
       break;
     case "EN":
       inicio = "Home";
@@ -47,6 +49,7 @@ export default function Navbar() {
       resell = "Resell";
       chat = "Chatbot Development";
       desarrollo = "Custom Development";
+      workWithUs = "Work with us";
       break;
     default:
       inicio = "Inicio";
@@ -56,6 +59,7 @@ export default function Navbar() {
       chat = "Desarrollo de chatbot";
       resell = "Reventa";
       desarrollo = "Desarrollo a medida";
+      workWithUs = "Súmate";
   }
   return (
     <>
@@ -119,6 +123,9 @@ export default function Navbar() {
                 <nav role="navigation" className="nav-menu-mobile w-nav-menu">
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
+                  </Link>
+                  <Link href="/workwithus" className="nav-link w-inline-block w--current bg-transparent text-white hover:bg-white hover:text-black">
+                    <div className="nav-text">{workWithUs}</div>
                   </Link>
                   {/* <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
                     <div className="nav-text">{resell}</div>
