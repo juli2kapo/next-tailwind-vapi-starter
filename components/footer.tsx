@@ -153,6 +153,8 @@ export default function Footer() {
               {/* {"Numero: "}  */}
                 <a
                   // href="callto:+5491122915006"
+                  target="_blank" 
+                  href="https://wa.me/5491122915006" 
                   className="footer-text text-[#9a5de5d3] pt-1"
                 >
                   +54 9 11 2291-5006
