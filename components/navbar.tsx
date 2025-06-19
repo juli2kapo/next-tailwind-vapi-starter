@@ -12,6 +12,7 @@ import useWindowDimensions from "@/hooks/dimensionsHook";
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isJoingUsOpen, setIsJoinUsOpen] = useState(false);
   const { currentLanguage } = useLanguage();
   const currentPath = usePathname();
   const { height, width } = useWindowDimensions();
@@ -30,6 +31,7 @@ export default function Navbar() {
   let ia;
   let chat;
   let desarrollo;
+  let jobs;
   switch (currentLanguage) {
     case "ES":
       inicio = "Inicio";
@@ -40,6 +42,7 @@ export default function Navbar() {
       desarrollo = "Desarrollo de software";
       resell = "Reventa";
       workWithUs = "Súmate";
+      jobs = "Empleos";
       break;
     case "EN":
       inicio = "Home";
@@ -50,6 +53,7 @@ export default function Navbar() {
       chat = "Chatbot Development";
       desarrollo = "Custom Development";
       workWithUs = "Work with us";
+      jobs = "Jobs";
       break;
     default:
       inicio = "Inicio";
@@ -60,6 +64,7 @@ export default function Navbar() {
       resell = "Reventa";
       desarrollo = "Desarrollo a medida";
       workWithUs = "Súmate";
+      jobs = "Empleos";
   }
   return (
     <>
@@ -124,9 +129,39 @@ export default function Navbar() {
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
                   </Link>
-                  <Link href="/workwithus" className="nav-link w-inline-block w--current bg-transparent text-white hover:bg-white hover:text-black">
+                  {/* <Link href="/workwithus" className="nav-link w-inline-block w--current bg-transparent text-white hover:bg-white hover:text-black">
                     <div className="nav-text">{workWithUs}</div>
-                  </Link>
+                  </Link> */}
+
+                    <div
+                    className="flex flex-col dropdown-container cursor-default
+"
+                    onMouseEnter={() => setIsJoinUsOpen(true)}
+                    onMouseLeave={() => setIsJoinUsOpen(false)}
+                    // href="/services"
+                  >
+                    <div 
+                    // className="nav-link dropdown-trigger"
+                    className={
+                      `nav-link dropdown-trigger w-inline-block ${
+                        isJoingUsOpen ? "bg-white text-black" : ""
+                      }`
+                    }
+                    >
+                      <div className="nav-text w-14">{workWithUs}</div>
+                    </div>
+                    <div
+                      className={`dropdown-menu absolute -left-2 z-50 ${
+                        isJoingUsOpen ? "flex" : "hidden"
+                      }`}
+                    >
+                      <div className="inner-dropdown min-w-28">
+                        <Link className="w-14" href="/workwithus">{jobs}</Link>
+                        <Link className="w-14" href="/resell">{resell}</Link>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* <Link href="/resell" className="nav-link w-inline-block w--current bg-transparent text-white hover:text-black hover:bg-white">
                     <div className="nav-text">{resell}</div>
                   </Link> */}

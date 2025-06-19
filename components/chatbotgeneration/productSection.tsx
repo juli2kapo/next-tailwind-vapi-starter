@@ -124,7 +124,7 @@ export default function ProductSectionChatbot() {
           </span>
         </div>
         <p className="text-gray-800 mt-[0.5vh] mb-0 text-[1.8vh]">
-          +54 9 11 5258-6782
+          +54 9 11 3254-3634
         </p>
       </a>
       
