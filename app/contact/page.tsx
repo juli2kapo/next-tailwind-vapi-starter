@@ -134,22 +134,21 @@ export default function Home() {
     console.log("Submitting form data:", formObject);
     
     try {
-      // First, try with more complete error handling and CORS mode
       const response = await fetch('http://api.elykia.com.ar/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify(formObject),
-        mode: 'cors', // Explicitly set CORS mode
-        credentials: 'same-origin',
+        mode: 'cors',
+        credentials: 'omit', // Changed from 'same-origin' to 'omit'
       });
       
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
       
       if (response.ok) {
-        // Show success toast
         setToast({
           show: true,
           message: currentLanguage === 'ES' ? 
@@ -157,7 +156,6 @@ export default function Home() {
             "Message sent successfully",
           type: "success"
         });
-        // Reset form
         e.target.reset();
       } else {
         const errorText = await response.text();
@@ -167,23 +165,21 @@ export default function Home() {
     } catch (error) {
       console.log("Fetch error:", error);
       console.error("Fetch error:", error);
-      // Show error toast
       setToast({
         show: true,
         message: currentLanguage === 'ES' ? 
-          "Error al enviar el mensaje" : 
-          "Error sending message",
+          "Error al enviar el mensaje. Por favor, intenta nuevamente." : 
+          "Error sending message. Please try again.",
         type: "error"
       });
     } finally {
       setIsSubmitting(false);
       
-      // Hide toast after 5 seconds
       setTimeout(() => {
         setToast({ show: false, message: "", type: "" });
       }, 5000);
     }
-};
+  };
 
 
   return (
