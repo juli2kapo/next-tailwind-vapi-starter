@@ -49,41 +49,45 @@ export default function ReferralSection() {
   }
 
   return (
-    <section className="bg-black py-20 md:py-32">
-      <div className="container mx-auto px-6 md:px-8">
+    <section className="bg-black py-16 md:py-20">
+      <div className="container mx-auto px-4 md:px-6">
         {/* Header Section */}
-        <div className="text-center mb-20">
-          {/* Elykia Logo and Brand */}
-          <div className="horizontal-div justify-center mb-8">
-            <img src="https://i.imgur.com/yHSIico.png" loading="lazy" alt="star" width="40" />
-            <div className="elykia-text text-white ml-2">ELYKIA</div>
-          </div>
+        <div className="text-center mb-16">
+          {/* Brand section */}
           
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase">
-            <span className="green">{firstRow}</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 uppercase tracking-wide">
+            {firstRow}
           </h1>
           
-          <p className="text-gray-300 text-lg md:text-2xl max-w-5xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
             {parrafo}
           </p>
         </div>
 
-        {/* Cards Section - Horizontal Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-7xl mx-auto mb-20">
+        {/* Cards Section */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {/* Casual Reseller Card */}
-          <div className="services-card bg-black bg-opacity-60 border-2 border-gray-800 hover:border-purple-400 transition-all duration-300 p-10 rounded-lg flex-1">
-            <div className="flex items-center mb-8">
-              <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="Casual Reseller Icon" width="50" className="mr-6" />
-              <h2 className="h3 white text-2xl md:text-3xl font-bold uppercase">{secondRow}</h2>
+          <div className="group bg-gray-900/50 border border-gray-800 hover:border-purple-400 transition-all duration-300 p-8 rounded-xl">
+            <div className="flex items-center mb-6">
+              <img 
+                src="https://i.imgur.com/yHSIico.png" 
+                loading="lazy" 
+                alt="Casual Reseller Icon" 
+                width="45" 
+                className="mr-4"
+              />
+              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
+                {secondRow}
+              </h2>
             </div>
             
-            <div className="text-gray-300 space-y-6">
-              <p className="leading-relaxed text-lg">
+            <div className="space-y-6 text-gray-300">
+              <p className="leading-relaxed text-base md:text-lg">
                 {secondParrafo}
               </p>
               
               <div className="border-t border-gray-700 pt-6">
-                <p className="text-base leading-relaxed">
+                <p className="text-sm md:text-base leading-relaxed opacity-90">
                   {thirdParrafo}
                 </p>
               </div>
@@ -91,14 +95,22 @@ export default function ReferralSection() {
           </div>
 
           {/* Marketing Agencies Card */}
-          <div className="services-card bg-black bg-opacity-60 border-2 border-gray-800 hover:border-purple-400 transition-all duration-300 p-10 rounded-lg flex-1">
-            <div className="flex items-center mb-8">
-              <img src="https://i.imgur.com/uAx9MVb.png" loading="lazy" alt="Marketing Agency Icon" width="50" className="mr-6" />
-              <h2 className="h3 white text-2xl md:text-3xl font-bold uppercase">{thirdRow}</h2>
+          <div className="group bg-gray-900/50 border border-gray-800 hover:border-purple-400 transition-all duration-300 p-8 rounded-xl">
+            <div className="flex items-center mb-6">
+              <img 
+                src="https://i.imgur.com/yHSIico.png" 
+                loading="lazy" 
+                alt="Marketing Agency Icon" 
+                width="45" 
+                className="mr-4"
+              />
+              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide">
+                {thirdRow}
+              </h2>
             </div>
             
             <div className="text-gray-300">
-              <p className="leading-relaxed text-lg">
+              <p className="leading-relaxed text-base md:text-lg">
                 {fourthParrafo}
               </p>
             </div>
@@ -109,7 +121,7 @@ export default function ReferralSection() {
         <div className="text-center">
           <Link
             href="/contact"
-            className="button-2 inline-flex items-center px-12 py-5 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
           >
             {buttonText}
           </Link>

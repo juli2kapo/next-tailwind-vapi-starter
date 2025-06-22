@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className="bg-gray-100">
       <ReferralSection />
-      <div className="py-10 pb-16">
+      {/* <div className="py-10 pb-16">
         <KnowMoreMail />
-      </div>
+      </div> */}
     </div>
   );
 }
