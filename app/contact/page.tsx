@@ -135,7 +135,7 @@ export default function Home() {
     
     try {
       // First, try with more complete error handling and CORS mode
-      const response = await fetch('https://api.elykia.com.ar/contact', {
+      const response = await fetch('http://api.elykia.com.ar/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
