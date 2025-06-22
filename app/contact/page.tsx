@@ -134,7 +134,7 @@ export default function Home() {
     console.log("Submitting form data:", formObject);
     
     try {
-      const response = await fetch('http://api.elykia.com.ar/contact', {
+      const response = await fetch('https://api.elykia.com.ar/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
