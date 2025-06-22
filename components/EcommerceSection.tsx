@@ -27,16 +27,16 @@ export default function EcommerceSection(){
       secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio. Cualquier empresa con un volumen significativo de llamadas o mensajes puede beneficiarse de nuestra tecnología."
       break;
     case "EN":
-      firstRow = "Your privacy is important to us";
-      firstTitle = "Security as a fundamental pillar";
-      firstDescription = "At Elykia, data protection and user interactions are a central priority.";
-      secondTitle = "Compliance with requirements";
-      secondDescription = "We align with your security and compliance needs, ensuring that our chatbots meet your needs.";
-      thirdTitle = "Defense against vulnerabilities";
-      thirdDescription = "We develop robust chatbots that withstand threats and vulnerabilities without compromising functionality or user experience.";
-      fourthTitle = "Data protection";
-      fourthDescription = "We implement advanced data encryption measures to keep all information handled by chatbots secure.";
-      secondParrafo = "These are just initial proposals. Our service is not a pre-established solution, and we can adapt it to add or remove features according to the specific needs of your business. Any company with a significant volume of calls or messages can benefit from our technology, beyond the examples mentioned above."
+      firstRow = "Who benefits from the service?";
+      firstTitle = "Restaurants.";
+      firstDescription = "Manage reservations, delivery and inquiries.";
+      secondTitle = "Hotels and tourism.";
+      secondDescription = "Reservations, service and event inquiries, or providing information about destinations.";
+      thirdTitle = "Clinics and sanatoriums.";
+      thirdDescription = "Schedule appointments, answer frequently asked questions, follow-ups and reminders.";
+      fourthTitle = "Transportation and logistics.";
+      fourthDescription = "Schedule confirmation, order status inquiries.";
+      secondParrafo = "Our service is not a pre-established solution, we can add and remove features according to the specific needs of your business. Any company with a significant volume of calls or messages can benefit from our technology."
       break;
     default:
       firstRow = "Tu privacidad es importante para nosotros";

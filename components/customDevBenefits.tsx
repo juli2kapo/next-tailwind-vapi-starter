@@ -26,7 +26,7 @@ export default function CustomDevBenefits() {
           benefit2Description = "Gain edge over competitors with proprietary software that automates your unique workflows and optimizes operations in ways others can't match.";
           benefit3Title = "SCALABILITY & FLEXIBILITY";
           benefit3Description = "Custom software grows with your business and adapts to changing requirements without the limitations of commercial packages.";
-          benefit4Title = "SEAMLESS INTEGRATION";
+          benefit4Title = "PERFECT INTEGRATION";
           benefit4Description = "Connect with all your existing systems—from legacy databases to modern cloud services—creating a unified ecosystem that maximizes efficiency.";
           break;
       case "ES":

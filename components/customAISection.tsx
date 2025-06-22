@@ -30,7 +30,7 @@ export default function CustomAISection() {
       service3Desc = "24/7 optimization and evolution of your solutions by our dedicated team of AI specialists";
       service4Title = "Strategic AI Consulting";
       service4Desc = "Data-driven insights and expert guidance to maximize ROI and accelerate business transformation";
-      ctaButton = "Transform Your Business Now";
+      ctaButton = "Talk to an expert now";
       break;
     default:
       title = "Revoluciona Tu Empresa con IA";
@@ -68,169 +68,169 @@ export default function CustomAISection() {
         </div>
 
         {
-          width >= 768 ? 
-          (
-          <>
-          
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mt-[4vh] mb-[2vh] justify-center">
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
+          width >= 768 ?
+            (
+              <>
+
+                <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mt-[4vh] mb-[2vh] justify-center">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                      <img
+                        src="https://i.imgur.com/yHSIico.png"
+                        loading="lazy"
+                        alt="star"
+                        width="45"
+                      />
+                    </div>
+                    <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                      {service1Title}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                      <img
+                        src="https://i.imgur.com/yHSIico.png"
+                        loading="lazy"
+                        alt="star"
+                        width="45"
+                      />
+                    </div>
+                    <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                      {service2Title}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                      <img
+                        src="https://i.imgur.com/yHSIico.png"
+                        loading="lazy"
+                        alt="star"
+                        width="45"
+                      />
+                    </div>
+                    <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                      {service3Title}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                      <img
+                        src="https://i.imgur.com/yHSIico.png"
+                        loading="lazy"
+                        alt="star"
+                        width="45"
+                      />
+                    </div>
+                    <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                      {service4Title}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service1Title}
+
+
+
+                <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mb-[6vh] justify-center">
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-white text-[16px] px-2">
+                      {service1Desc}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-white text-[16px] px-2">
+                      {service2Desc}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-white text-[16px] px-2">
+                      {service3Desc}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-white text-[16px] px-2">
+                      {service4Desc}
+                    </p>
+                  </div>
+                </div>
+              </>
+            )
+            :
+            (
+              <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mt-[4vh] mb-[2vh] justify-center">
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                    <img
+                      src="https://i.imgur.com/yHSIico.png"
+                      loading="lazy"
+                      alt="star"
+                      width="45"
+                    />
+                  </div>
+                  <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                    {service1Title}
+                  </div>
+                  <p className="text-white text-[16px] px-2">
+                    {service1Desc}
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                    <img
+                      src="https://i.imgur.com/yHSIico.png"
+                      loading="lazy"
+                      alt="star"
+                      width="45"
+                    />
+                  </div>
+                  <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                    {service2Title}
+                  </div>
+                  <p className="text-white text-[16px] px-2">
+                    {service2Desc}
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                    <img
+                      src="https://i.imgur.com/yHSIico.png"
+                      loading="lazy"
+                      alt="star"
+                      width="45"
+                    />
+                  </div>
+                  <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                    {service3Title}
+                  </div>
+                  <p className="text-white text-[16px] px-2">
+                    {service3Desc}
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center text-center">
+                  <div className="h-[45px] flex items-center justify-center mb-[1vh]">
+                    <img
+                      src="https://i.imgur.com/yHSIico.png"
+                      loading="lazy"
+                      alt="star"
+                      width="45"
+                    />
+                  </div>
+                  <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
+                    {service4Title}
+                  </div>
+                  <p className="text-white text-[16px] px-2">
+                    {service4Desc}
+                  </p>
                 </div>
               </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service2Title}
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service3Title}
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service4Title}
-                </div>
-              </div>
-            </div>
-
-
-
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mb-[6vh] justify-center">
-              <div className="flex flex-col items-center text-center">
-                <p className="text-white text-[16px] px-2">
-                  {service1Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <p className="text-white text-[16px] px-2">
-                  {service2Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <p className="text-white text-[16px] px-2">
-                  {service3Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <p className="text-white text-[16px] px-2">
-                  {service4Desc}
-                </p>
-              </div>
-            </div>
-          </>
-          )
-          :
-          (
-            <div className="grid md:grid-cols-4 grid-cols-1 gap-8 mt-[4vh] mb-[2vh] justify-center">
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service1Title}
-                </div>
-                <p className="text-white text-[16px] px-2">
-                  {service1Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service2Title}
-                </div>
-                <p className="text-white text-[16px] px-2">
-                  {service2Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service3Title}
-                </div>
-                <p className="text-white text-[16px] px-2">
-                  {service3Desc}
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center">
-                <div className="h-[45px] flex items-center justify-center mb-[1vh]">
-                  <img
-                    src="https://i.imgur.com/yHSIico.png"
-                    loading="lazy"
-                    alt="star"
-                    width="45"
-                  />
-                </div>
-                <div className="text-white text-[22px] font-semibold py-2 flex items-center h-[60px] justify-center">
-                  {service4Title}
-                </div>
-                <p className="text-white text-[16px] px-2">
-                  {service4Desc}
-                </p>
-              </div>
-            </div>
-          )
+            )
         }
         <div className="mx-auto my-[4vh]">
           {/* <Link
@@ -240,11 +240,11 @@ export default function CustomAISection() {
             {ctaButton}
           </Link> */}
           <Link
-  href="contact"
-  className="py-4 px-12 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300 inline-block max-w-[180px] sm:max-w-none"
->
-  <span className="whitespace-normal sm:whitespace-nowrap">{ctaButton}</span>
-</Link>
+            href="contact"
+            className="py-4 px-12 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300 inline-block max-w-[180px] sm:max-w-none"
+          >
+            <span className="whitespace-normal sm:whitespace-nowrap">{ctaButton}</span>
+          </Link>
         </div>
       </div>
     </section>

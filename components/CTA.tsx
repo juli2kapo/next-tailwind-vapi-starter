@@ -13,17 +13,17 @@ export default function CustomDevCTA() {
     case "EN":
       title = "Ready to Transform Your Business?";
       description = "Let's discuss how our custom AI solutions can elevate your operations and drive growth. Get in touch for a no-obligation consultation.";
-      buttonText = "Schedule a Free Consultation";
+      buttonText = "Contact Us";
       break;
     case "ES":
       title = "¿Listo para Transformar tu Negocio?";
       description = "Discutamos cómo nuestras soluciones de IA personalizadas pueden elevar tus operaciones e impulsar el crecimiento. Contáctanos para una consulta sin compromiso.";
-      buttonText = "Comunicate con nosotros";
+      buttonText = "Comunícate con nosotros";
       break;
     default:
       title = "¿Listo para Transformar tu Negocio?";
       description = "Discutamos cómo nuestras soluciones de IA personalizadas pueden elevar tus operaciones e impulsar el crecimiento. Contáctanos para una consulta sin compromiso.";
-      buttonText = "Programa una Consulta Gratuita";
+      buttonText = "Comunícate con nosotros";
   }
 
   return (

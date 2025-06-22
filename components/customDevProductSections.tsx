@@ -11,16 +11,16 @@ export default function CustomDevProductSection() {
 
     switch (currentLanguage) {
         case "EN":
-            title = "Innovative Technology Solutions";
+            title = "Custom Software Development";
             subtitle = "Transforming Ideas into Reality";
-            description = "At Elykia, we're passionate about turning your ideas into successful digital products. Our expert team combines creativity, cutting-edge technology, and strategic thinking to develop customized solutions that drive your business forward.";
+            description = "At Elykia, we're passionate about turning your ideas into successful digital products. Our expert team combines creativity, innovative technology, and strategic approach to develop customized solutions that drive your business forward.";
             benefits = [
                 "Strategic development aligned with your business vision and objectives",
                 "Scalable architecture designed for seamless growth and adaptation",
-                "Seamless integration with your existing systems and data architecture",
+                "Perfect integration with your existing systems and current data architecture",
                 "Advanced technology stack with AI-powered capabilities",
-                "Comprehensive quality assurance ensuring flawless performance",
-                "Dedicated support and continuous improvement services"
+                "Absolute commitment to maximum excellence and quality",
+                "Dedicated support services and continuous improvement to ensure long-term success"
             ];
             break;
         case "ES":
@@ -37,7 +37,7 @@ export default function CustomDevProductSection() {
             ];
             break;
         default:
-            title = "Soluciones Tecnológicas Innovadoras";
+            title = "Desarrollo de software a medida";
             subtitle = "Transformamos Ideas en Realidad";
             description = "En Elykia, nos apasiona convertir tus ideas en productos digitales exitosos. Nuestro equipo de expertos combina creatividad, tecnología de vanguardia y pensamiento estratégico para desarrollar soluciones personalizadas que impulsan tu negocio.";
             benefits = [

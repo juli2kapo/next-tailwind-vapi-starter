@@ -17,7 +17,7 @@ export default forwardRef<HTMLDivElement, UploadDropzoneV1Props>(function Upload
   ref
 ) {
   const [errorMessage, setErrorMessage] = useState<string | null>();
-  const [uploadedFileName, setUploadedFileName] = useState<string | null>("Arrastra y suelta el archivo aquí");
+  const [uploadedFileName, setUploadedFileName] = useState<string | null>("Drag and drop file here");
   const [isUploading, setIsUploading] = useState(false);
 
   return (

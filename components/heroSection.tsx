@@ -13,19 +13,19 @@ export default function HeroSection() {
     case "ES":
       headline = "Potencia tu empresa con inteligencia artificial";
       // subheadline = "Soluciones personalizadas que impulsan resultados reales y transforman tu negocio";
-      subheadline = "Automatiza la atención al cliente, las ventas y los procesos internos utilizando soluciones personalizadas que trabajan 24/7."
+      subheadline = "Automatiza la atención al cliente, las ventas y los procesos internos utilizando soluciones personalizadas que trabajan 24/7."
       ctaPrimary = "Hablar con un experto";
       ctaSecondary = "Ver servicios";
       break;
     case "EN":
       headline = "Empower Your Business with AI";
-      subheadline = "Custom solutions that drive real results and transform your business";
+      subheadline = "Automate customer service, sales, and internal processes using custom solutions that work 24/7.";
       ctaPrimary = "Talk to an Expert";
       ctaSecondary = "View Services";
       break;
     default:
       headline = "Potencia tu empresa con inteligencia artificial";
-      subheadline = "Soluciones personalizadas que impulsan resultados reales y transforman tu negocio";
+      subheadline = "Automatiza la atención al cliente, las ventas y los procesos internos utilizando soluciones personalizadas que trabajan 24/7.";
       ctaPrimary = "Hablar con un experto";
       ctaSecondary = "Ver servicios";
   }

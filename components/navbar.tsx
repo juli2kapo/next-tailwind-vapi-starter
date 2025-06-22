@@ -48,7 +48,7 @@ export default function Navbar() {
       ia = "Conversational AI";
       resell = "Resell";
       chat = "Chatbot Development";
-      desarrollo = "Custom Development";
+      desarrollo = "Software Development";
       workWithUs = "Work with us";
       break;
     default:

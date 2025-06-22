@@ -26,34 +26,34 @@ export default function HowItWorksChatBot() {
           thirdItemDescription = "In case of having access to user-related information, the chatbot is able to personalize the conversation to improve interaction or facilitate a sale.";
           fourthItemTitle = "BETTER THAN THE COMPETITION.";
           fourthItemDescription ="Our chatbots are 100% intelligent, without logical chains, conditions, or buttons. Practically like a human employee behind the chat.";
-          fifthItemTitle = "";
-          fifthItemDescription = "";
+          fifthItemTitle = "TAILORED TO YOU.";
+          fifthItemDescription = "Custom integration according to your needs, our priority is that the chatbot connects with the tools you use to guarantee the best performance.";
           break;
       case "ES":
           title = "¿Cuál es el valor agregado de Elykia?";
           firstItemTitle = "MEJOR QUE UN HUMANO.";
-          firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basandose en la información provista, las 24 horas del día y de forma inmediata.";
+          firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basándose en la información provista, las 24 horas del día y de forma inmediata.";
           secondItemTitle = "ESCALABILIDAD.";
-          secondItemDescription = "Capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
+          secondItemDescription = "Capaz de manejar múltiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
           thirdItemTitle = "ADAPTABLE.";
-          thirdItemDescription = "En caso de contar con acceso a informacion relacionada al usuario, el chatbot es capaz de personalizar la conversacion para mejorar la interaccion o facilitar una venta.";
+          thirdItemDescription = "En caso de contar con acceso a información relacionada al usuario, el chatbot es capaz de personalizar la conversación para mejorar la interacción o facilitar una venta.";
           fourthItemTitle = "MEJOR QUE LA COMPETENCIA.";
-          fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Practicamente como un empleado humano tras el chat.";
-          fifthItemTitle = "A TU MEDIDA";
-          fifthItemDescription = "Integracion personalizada segun tus necesidades, nuestra prioridad es que el chatbot se conecte con las herramientas que usas para garantizar el mejor rendimiento";
+          fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Prácticamente como un empleado humano tras el chat.";
+          fifthItemTitle = "A TU MEDIDA.";
+          fifthItemDescription = "Integración personalizada según tus necesidades, nuestra prioridad es que el chatbot se conecte con las herramientas que usas para garantizar el mejor rendimiento.";
           break;
       default:
-        title = "¿Cual es el valor agregado de Elykia?";
-        firstItemTitle = "MEJOR QUE UN HUMANO.";
-        firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basandose en la información provista, las 24 horas del día y de forma inmediata.";
-        secondItemTitle = "ESCALABILIDAD.";
-        secondItemDescription = "Es capaz de manejar multiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
-        thirdItemTitle = "ADAPTABLE.";
-        thirdItemDescription = "En caso de contar con acceso a informacion relacionada al usuario, el chatbot es capaz de personalizar la conversacion para mejorar la interaccion o facilitar una venta.";
-        fourthItemTitle = "MEJOR QUE LA COMPETENCIA.";
-        fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Practicamente como un empleado humano tras el chat.";
-        fifthItemTitle = "";
-        fifthItemDescription = "";
+          title = "¿Cuál es el valor agregado de Elykia?";
+          firstItemTitle = "MEJOR QUE UN HUMANO.";
+          firstItemDescription = "Gracias a la integración con inteligencia artificial nuestro chatbot es capaz de responder de forma precisa e inteligente (sin botones), basándose en la información provista, las 24 horas del día y de forma inmediata.";
+          secondItemTitle = "ESCALABILIDAD.";
+          secondItemDescription = "Capaz de manejar múltiples conversaciones simultáneamente sin comprometer la calidad de la respuesta, mientras que al mismo tiempo recopila y analiza los datos de las interacciones para mejorar continuamente el servicio y adaptarse mejor a los usuarios.";
+          thirdItemTitle = "ADAPTABLE.";
+          thirdItemDescription = "En caso de contar con acceso a información relacionada al usuario, el chatbot es capaz de personalizar la conversación para mejorar la interacción o facilitar una venta.";
+          fourthItemTitle = "MEJOR QUE LA COMPETENCIA.";
+          fourthItemDescription ="Nuestros chatbots son 100% inteligentes, sin cadenas lógicas, ni condiciones, ni botones. Prácticamente como un empleado humano tras el chat.";
+          fifthItemTitle = "A TU MEDIDA.";
+          fifthItemDescription = "Integración personalizada según tus necesidades, nuestra prioridad es que el chatbot se conecte con las herramientas que usas para garantizar el mejor rendimiento.";
       }
 return (
   <>
@@ -421,4 +421,3 @@ isolation: isolate;
   </>
 );
 }
-
