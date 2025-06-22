@@ -24,7 +24,7 @@ export default function KnowMoreMail() {
       <h2 className="section-heading">{firstRow}</h2>
       <div className="mx-auto">
         <a
-          href={"mailto:" + {secondRow}} 
+          href={"mailto:" + secondRow} 
           className="text-2xl"
         >
           {secondRow}

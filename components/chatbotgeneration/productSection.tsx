@@ -101,7 +101,7 @@ export default function ProductSectionChatbot() {
     
     <div className="flex flex-col items-center space-y-4">
     <a 
-        href="https://wa.me/5491152586782" 
+        href="https://wa.me/5491132543634" 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-white hover:bg-gray-200 transition-colors duration-300 rounded-lg px-8 py-4 border-2 border-white group hover:text-green-400"

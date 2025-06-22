@@ -18,8 +18,8 @@ export default function AllServices() {
           description: "Our AI solution that can make or receive calls and manage multiple communication channels for your business.",
           features: [
             "24/7 support and assistance for all your customers' needs",
-            "Ability to handle more than 100,000 calls per day",
-            "Multichannel approach (Voice, Email, SMS, Whatsapp, etc.)",
+            "Capacity to handle more than 100,000 calls per day",
+            "Multichannel approach (Voice, Email, SMS, WhatsApp, etc.)",
             "Real-time data analysis to continuously improve responses"
           ],
           link: "/conversationai"
@@ -29,10 +29,10 @@ export default function AllServices() {
           name: "Chatbot Development",
           description: "Custom chatbots that increase business productivity and maximize purchase opportunities.",
           features: [
-            "Integration with AI for non-robotic interactions",
+            "AI integration, so interactions are not robotic",
             "Multilanguage and multiplatform support",
             "Complete customization to adapt to your brand identity",
-            "Ability to retain and expose selected information"
+            "Capable of retaining and exposing selected information"
           ],
           link: "/chatbotgeneration"
         },
@@ -42,8 +42,8 @@ export default function AllServices() {
           description: "Tailor-made solutions designed specifically for your business needs and challenges.",
           features: [
             "Our priority is to grow your business, not just make software",
-            "Service made for you - you tell us what you need and we do it",
-            "Save hours on data entry and reduce errors",
+            "Service made for you. You tell us what you need and we do it",
+            "You will save hours on data entry and reduce errors",
             "We align with your security and compliance needs"
           ],
           link: "/contact"

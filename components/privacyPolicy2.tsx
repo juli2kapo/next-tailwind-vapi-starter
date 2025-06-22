@@ -60,7 +60,6 @@ const PrivacyPolicy = () => {
   let breachContent;
   let ccpaTitle;
   let ccpaContent;
-  contactContent
 
   switch(currentLanguage) {
     case "EN":
@@ -69,11 +68,11 @@ const PrivacyPolicy = () => {
       legalBasisContent = "We process your data based on: (1) Contractual obligations, (2) Legitimate business interests, and (3) Your explicit consent when required.";
       transfersTitle = "International Data Transfers";
       transfersContent = "Your data is stored in databases located in the United States. We ensure protection through Standard Contractual Clauses approved by European authorities.";
-      breachTitle = "Data Breaches";
+      breachTitle = "Data Breach Notification";
       breachContent = "In case of a data breach, we will notify affected users and authorities within 72 hours of discovery as required by law.";
       ccpaTitle = "CCPA Compliance";
       ccpaContent = "We do not and will never sell your personal data to third parties.";
-      lastUpdated = "Last updated: Monday 17, March 2025";
+      lastUpdated = "Last updated: Monday, March 17, 2025";
       intro = "This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.";
       interpretationTitle = "Interpretation and Definitions";
       interpretationContent = "The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.";
@@ -89,7 +88,7 @@ const PrivacyPolicy = () => {
       usageDataDef = "Usage Data: Data collected automatically through Service usage.";
       websiteDef = "Website: Elykia bots, accessible from elykia.com.ar.";
       youDef = "You: Individual or entity accessing/using the Service.";
-      collectingTitle = "Collecting and Using Your Personal Data";
+      collectingTitle = "Collection and Use of Your Personal Data";
       typesDataTitle = "Types of Data Collected";
       personalDataTitle = "Personal Data";
       personalDataList = "May include: Email, Name, Phone, Address, Usage Data";
@@ -124,11 +123,11 @@ const PrivacyPolicy = () => {
         "Withdraw consent"
       ];
       complianceTitle = "Compliance";
-      complianceContent = "We adhere to Argentina's Personal Data Protection Law (Ley 25.326), GDPR (EU General Data Protection Regulation), and CCPA (California Consumer Privacy Act). Contact us with any concerns.";
+      complianceContent = "We adhere to Argentina's Personal Data Protection Law (Law 25.326), GDPR (EU General Data Protection Regulation), and CCPA (California Consumer Privacy Act). Contact us with any concerns.";
       retentionTitle = "Data Retention";
       retentionContent = "We retain personal data for 3 years unless required longer by law.";
       childrenTitle = "Children's Privacy";
-      childrenContent = "Our service does not target and is not intended for users under 16 years of age.";
+      childrenContent = "Our service is not directed to and is not intended for users under 16 years of age.";
       updatesTitle = "Policy Updates";
       updatesContent = "We may update this policy and will notify you via email of significant changes.";
       contactTitle = "Contact Us";
@@ -138,12 +137,12 @@ const PrivacyPolicy = () => {
       privacyTitle = "Política de Privacidad";
       legalBasisTitle = "Base Legal para el Procesamiento";
       legalBasisContent = "Procesamos sus datos basados en: (1) Obligaciones contractuales, (2) Intereses comerciales legítimos y (3) Su consentimiento explícito cuando sea necesario.";
-        transfersTitle = "Transferencias Internacionales de Datos";
-        transfersContent = "Sus datos se almacenan en bases de datos ubicadas en Estados Unidos. Garantizamos protección mediante Cláusulas Contractuales Estándar aprobadas por autoridades europeas.";
-        breachTitle = "Violaciones de Datos";
-        breachContent = "En caso de una violación de datos, notificaremos a los usuarios afectados y a las autoridades dentro de las 72 horas posteriores al descubrimiento según lo requiere la ley.";
-        ccpaTitle = "Cumplimiento de CCPA";
-        ccpaContent = "No vendemos ni venderemos sus datos personales a terceros.";
+      transfersTitle = "Transferencias Internacionales de Datos";
+      transfersContent = "Sus datos se almacenan en bases de datos ubicadas en Estados Unidos. Garantizamos protección mediante Cláusulas Contractuales Estándar aprobadas por autoridades europeas.";
+      breachTitle = "Violaciones de Datos";
+      breachContent = "En caso de una violación de datos, notificaremos a los usuarios afectados y a las autoridades dentro de las 72 horas posteriores al descubrimiento según lo requiere la ley.";
+      ccpaTitle = "Cumplimiento de CCPA";
+      ccpaContent = "No vendemos ni venderemos sus datos personales a terceros.";
       lastUpdated = "Última actualización: Lunes 17, Marzo 2025";
       intro = "Esta Política de Privacidad describe Nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de Su información cuando utiliza el Servicio y le informa sobre Sus derechos de privacidad y cómo la ley lo protege.";
       interpretationTitle = "Interpretación y Definiciones";
@@ -193,7 +192,7 @@ const PrivacyPolicy = () => {
         "Oponerse al procesamiento",
         "Restringir el procesamiento",
         "Retirar el consentimiento"
-        ];
+      ];
       complianceTitle = "Cumplimiento";
       complianceContent = "Cumplimos con la Ley de Protección de Datos Personales de Argentina (Ley 25.326), GDPR (Reglamento General de Protección de Datos de la UE) y CCPA (Ley de Privacidad del Consumidor de California). Contáctenos con cualquier inquietud.";
       retentionTitle = "Retención de Datos";
@@ -203,7 +202,7 @@ const PrivacyPolicy = () => {
       updatesTitle = "Actualizaciones de Políticas";
       updatesContent = "Podemos actualizar esta política y le notificaremos por email cambios significativos.";
       contactTitle = "Contáctenos";
-        contactContent = `Dirección: Anibal Troilo 906, Capital Federal, Argentina | Teléfono: +5491122700514 | Email: `;
+      contactContent = `Dirección: Anibal Troilo 906, Capital Federal, Argentina | Teléfono: +5491122700514 | Email: `;
   }
 
   return (
@@ -289,9 +288,9 @@ const PrivacyPolicy = () => {
             <p className="text-gray-300 text-[2vh]">{legalBasisContent}</p>
           </div>
           <div className="border-b border-gray-700 pb-8">
-  <h2 className="text-[3.5vh] font-bold uppercase mb-6">{transfersTitle}</h2>
-  <p className="text-gray-300 text-[2vh]">{transfersContent}</p>
-</div>
+            <h2 className="text-[3.5vh] font-bold uppercase mb-6">{transfersTitle}</h2>
+            <p className="text-gray-300 text-[2vh]">{transfersContent}</p>
+          </div>
 
           {/* Third-Party Services */}
           <div className="border-b border-gray-700 pb-8">
@@ -363,14 +362,14 @@ const PrivacyPolicy = () => {
 
           {/* Contact Section */}
           <div className="pt-8">
-  <h2 className="text-[3.5vh] font-bold uppercase mb-6">{contactTitle}</h2>
-  <p className="text-gray-300 text-[2vh]">
-    {contactContent}
-    <a href="mailto:sesto@elykia.com.ar" className="text-blue-400 underline">
-      sesto@elykia.com.ar
-    </a>
-  </p>
-</div>
+            <h2 className="text-[3.5vh] font-bold uppercase mb-6">{contactTitle}</h2>
+            <p className="text-gray-300 text-[2vh]">
+              {contactContent}
+              <a href="mailto:sesto@elykia.com.ar" className="text-blue-400 underline">
+                sesto@elykia.com.ar
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

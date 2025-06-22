@@ -129,33 +129,29 @@ export default function Navbar() {
                   <Link href="/" className="nav-link w-inline-block w--current">
                     <div className="nav-text">{inicio}</div>
                   </Link>
-                  {/* <Link href="/workwithus" className="nav-link w-inline-block w--current bg-transparent text-white hover:bg-white hover:text-black">
-                    <div className="nav-text">{workWithUs}</div>
-                  </Link> */}
+
 
                     <div
                     className="flex flex-col dropdown-container cursor-default
 "
                     onMouseEnter={() => setIsJoinUsOpen(true)}
                     onMouseLeave={() => setIsJoinUsOpen(false)}
-                    // href="/services"
                   >
                     <div 
-                    // className="nav-link dropdown-trigger"
                     className={
                       `nav-link dropdown-trigger w-inline-block ${
                         isJoingUsOpen ? "bg-white text-black" : ""
                       }`
                     }
                     >
-                      <div className="nav-text w-14">{workWithUs}</div>
+                      <div className={"nav-text "}>{workWithUs}</div>
                     </div>
                     <div
-                      className={`dropdown-menu absolute -left-2 z-50 ${
+                      className={`dropdown-menu absolute  z-50 ${
                         isJoingUsOpen ? "flex" : "hidden"
-                      }`}
+                      }` + (currentLanguage === "EN" ? " -left-4" : " -left-2" )}
                     >
-                      <div className="inner-dropdown min-w-28">
+                      <div className={"inner-dropdown " + (currentLanguage === "EN" ? "min-w-40" : "min-w-28" )}>
                         <Link className="w-14" href="/workwithus">{jobs}</Link>
                         <Link className="w-14" href="/resell">{resell}</Link>
                       </div>

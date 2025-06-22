@@ -24,7 +24,7 @@ export default function WhoBenefits(){
       thirdDescription = "Agendar citas, responder preguntas frecuentes, seguimientos y recordatorios.";
       fourthTitle = "Transporte y logística.";
       fourthDescription = "Confirmación de horarios, consulta sobre estado de pedidos.";
-      secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio."
+      secondParrafo = "Nuestro servicio no es una solución preestablecida, podemos agregar y eliminar funciones según las necesidad especificas de tu negocio. Cualquier empresa con un volumen significativo de llamadas o mensajes puede beneficiarse de nuestra tecnología."
 
       break;
     case "EN":
@@ -37,7 +37,7 @@ export default function WhoBenefits(){
       thirdDescription = "Schedule appointments, answer frequently asked questions, follow-ups and reminders.";
       fourthTitle = "Transport and logistics.";
       fourthDescription = "Confirmation of schedules, consultation on order status.";
-      secondParrafo = "These are just initial proposals. Our service is not a pre-established solution, and we can adapt it to add or remove features according to the specific needs of your business. Any company with a significant volume of calls or messages can benefit from our technology, beyond the examples mentioned above."
+      secondParrafo = "Our service is not a pre-established solution, we can add and remove features according to the specific needs of your business. Any company with a significant volume of calls or messages can benefit from our technology."
       break;
     default:
       firstRow = "¿A quien beneficia el servicio?";

@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useLanguage } from "./componentProvider";
-import DripTransition from "./BlackToWhite";
 
 export default function ServicesSection() {
   const { currentLanguage } = useLanguage();
@@ -12,21 +11,20 @@ export default function ServicesSection() {
     case "ES":
       firstRow = "Soluciones de IA y software a medida para tu negocio";
       parrafo =
-        // "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
         "En Elykia nos dedicamos a desarrollar una solucion especifica para tu negocio, usamos nuestro conocimiento y experiencia para implementar o crear nuevas tecnologias perfectas para tus sistemas existentes. Nuestras herramientas para garantizarte esto son una profunda dedicacion a la comprension de tu negocio y la oportunidad de utilizar IA para abordar desafios que previamente se consideraban imposibles, generando resultados tangibles y ventajas competitivas para tu empresa"
-      button = "Contactanos";
+      button = "Solución personalizada";
       break;
     case "EN":
-      firstRow = "Custom AI Development";
+      firstRow = "Custom AI and software solutions for your business";
       parrafo =
-        "At Elykia, we specialize in creating tailored solutions that address your business's specific challenges. We combine our technical expertise with deep industry knowledge to develop and implement technologies that seamlessly integrate into your existing systems. Additionally, we leverage our understanding of Artificial Intelligence to bring you previously impossible automations, generating tangible results and competitive advantages for your company.";
-      button = "Contact us";
+        "At Elykia, we are dedicated to developing a specific solution for your business, we use our knowledge and experience to implement or create new technologies perfect for your existing systems. Our tools to guarantee this are a deep dedication to understanding your business and the opportunity to use AI to address challenges that were previously considered impossible, generating tangible results and competitive advantages for your company.";
+      button = "Custom Solution";
       break;
     default:
-      firstRow = "Desarrollo personalizado de IA";
+      firstRow = "Soluciones de IA y software a medida para tu negocio";
       parrafo =
-        "En Elykia nos especializamos en crear soluciones a medida que responden a los desafíos específicos de tu negocio. Combinamos nuestra experiencia técnica con un profundo conocimiento sectorial para desarrollar e implementar tecnologías que se integran perfectamente en tus sistemas existentes, adicionalmente utilizamos nuestro conocimiento sobre Inteligencia Artificial para traerte automatizaciones previamente no posibles, generando resultados tangibles y ventajas competitivas para tu empresa.";
-      button = "Contactanos";
+        "En Elykia nos dedicamos a desarrollar una solucion especifica para tu negocio, usamos nuestro conocimiento y experiencia para implementar o crear nuevas tecnologias perfectas para tus sistemas existentes. Nuestras herramientas para garantizarte esto son una profunda dedicacion a la comprension de tu negocio y la oportunidad de utilizar IA para abordar desafios que previamente se consideraban imposibles, generando resultados tangibles y ventajas competitivas para tu empresa";
+      button = "Solución personalizada";
   }
   return (
     <section className="section">
@@ -57,17 +55,9 @@ export default function ServicesSection() {
               // className=" py-4 px-6 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-bold text-center transition-colors duration-300"
                 className="py-4 px-6 rounded-md border border-black bg-transparent hover:bg-black hover:text-white text-black font-bold text-center transition-colors duration-300"
               >
-                Solución personalizada
-              </Link>
-          </div>
-          {/* <div className="mx-auto my-[4vh]">
-            <Link
-              href="/contact"
-              className="nav-link contact-button !bg-black !text-white !px-[7vw] !py-4"
-            >
-              {button}
+                {button}
             </Link>
-          </div> */}
+          </div>
         
       </div>
     </section>
