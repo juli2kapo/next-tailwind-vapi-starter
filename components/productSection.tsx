@@ -330,7 +330,7 @@ export default function ProductSection() {
               {demoSubtitle}
             </p>
 
-            <div className="flex flex-col items-center space-y-4">
+            {/* <div className="flex flex-col items-center space-y-4">
               <div className="flex items-center justify-center space-x-3 bg-black/40 rounded-full px-6 py-4 border border-purple-400/50">
                 <Phone size={24} color="#a855f7" className="animate-pulse" />
                 <span className="text-white text-[2.5vh] font-semibold tracking-wider">
@@ -344,7 +344,7 @@ export default function ProductSection() {
                   "Llama ahora para experimentar nuestro asistente de IA en acción"
                 }
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

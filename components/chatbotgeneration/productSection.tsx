@@ -87,7 +87,7 @@ export default function ProductSectionChatbot() {
         </div>
 
                 <div className="mb-5 mx-[5vw]">
-                <div className="mb-5 mx-[5vw]">
+                {/* <div className="mb-5 mx-[5vw]">
   <div className="bg-black/80 border-2 border-white rounded-xl p-8 text-center backdrop-blur-sm mb-12">
     <h3 className="text-white text-[3.5vh] font-bold mb-4 uppercase">
       {currentLanguage === "EN" ? "Try Our AI Assistant" : "Prueba Nuestro Asistente de IA"}
@@ -127,19 +127,9 @@ export default function ProductSectionChatbot() {
           +54 9 11 3254-3634
         </p>
       </a>
-      
-      
-      
-{/*       
-      <p className="text-gray-400 text-[1.8vh] max-w-md mx-auto">
-        {currentLanguage === "EN" ? 
-          "Get instant responses and see our AI in action" : 
-          "Obtén respuestas instantáneas y ve nuestra IA en acción"
-        }
-      </p> */}
     </div>
   </div>
-</div>
+</div> */}
         </div>
       </div>
     </>
