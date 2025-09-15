@@ -321,7 +321,7 @@ export default function ProductSection() {
 
         </div>
 
-        {/* <div className="mb-5 mx-[5vw]">
+        <div className="mb-5 mx-[5vw]">
           <div className="bg-gradient-to-r  border border-purple-500/20 rounded-2xl p-8 text-center backdrop-blur-sm mb-12">
             <h3 className="text-white text-[3.5vh] font-bold mb-4">
               {demoTitle}
@@ -334,7 +334,7 @@ export default function ProductSection() {
               <div className="flex items-center justify-center space-x-3 bg-black/40 rounded-full px-6 py-4 border border-purple-400/50">
                 <Phone size={24} color="#a855f7" className="animate-pulse" />
                 <span className="text-white text-[2.5vh] font-semibold tracking-wider">
-                  +54 9 11 5258-6782
+                  +54 9 11 5273-1010
                 </span>
               </div>
 
@@ -346,7 +346,7 @@ export default function ProductSection() {
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   )

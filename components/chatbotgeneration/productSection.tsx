@@ -87,7 +87,7 @@ export default function ProductSectionChatbot() {
         </div>
 
                 <div className="mb-5 mx-[5vw]">
-                {/* <div className="mb-5 mx-[5vw]">
+                <div className="mb-5 mx-[5vw]">
   <div className="bg-black/80 border-2 border-white rounded-xl p-8 text-center backdrop-blur-sm mb-12">
     <h3 className="text-white text-[3.5vh] font-bold mb-4 uppercase">
       {currentLanguage === "EN" ? "Try Our AI Assistant" : "Prueba Nuestro Asistente de IA"}
@@ -101,7 +101,7 @@ export default function ProductSectionChatbot() {
     
     <div className="flex flex-col items-center space-y-4">
     <a 
-        href="https://wa.me/5491132543634" 
+        href="https://wa.me/5491139360931" 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-white hover:bg-gray-200 transition-colors duration-300 rounded-lg px-8 py-4 border-2 border-white group hover:text-green-400"
@@ -124,12 +124,12 @@ export default function ProductSectionChatbot() {
           </span>
         </div>
         <p className="text-gray-800 mt-[0.5vh] mb-0 text-[1.8vh]">
-          +54 9 11 3254-3634
+          +54 9 11 3936-0931
         </p>
       </a>
     </div>
   </div>
-</div> */}
+</div>
         </div>
       </div>
     </>

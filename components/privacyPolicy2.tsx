@@ -131,7 +131,7 @@ const PrivacyPolicy = () => {
       updatesTitle = "Policy Updates";
       updatesContent = "We may update this policy and will notify you via email of significant changes.";
       contactTitle = "Contact Us";
-      contactContent = `Address: Anibal Troilo 906, Capital Federal, Argentina | Phone: +5491122700514 | Email: `;
+      contactContent = `Phone: +5491122700514 | Email: `;
       break;
     default: // ES
       privacyTitle = "Política de Privacidad";
@@ -202,7 +202,7 @@ const PrivacyPolicy = () => {
       updatesTitle = "Actualizaciones de Políticas";
       updatesContent = "Podemos actualizar esta política y le notificaremos por email cambios significativos.";
       contactTitle = "Contáctenos";
-      contactContent = `Dirección: Anibal Troilo 906, Capital Federal, Argentina | Teléfono: +5491122700514 | Email: `;
+      contactContent = `Teléfono: +5491122700514 | Email: `;
   }
 
   return (
