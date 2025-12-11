@@ -249,15 +249,6 @@ const WorkWithUsSection: React.FC = () => {
   return (
     <section className="bg-black py-4 md:py-24">
       <div className="container mx-auto px-6 md:px-8">
-        {/* Language Toggle */}
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={handleLanguageToggle}
-            className="px-4 py-2 text-sm font-medium text-gray-300 bg-gray-800 hover:bg-gray-700 rounded-md transition-colors duration-300"
-          >
-            {language === 'es' ? 'English' : 'Español'}
-          </button>
-        </div>
 
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-2 md:mb-16">
