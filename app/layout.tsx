@@ -20,6 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="bg-black">
+      <head>
+        <meta name="facebook-domain-verification" content="ma7f97alsfl4v7gyocohfini4vyg1z" />
+      </head>
       {/* <link rel="icon" href="Images/iconBlack.svg" /> */}
       <link rel="icon" href="Images/6.svg" />
 
