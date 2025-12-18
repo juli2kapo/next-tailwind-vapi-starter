@@ -146,7 +146,8 @@ export default function Footer() {
                   href="mailto:info@elykia.com.ar?subject=Asunto"
                   className="footer-text text-[#9a5de5d3]"
                 >
-                  info@elykia.com.ar
+                  {/* TODO, CAMBIAR ESTO */}
+                  sesto@elykia.com.ar
                 </a>
               </div>
               <div className="text-white">
@@ -162,6 +163,39 @@ export default function Footer() {
               </div>
               
             </div>
+            {/* TODO, SACAR TODO ESTO */}
+            <div className="div-block-5 flex flex-col pt-4">
+  <div className="horizontal-div flex items-center mb-1 space-x-2">
+    {/* Updated to User Icon */}
+    <div className="user-icon w-embed">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <div className="footer-text text-white">Informacion</div>
+  </div>
+
+  <div className="text-white">
+    <div className="footer-text text-[#9a5de5d3] mt-1">
+      Nombre y Apellido: Julian Salvador Sesto Llerena
+    </div>
+  </div>
+
+  <div className="text-white">
+    <div className="footer-text text-[#9a5de5d3] mt-1">
+      Numero Personal: +54 9 11 2270-0514
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
