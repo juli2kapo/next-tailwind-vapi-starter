@@ -5,6 +5,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import LanguageProvider from "@/components/componentProvider";
 import NoSsr from "@/components/noSsr";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,14 +27,30 @@ export default function RootLayout({
       {/* <link rel="icon" href="Images/iconBlack.svg" /> */}
       <link rel="icon" href="Images/6.svg" />
 
-      <body className={inter.className }>
+      <body className={inter.className}>
+        {/* --- 2. PEGA ESTO AQUÍ (INICIO GA4) --- */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q026PHQE01"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Q026PHQE01');
+          `}
+        </Script>
+        {/* --- (FIN GA4) --- */}
+
         <LanguageProvider>
-          <NoSsr >
-          <Navbar />
-          <main>
-            {children}
-          </main>
-          <Footer />
+          <NoSsr>
+            <Navbar />
+            <main>
+              {children}
+            </main>
+            <Footer />
           </NoSsr>
         </LanguageProvider>
       </body>
