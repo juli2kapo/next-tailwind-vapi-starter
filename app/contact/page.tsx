@@ -52,7 +52,7 @@ export default function Home() {
       emailLabel = "Email:";
       emailValue = "info@elykia.com";
       phoneLabel = "Teléfono:";
-      phoneValue = "+54 11 1234-5678";
+      phoneValue = "+54 11 2291-5006";
       addressLabel = "Dirección:";
       addressValue = "Av. Corrientes 1234, CABA, Argentina";
       firstField = "Asunto";
@@ -79,7 +79,7 @@ export default function Home() {
       emailLabel = "Email:";
       emailValue = "info@elykia.com";
       phoneLabel = "Phone:";
-      phoneValue = "+1 (555) 123-4567";
+      phoneValue = "+54 11 2291-5006";
       addressLabel = "Address:";
       addressValue = "123 AI Boulevard, Tech Valley, CA 94025";
       firstField = "Subject";
